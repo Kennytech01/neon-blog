@@ -12,13 +12,12 @@ export const TopNav = () => {
     const [open, setOpen ] = useState(false);
     const [search, setSearch] = useState(false)
 
-    // const handleClick = {
-        
-    // }
+    
+    
     
   return (
     <div id='topNav' className='max-w-[1040px] m-auto'>
-        <div className=' z-[999] h-20 mt-20 border flex items-center justify-between p-3 shadow-lg rounded '>
+        <div className='bg-stone-100 z-[999] h-20 mt-20 border flex items-center justify-between p-3 shadow-lg rounded '>
             <Link to = "/" >
                 <img src={LOGO} alt="logo" className=''/>
             </Link>
@@ -119,10 +118,16 @@ export const TopNav = () => {
                     </button>
                     {
                         search? (
-                            <div className='absolute bg-stone-600/20 top-0 right-0 left-0 h-full w-full flex justify-center items-center mx-auto'>
-                                <div className=''>
-                                    <input type="search" name="search-btn" id=""  className='w-full h-12'/>
-                                    <AiOutlineSearch size={20}/>
+                            <div className='absolute top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
+                                <div className='w-full h-full absolute bg-black/40' onClick={()=>setSearch(!search)}></div>
+                                <div className='z-[999] absolute top-28 w-1/2 flex justify-start items-center bg-stone-50 h-16 rounded p-2 px-3 '>
+                                    <AiOutlineSearch size={20} className=''/>
+                                    <input 
+                                    type="search" name="search-btn" id=""
+                                    required 
+                                    placeholder={`Search posts,tags and authors..`} 
+                                    className='ml-3 w-full outline-none text-xl font-light'
+                                    />
                                 </div>
                             </div>
                         )
