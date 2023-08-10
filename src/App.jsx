@@ -6,6 +6,7 @@ import {StyleGuide} from './Pages/StyleGuide'
 import { Author } from './Pages/Author'
 import { Tags } from './Pages/Tags'
 import { HomeSlide } from './Pages/HomePage'
+import { PageDetails } from './Pages/PageDetails'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/tags' element= {<Tags/>}/>
         <Route path='/author' element= {<Author/>}/>
       </Routes>
+      <PageDetails/>
     </>
   )
 }

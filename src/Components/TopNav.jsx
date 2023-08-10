@@ -17,7 +17,7 @@ export const TopNav = () => {
     
   return (
     <div id='topNav' className='max-w-[1040px] m-auto'>
-        <div className='bg-stone-100 z-[999] h-20 mt-20 border flex items-center justify-between p-3 shadow-lg rounded '>
+        <div className='bg-stone-100 z-[999] h-20 my-20 border flex items-center justify-between p-3 shadow-lg rounded '>
             <Link to = "/" >
                 <img src={LOGO} alt="logo" className=''/>
             </Link>
