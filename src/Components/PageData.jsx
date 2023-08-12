@@ -40,6 +40,7 @@ const PageData = [
  
     {
         id: 'footer',
+        location: 'page',
         image: `${nature}`,
         type1: 'Nature',
         header: 'Autumn is a second spring when every leaf is a flower',
@@ -48,6 +49,7 @@ const PageData = [
         time: '4 min read'
     },
     {
+        location: 'page',
         image: `${travel}`,
         type1: 'Travel',
         header: 'Never let your memories be greater than your dreams',
@@ -56,6 +58,7 @@ const PageData = [
         time: '4 min read '
     },
     {
+        location: 'page',
         image: `${food}`,
         type1: 'Food',
         header: 'Dramatically improve your cooking using just your imagination',
@@ -64,6 +67,7 @@ const PageData = [
         time: '4 min read'
     },
     {
+        location: 'page',
         image: `${lifestyle}`,
         type1: 'Lifestyle',
         header: 'Self-observation is the first step of inner unfolding',
@@ -72,6 +76,7 @@ const PageData = [
         time: '5 min read'
     },
     {
+        location: 'page',
         image: `${inspiration}`,
         type1: 'Inspiration',
         header: 'It is during our darkest moments that we must focus to see the light',
@@ -80,6 +85,7 @@ const PageData = [
         time: '4 min read'
     },
     {
+        location: 'page',
         image: `${bag}`,
         type1: 'Technology',
         type2: 'Nature',
@@ -90,6 +96,7 @@ const PageData = [
         time: '3 min read'
     },
     {
+        location: 'page',
         image: `${food2}`,
         type1: 'Food',
         header: 'I do not stick to rules when cooking. I rely on my imagination',
@@ -98,6 +105,7 @@ const PageData = [
         time: '4 min read'
     },
     {
+        location: 'page',
         image: `${health}`,
         type1: 'health',
         header: 'The mind and body are not separate. what affects one, affects the other',
@@ -106,6 +114,7 @@ const PageData = [
         time: '3 min read'
     },
     {
+        location: 'page',
         image: `${drones}`,
         type1: 'Technology',
         header: 'Amphibious drone are being used to send medicine to flooded area',
@@ -114,6 +123,7 @@ const PageData = [
         time: '4 min read'
     },
     {
+        location: 'page',
         image: `${forestTree}`,
         type1: 'Nature',
         header: 'In all things of nature there is something of the marvelous',
@@ -122,6 +132,7 @@ const PageData = [
         time: '3 min read'
     },
     {
+        location: 'page',
         image: `${animal}`,
         type1: 'Travel',
         header: "Don't listen to what they say, go see",
@@ -130,6 +141,7 @@ const PageData = [
         time: '4 min read'
     },
     {
+        location: 'page',
         id: "footer",
         image: `${schoolGirl}`,
         type1: 'Travel',
@@ -139,6 +151,7 @@ const PageData = [
         time: '3 min read'
     },
     {
+        location: 'page',
         image: `${friuts}`,
         type1: 'Food',
         type2: 'Inspiration',
@@ -148,6 +161,7 @@ const PageData = [
         time: '3 min read'
     },
     {
+        location: 'page',
         image: `${mountain}`,
         type1: 'Nature',
         type2: "Travel",
@@ -157,6 +171,7 @@ const PageData = [
         time: '4 min read'
     },
     {
+        location: 'page',
         id: 'footer',
         image: `${ladyEating}`,
         type1: 'Food',
@@ -166,6 +181,7 @@ const PageData = [
         time: '2 min read'
     },
     {
+        location: 'page',
         image: `${goodHealth}`,
         type1: 'Health',
         type2: "Lifstyle",

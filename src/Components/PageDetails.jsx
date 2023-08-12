@@ -29,7 +29,7 @@ export const PageDetails = () => {
     <div className=' flex justify-center items-cente relative'>
       <div className='md:m-10 w-2/3 md:w-full flex flex-col overflow-y-scroll scroll-smooth no-scrollbar'>
         {
-          PageData?.slice(0,visible).map((pages, id) => (
+          PageData?.filter((data)=> data.location === 'page').slice(0, visible).map((pages, id) => (
             <div key={id} className='md:h-80 h-96 md:flex w-full justify-center items-center my-10 rounded-xl shadow-inner bg-stone-100'>
               <div className='relative md:w-2/3 lg:w-1/2 my-2'>
                 <img src={pages.image} alt="image" className='rounded-xl object-cover h-40 w-full'/>
