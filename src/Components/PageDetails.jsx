@@ -55,7 +55,7 @@ export const PageDetails = () => {
         </div>
       </div>
       {/* Sidebar */}
-        <Aside {...state}/>
+        <Aside/>
     </div>
   )
 }

@@ -11,7 +11,7 @@ export const Aside = (props) => {
         <div>
             <h1 className='font-bold p-3 text-xl'>Featured Posts</h1>
             <div>
-                <h2 className='bg-blue-500'>{props.time}</h2>
+                <h2 className='bg-blue-500'>I'm Comming for you!</h2>
             </div>
         </div>
     </div>
