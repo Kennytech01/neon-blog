@@ -28,7 +28,7 @@ const PageData = [
         image: `${travel}`,
         type1: 'Travel',
         header: 'Never let your memories be greater than your dreams',
-        details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
+    details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
         date: 'July 30, 2023',
         time: '4 min read'
     },

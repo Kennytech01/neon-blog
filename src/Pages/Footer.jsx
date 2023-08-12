@@ -1,0 +1,80 @@
+import React, { useState } from 'react'
+import {FaTwitter, FaFacebookF,FaInstagram,FaLinkedinIn,FaGithub} from 'react-icons/fa'
+import {WiDirectionUp} from 'react-icons/wi'
+import PageData from '../Components/PageData'
+import {BsClockHistory} from 'react-icons/bs'
+
+export const Footer = () => {
+    const [display, setDisplay] = useState(3)
+
+    const truncateString = (str, num) => {
+        if (str?.length > num){
+            return( str.slice(0, num)+'...')
+        } else{
+            return str
+        }
+    }
+  return (
+    <div className=''>
+        <div className='grid md:grid-cols-3 grid-cols-1 p-3 gap-4'>
+            <div>
+                <h1 className='font-bold p-2 text-lg'>New Letter</h1>
+                <p className='p-3 py-5 font-light'>Get the latest posts delivered straight to your inbox.</p>
+                <div className='border h-12 bg-blue-200 flex justify-between items-center rounded-full '>
+                    <input type="search" name="" placeholder='Your email address' className='w-full h-full rounded-l-full p-3' />
+                    <button type="submit" className='p-2 bg-[#EC094D] rounded-r-full text-stone-100 h-full hover:scale-75 ease-out duration-100'>Subscribe</button>
+                </div>
+                <div>
+                    <h1 className='font-bold p-2 py-5 text-lg'>Follow Us</h1>
+                    <span className='flex p-2'>
+                        <FaTwitter className='m-2 text-blue-400' size={20}/>
+                        <FaFacebookF className='m-2 text-blue-800' size={20}/>
+                        <FaInstagram className='m-2 text-red-600' size={20}/>
+                        <FaLinkedinIn className='m-2 text-blue-900' size={20}/>
+                        <FaGithub className='m-2 text-black' size={20}/>
+                    </span>
+                </div>
+            </div>
+            <div className=''>
+                <h1 className='font-bold p-2 text-lg'>Latest Posts</h1>
+                <div>
+                    {
+                        PageData.slice(0, display).map((item, idx)=> (
+                            <div className='group' >
+                                <div key={idx} className='group-hover:scale-105 ease-in duration-100 relative flex h-20 overflow-hidden bg-stone-100 shadow-inner my-3 rounded-xl'>
+                                    <div className='w-1/4'>
+                                        <img src={item.image} alt="image " className='w-full h-full object-cover '/>
+                                    </div>
+                                    <div className=' p-2 w-full h-full flex flex-col items-start justify-around bg-pink-200'>
+                                        <h2 className='text-sm font-semibold  hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>{truncateString(item?.header,50)}</h2>
+                                        <p className='flex justify-start items-center text-sm font-thin'><BsClockHistory className='mx-1' />{item.time}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+            <div className=''>
+                <h1 className='font-bold p-2 text-lg'>Tags</h1>
+                {
+                    PageData.map((pages, id)=>(
+                        <div key={id}>
+                            <div className='list-disc flex flex-wrap '>
+                                { pages.type1? (<span className='font-light bg-stone-200 rounded-full mx-2 p-2 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-green-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>{pages?.type1}</span>) : null}
+                                { pages.type2? (<span className='font-light bg-stone-200 rounded-full mx-2 p-2 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-pink-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{pages?.type2}</span>) : null}
+                                { pages.type3? (<span className='font-light bg-stone-200 rounded-full mx-2 p-2 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-blue-600 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{pages?.type3}</span>) : null}
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+        {/* last div */}
+        <div className='flex flex-wrap justify-between items-center p-2 py-5'>
+            <div >© 2023 Neon - All right Reserved. Proudly Published with Ghost</div>
+            <div className='flex justify-center items-center'><WiDirectionUp/>back top top</div>
+        </div>
+    </div>
+  )
+}

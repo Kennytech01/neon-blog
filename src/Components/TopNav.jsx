@@ -16,8 +16,8 @@ export const TopNav = () => {
     
     
   return (
-    <div id='topNav' className='max-w-[1040px] m-auto'>
-        <div className='bg-stone-100 z-[999] h-20 my-20 border flex items-center justify-between p-3 shadow-lg rounded '>
+    <div id='topNav' className='max-w-[1040px] m-auto '>
+        <div className='bg-stone-100 z-[999] h-20 md:my-20 my-5 border flex items-center justify-between p-3 shadow-lg rounded '>
             <Link to = "/" >
                 <img src={LOGO} alt="logo" className=''/>
             </Link>
@@ -66,7 +66,7 @@ export const TopNav = () => {
                             <BsArrowDownShort size={20}/>
                     </button>
                     { open? (
-                        <ul className={`absolute right-0 left-0 top-10 flex flex-col justify-center w-52 py-2 mt-2 rounded-lg shadow-xl border bg-stone-50`}>
+                        <ul className={`z-[99] absolute right-0 left-0 top-10 flex flex-col justify-center w-52 py-2 mt-2 rounded-lg shadow-xl border bg-stone-50`}>
                             <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Home post vertical</li>
                             </NavLink>
