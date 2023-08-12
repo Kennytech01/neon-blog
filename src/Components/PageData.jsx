@@ -15,8 +15,31 @@ import mountain from '../assets/images/mountain.jpeg'
 import ladyEating from '../assets/images/ladyEating.jpeg'
 import goodHealth from '../assets/images/goodHealth.jpeg'
 
+// export const dataSet = [
+//     {
+//         tags: "id",
+//         tag1: "Food",
+//         tag2: "Health",
+//         tag3: "Lifestyle",
+//         tag4: "Nature",
+//         tag5: "Technology",
+//         tag6: "Travel"
+//     }
+// ];
+
 const PageData = [
     {
+        tags: "id",
+        tag1: "Food",
+        tag2: "Health",
+        tag3: "Lifestyle",
+        tag4: "Nature",
+        tag5: "Technology",
+        tag6: "Travel"
+    },
+ 
+    {
+        id: 'footer',
         image: `${nature}`,
         type1: 'Nature',
         header: 'Autumn is a second spring when every leaf is a flower',
@@ -28,9 +51,9 @@ const PageData = [
         image: `${travel}`,
         type1: 'Travel',
         header: 'Never let your memories be greater than your dreams',
-    details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
+        details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
         date: 'July 30, 2023',
-        time: '4 min read'
+        time: '4 min read '
     },
     {
         image: `${food}`,
@@ -107,6 +130,7 @@ const PageData = [
         time: '4 min read'
     },
     {
+        id: "footer",
         image: `${schoolGirl}`,
         type1: 'Travel',
         header: "Stop worrying about the potholes in the road and enjoy the journey",
@@ -133,6 +157,7 @@ const PageData = [
         time: '4 min read'
     },
     {
+        id: 'footer',
         image: `${ladyEating}`,
         type1: 'Food',
         header: "I like better than talking about food is eating",
@@ -151,3 +176,4 @@ const PageData = [
     }
 ]
 export default PageData
+// export default myData

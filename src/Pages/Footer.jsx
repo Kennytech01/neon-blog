@@ -4,9 +4,9 @@ import {WiDirectionUp} from 'react-icons/wi'
 import PageData from '../Components/PageData'
 import {BsClockHistory} from 'react-icons/bs'
 
-export const Footer = () => {
-    const [display, setDisplay] = useState(3)
 
+export const Footer = () => {
+    
     const truncateString = (str, num) => {
         if (str?.length > num){
             return( str.slice(0, num)+'...')
@@ -17,6 +17,7 @@ export const Footer = () => {
   return (
     <div className=''>
         <div className='grid md:grid-cols-3 grid-cols-1 p-3 gap-4'>
+            {/* News letter */}
             <div>
                 <h1 className='font-bold p-2 text-lg'>New Letter</h1>
                 <p className='p-3 py-5 font-light'>Get the latest posts delivered straight to your inbox.</p>
@@ -35,17 +36,18 @@ export const Footer = () => {
                     </span>
                 </div>
             </div>
+            {/* Latest Posts */}
             <div className=''>
                 <h1 className='font-bold p-2 text-lg'>Latest Posts</h1>
                 <div>
                     {
-                        PageData.slice(0, display).map((item, idx)=> (
+                        PageData.filter((show)=> show.id === 'footer').map((item, idx)=> (
                             <div className='group' >
-                                <div key={idx} className='group-hover:scale-105 ease-in duration-100 relative flex h-20 overflow-hidden bg-stone-100 shadow-inner my-3 rounded-xl'>
+                                <div key={idx} className='group-hover:scale-110 ease-in duration-100 relative flex h-20 overflow-hidden bg-stone-100 shadow-inner my-3 rounded-xl'>
                                     <div className='w-1/4'>
                                         <img src={item.image} alt="image " className='w-full h-full object-cover '/>
                                     </div>
-                                    <div className=' p-2 w-full h-full flex flex-col items-start justify-around bg-pink-200'>
+                                    <div className=' p-2 w-full h-full flex flex-col items-start justify-around'>
                                         <h2 className='text-sm font-semibold  hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>{truncateString(item?.header,50)}</h2>
                                         <p className='flex justify-start items-center text-sm font-thin'><BsClockHistory className='mx-1' />{item.time}</p>
                                     </div>
@@ -55,18 +57,24 @@ export const Footer = () => {
                     }
                 </div>
             </div>
+            {/* Tags */}
             <div className=''>
                 <h1 className='font-bold p-2 text-lg'>Tags</h1>
                 {
-                    PageData.map((pages, id)=>(
-                        <div key={id}>
-                            <div className='list-disc flex flex-wrap '>
-                                { pages.type1? (<span className='font-light bg-stone-200 rounded-full mx-2 p-2 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-green-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>{pages?.type1}</span>) : null}
-                                { pages.type2? (<span className='font-light bg-stone-200 rounded-full mx-2 p-2 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-pink-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{pages?.type2}</span>) : null}
-                                { pages.type3? (<span className='font-light bg-stone-200 rounded-full mx-2 p-2 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-blue-600 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{pages?.type3}</span>) : null}
+                    PageData?.filter((data)=> data.tags === 'id').map((result, idd)=>{
+                        return(
+                            <div key={idd} >
+                                <div className='flex-wrap flex p-2 '>
+                                    <span className='bg-stone-100 p-2 m-1 rounded-full px-3 font-light'>{result?.tag1}</span>
+                                    <span className='bg-stone-100 p-2 m-1 rounded-full px-3 font-light'>{result?.tag2}</span>
+                                    <span className='bg-stone-100 p-2 m-1 rounded-full px-3 font-light'>{result?.tag3}</span>
+                                    <span className='bg-stone-100 p-2 m-1 rounded-full px-3 font-light'>{result?.tag4}</span>
+                                    <span className='bg-stone-100 p-2 m-1 rounded-full px-3 font-light'>{result?.tag5}</span>
+                                    <span className='bg-stone-100 p-2 m-1 rounded-full px-3 font-light'>{result?.tag6}</span>
+                                </div>
                             </div>
-                        </div>
-                    ))
+                        )
+                    })
                 }
             </div>
         </div>
