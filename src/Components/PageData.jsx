@@ -76,6 +76,7 @@ const PageData = [
         time: '5 min read'
     },
     {
+        id: "featured",
         location: 'page',
         image: `${inspiration}`,
         type1: 'Inspiration',
@@ -114,6 +115,7 @@ const PageData = [
         time: '3 min read'
     },
     {
+        id: "featured",
         location: 'page',
         image: `${drones}`,
         type1: 'Technology',
@@ -123,6 +125,7 @@ const PageData = [
         time: '4 min read'
     },
     {
+        id: "featured",
         location: 'page',
         image: `${forestTree}`,
         type1: 'Nature',
@@ -132,6 +135,7 @@ const PageData = [
         time: '3 min read'
     },
     {
+        id: "latest",
         location: 'page',
         image: `${animal}`,
         type1: 'Travel',
@@ -161,6 +165,7 @@ const PageData = [
         time: '3 min read'
     },
     {
+        id: "latest",
         location: 'page',
         image: `${mountain}`,
         type1: 'Nature',
@@ -181,6 +186,7 @@ const PageData = [
         time: '2 min read'
     },
     {
+        id: "latest",
         location: 'page',
         image: `${goodHealth}`,
         type1: 'Health',
