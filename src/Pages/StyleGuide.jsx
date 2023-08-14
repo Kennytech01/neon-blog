@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {FaQuoteLeft} from 'react-icons/fa'
+import ghost from '../assets/images/ghost.png'
+import premium from '../assets/images/premium.jpg'
+import {BsPencilSquare} from 'react-icons/bs'
+import {MdKeyboardArrowDown} from 'react-icons/md'
+import {MdKeyboardArrowUp} from 'react-icons/md'
+import productCard from '../assets/images/productCard.png'
+import fiveStar from '../assets/images/fiveStar.png'
+import {ImStarFull} from 'react-icons/im'
 
 export const StyleGuide = () => {
+  const [toggleOne, setToggleOne] = useState(false)
+  const [toggleTwo, setToggleTwo] = useState(false)
+
+  
   return (
     <div>
       <div className='text-center font-bold text-3xl pb-10'>
@@ -75,14 +88,162 @@ export const StyleGuide = () => {
         <div className='p-5 lg:mx-20 md:mx-10'>
           <h1 className='font-bold text-black text-3xl py-5'>Quote</h1>
           <p>Do you know you can type a greater than symbol and space at the beginnign of any text to make it a quote in Ghost Koenig Editor similar as markdown.</p>
-          <div className='my-10 border-l-4 border-[#ec094d]'>
+          <div className='my-5 border-l-4 border-[#ec094d]'>
             <p className='p-3'>We still do not know one-thousandth of one percent of what nature has revealed to us. - Albert Einstein</p>
+          </div>
+        </div>
+        {/* Quote alternative */}
+        <div className='p-5 lg:mx-20 md:mx-10'>
+          <h1 className='font-bold text-black text-3xl py-5'>Quote alternative</h1>
+          <p className='p-3'>Ghost support 2 types of blockquotes. Here is the second one.</p>
+          <div className='border-t-2 border-b-2 border-b-[#ec094d] my-20 flex flex-col justify-center items-center'>
+            <FaQuoteLeft className='mt-5 text-[#ec094d]' />
+            <p className='m-auto p-10 text-2xl'>We still do not know one-thousandth of one percent of what nature has revealed to us. - Albert Einstein</p>
+          </div>
+        </div>
+        {/* Bookmark */}
+        <div className='p-5 lg:mx-20 md:mx-10'>
+          <h1 className='font-bold text-black text-3xl py-5'>Bookmark</h1>
+          <p>In ghost editor, just paste a link and it will automatically converted to bookmark card. It is awesome</p>
+         {/* ghost */}
+          <div className='border md:mx-10 my-5 rounded-lg flex flex-col sm:flex-row md:h-40 h-auto shadow-inner hover:cursor-pointer'>
+            <div className='w-full md:mx-5 p-2 '>
+              <h2 className='font-bold text-black pt-4 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>Ghost: Turn your Audience in a business</h2>
+              <p className='capitalize md:py-3 text-sm '>The world most popular modern platform for creating a new media platform. Used by Apple, Skynews, Buffer, OpenAi</p>
+              <p className='text-xs py-2 text-stone-600 font-bold'>Ghost:The professional Publishing platform</p>
+            </div>
+            <div className='h-1/2 md:h-full md:w-1/2 w-full p-3 order-first sm:order-2'>
+              <img src={ghost} alt="image" className='rounded-lg w-full h-full object-cover' />
+            </div>
+          </div>
+          <p className='text-center text-sm cursor-text'>Optional caption</p>
+          {/* premiumGhost */}
+          <div className='border md:mx-10 my-5 rounded-lg flex flex-col sm:flex-row md:h-40 h-auto shadow-inner hover:cursor-pointer'>
+            <div className='w-full md:mx-5 p-2 '>
+              <h2 className='font-bold text-black pt-4 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>Premium Ghost themes</h2>
+              <p className='capitalize py-3 text-sm'>Functional and beautiful Ghost themes, easily build your amazing websites using our premium quality SEO friendly themes</p>
+              <p className='text-xs py-4 text-stone-600 font-bold'>GBJ solution</p>
+            </div>
+            <div className='h-1/2 md:h-full md:w-1/2 w-full p-3 order-first sm:order-2'>
+              <img src={premium} alt="image" className='rounded-lg w-full h-full object-cover' />
+            </div>
+          </div>
+        </div>
+        {/* callOut */}
+        <div className='p-5 lg:mx-20 md:mx-10'>
+          <h1 className='font-bold text-black text-3xl py-5'>Callout</h1>
+          <p>Here are some callout examples. These are useful for drawing your reader's attention.</p>
+          {/* div-1 */}
+          <div className=' md:m-10 mt-5 bg-pink-300/20  rounded-lg shadow'>
+            <div className='flex sm:flex-row flex-col items-center justify-center md:p-4 p-2'>
+              <BsPencilSquare size={30}/>
+              <p className='md:pl-3 p-1'>Proin at pharetra enim, quis sagittis eros. Nulla placerat ultrices arcu a iaculis. Mauris dolor orci, vehicula quis efficitur quis, venenatis in ex. Integer est neque, volutpat id pellentesque vitae, tempor vel est.</p>
+            </div>
+          </div>
+          {/* div-2 */}
+          <div className=' md:m-10 mt-5 bg-orange-100  rounded-lg shadow'>
+            <div className='flex sm:flex-row flex-col items-center justify-center md:p-4 p-2'>
+              <BsPencilSquare size={30}/>
+              <p className='md:pl-3 p-1'>Proin at pharetra enim, quis sagittis eros. Nulla placerat ultrices arcu a iaculis. Mauris dolor orci, vehicula quis efficitur quis, venenatis in ex. Integer est neque, volutpat id pellentesque vitae, tempor vel est.</p>
+            </div>
+          </div>
+          {/* div-3 */}
+          <div className=' md:m-10 mt-5 bg-stone-300/30  rounded-lg shadow'>
+            <div className='flex sm:flex-row flex-col items-center justify-center md:p-4 p-2'>
+              <BsPencilSquare size={30}/>
+              <p className='md:pl-3 p-1'>Proin at pharetra enim, quis sagittis eros. Nulla placerat ultrices arcu a iaculis. Mauris dolor orci, vehicula quis efficitur quis, venenatis in ex. Integer est neque, volutpat id pellentesque vitae, tempor vel est.</p>
+            </div>
+          </div>
+          {/* div-4 */}
+          <div className=' md:m-10 mt-5 bg-emerald-400/20  rounded-lg shadow'>
+            <div className='flex sm:flex-row flex-col items-center justify-center md:p-4 p-2'>
+              <BsPencilSquare size={30}/>
+              <p className='md:pl-3 p-1'>Proin at pharetra enim, quis sagittis eros. Nulla placerat ultrices arcu a iaculis. Mauris dolor orci, vehicula quis efficitur quis, venenatis in ex. Integer est neque, volutpat id pellentesque vitae, tempor vel est.</p>
+            </div>
+          </div>
+        </div>
+        {/* toggle */}
+        <div className='p-5 lg:mx-20 md:mx-10'>
+          <h1 className='font-bold text-black text-3xl py-5'>Toggle</h1>
+          {/* toggle-1  */}
+          <div className='border md:m-10 mt-5' onClick={()=> setToggleOne(!toggleOne)}>
+            <h1 className='flex justify-between items-center p-2 font-bold'>
+              <span>What is Ghost?</span> 
+              {
+                toggleOne? <MdKeyboardArrowDown/> : <MdKeyboardArrowUp/>
+              }
+            </h1>
+            {
+              toggleOne? <p className='p-2'>Ghost is an open-source publishing platform. It is a powerful app for creators and publishers to publish, share, and grow a business around their content.</p>
+              :
+              null
+            }
+          </div>
+          {/* toggle-2  */}
+          <div className='border md:m-10 mt-5 rounded' onClick={()=> setToggleTwo(!toggleTwo)} >
+            <h1 className='flex justify-between items-center p-2 font-bold'>
+              <span>Is Ghost headless?</span> 
+              {
+                toggleOne? <MdKeyboardArrowDown/> : <MdKeyboardArrowUp/>
+              }
+            </h1>
+            {
+              toggleTwo? <p className='p-2 duration-300'>Ghost has a very strong front-end theme system. But you can also use Ghost as a headless CMS using the power of its content API and admin API.</p>
+              :
+              null
+            }
+          </div>
+        </div>
+        {/* productCard */}
+        <div className='p-2 md:p-5 lg:mx-20 md:mx-10'>
+          <h1 className='font-bold text-black text-3xl py-5'>Product Card</h1>
+          <div className='bg-white shadow-inner border lg:mx-20 md:mx-12 rounded flex flex-col justify-center items-center'>
+            <img src={productCard} alt="" className='w-full p-2' />
+            <div className='md:mx-12 '>
+              <p className='md:flex justify-around items-center p-2 '>
+                <span className='md:text-xl text-black w-full font-bold ' >Inros - multipurpose ghost theme</span>
+                <span className='flex  text-[#EC094D] p-3'>
+                  <ImStarFull className='mx-1'/>
+                  <ImStarFull className='mx-1'/>
+                  <ImStarFull className='mx-1'/>
+                  <ImStarFull className='mx-1'/>
+                  <ImStarFull className='mx-1'/>
+                </span>
+              </p>
+              <p className='text-sm text-stone-700 p-3'>Inros is a modern classic blog theme for Ghost blog/publishing platform. If you are looking for a good theme for your Ghost site then Inros is a suitable theme for your website.</p>
+              <ul className='p-5 list-disc'>
+                <li className='py-2'>Membership and subscription</li>
+                <li className='py-2'>Light and dark version</li>
+                <li className='py-2'>Content search</li>
+              </ul>
+              {/* submit */}
+              <form action="" method="post">
+                <div className='my-5 w-full h-10 bg-[#EC094D] hover:bg-[#de7e9a] text-stone-200 duration-200  flex justify-center items-center font-bold rounded-full'>
+                  <button type="submit" className=' outline-none '>Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {/* video Card */}
+        <div className='p-2 md:p-5 lg:mx-20 md:mx-10'>
+          <h1 className='font-bold text-black text-3xl py-5'>Video Card</h1>
+          <div className='w-full'>
+            <video width="auto" height="auto" controls className='w-full h-72' >
+              <source src="https://youtu.be/W_MfNQ9cv9M" type="video"/>
+            </video>
           </div>
         </div>
       </div>
     </div>
   )
 }
+
+
+// https://ads.google.com/
+
+
+
 
 
 
