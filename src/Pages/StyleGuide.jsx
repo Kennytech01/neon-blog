@@ -13,11 +13,14 @@ export const StyleGuide = () => {
   const [toggleOne, setToggleOne] = useState(false)
   const [toggleTwo, setToggleTwo] = useState(false)
 
+    // textInput must be declared here so the ref can refer to it 
+    // cot
+   
   
   return (
     <div>
       <div className='text-center font-bold text-3xl pb-10'>
-        <h1>Styled Guide</h1>
+        <h1 className='text-stone-700'>Styled Guide</h1>
       </div>
       {/*  */}
       <div className='md:mx-10 mx-3 text-stone-700 bg-stone-100 rounded-xl mb-24'>
@@ -218,7 +221,7 @@ export const StyleGuide = () => {
               </ul>
               {/* submit */}
               <form action="" method="post">
-                <div className='my-5 w-full h-10 bg-[#EC094D] hover:bg-[#de7e9a] text-stone-200 duration-200  flex justify-center items-center font-bold rounded-full'>
+                <div className='my-10 w-full h-10 bg-[#EC094D] hover:bg-[#de7e9a] text-stone-200 duration-200  flex justify-center items-center font-bold rounded-full'>
                   <button type="submit" className=' outline-none '>Subscribe</button>
                 </div>
               </form>
@@ -233,6 +236,10 @@ export const StyleGuide = () => {
               <source src="https://youtu.be/W_MfNQ9cv9M" type="video"/>
             </video>
           </div>
+        </div>
+        {/* Audio Card */}
+        <div className='p-2 md:p-5 lg:mx-20 md:mx-10'>
+          <h1 className='font-bold text-black text-3xl py-5'>Video Card</h1>
         </div>
       </div>
     </div>

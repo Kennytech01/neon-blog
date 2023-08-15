@@ -15,7 +15,7 @@ export const Footer = () => {
         }
     }
   return (
-    <div className='bg-stone-300/40'>
+    <div className='bg-stone-300/30'>
         <div className='grid md:grid-cols-3 grid-cols-1 p-3 gap-8'>
             {/* News letter */}
             <div>
@@ -42,8 +42,8 @@ export const Footer = () => {
                 <div>
                     {
                         PageData.filter((show)=> show.id === 'footer').map((item, idx)=> (
-                            <div className='' >
-                                <div key={idx} className=' duration-100 relative flex h-20 overflow-hidden bg-stone-100 shadow-inner my-3 rounded-xl'>
+                            <div key={idx} >
+                                <div className=' duration-100 relative flex h-20 overflow-hidden bg-stone-100 shadow-inner my-3 rounded-xl'>
                                     <div className='w-1/4'>
                                         <img src={item.image} alt="image " className='w-full h-full object-cover '/>
                                     </div>

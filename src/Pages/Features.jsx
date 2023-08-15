@@ -4,7 +4,7 @@ export const Features = () => {
   return (
     <div className='m-auto max-w-[1400px]'>
       <div className='text-center font-bold text-3xl pb-10'>
-        <h1>Features</h1>
+        <h1 className='text-stone-700'>Features</h1>
       </div>
       <div className='md:mx-10 mx-3 text-stone-700 bg-stone-100 rounded-xl mb-24'>
         <div className='p-5 lg:mx-20 md:mx-10 '>
