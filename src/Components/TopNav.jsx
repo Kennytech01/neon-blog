@@ -15,7 +15,7 @@ export const TopNav = () => {
 
     useEffect(()=>{
         const body = document.querySelector('body');
-        body.style.overflow = mobile? 'hidden' : 'auto';
+        body.style.overflow = mobile? 'scroll' : 'auto';
     }, [mobile]);
     
     
@@ -164,83 +164,85 @@ export const TopNav = () => {
             mobile? (
                 <div>
                     <div onClick={()=> setMobile(!mobile)} className='bg-black/40 fixed w-full h-full left-0 right-0 top-0 z-20'></div>
-                <ul onMouseLeave={()=> setMobile(!mobile)} className={`duration-300 ease-in  z-[999] absolute right-8 top-16 flex flex-col justify-center w-52 py-2 px-5 mt-2 rounded-lg shadow-xl border bg-stone-50 overflow-scroll no-scrollbar `}>
-                    <NavLink
-                        onClick={()=> setMobile(!mobile)}
-                        to = '/features' 
-                        style={
-                            ({isActive}) => {
-                            return {color: isActive? '#EC094D' : 'black'}
-                        }}
-                        className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
-                        Features
-                    </NavLink>
-                    <NavLink 
-                        onClick={()=> setMobile(!mobile)}
-                        to = '/styleGuide' 
-                        style={
-                            ({isActive}) => {
-                            return {color: isActive? '#EC094D' : 'black'}
-                        }}
-                        className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
-                        Style Guide
-                    </NavLink>
-                    <NavLink 
-                        onClick={()=> setMobile(!mobile)}
-                        to = '/tags' 
-                        style={
-                            ({isActive}) => {
-                            return {color: isActive? '#EC094D' : 'black'}
-                        }}
-                        className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
-                        Tags
-                    </NavLink>
-                    <NavLink
-                        onClick={()=> setMobile(!mobile)} 
-                        to = '/author' 
-                        style={
-                            ({isActive}) => {
-                            return {color: isActive? '#EC094D' : 'black'}
-                        }}
-                        className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
-                        Authors
-                    </NavLink>
-                    <div >
-                        <button className='p-3'><LiaMoonSolid size={20} onClick={()=> setMobile(!mobile)}/></button>
-                        <button className='p-3 hover:text-[#EC094D]'>
-                            <AiOutlineSearch size={20} className='hover:underline' onClick={()=>setSearch(true)} />
-                        </button>
-                        {
-                            search? (
-                                <div className='fixed top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
-                                    <div className='w-full h-full absolute bg-black/40' onClick={()=>setSearch(!search)}></div>
-                                    <div className='z-[999] absolute top-28 w-1/2 flex justify-start items-center bg-stone-50 h-16 rounded p-2 px-3 '>
-                                        <AiOutlineSearch size={20} className=''/>
-                                        <input 
-                                        type="search" name="search-btn" id=""
-                                        required 
-                                        placeholder={`Search posts,tags and authors..`} 
-                                        className='ml-3 w-full outline-none text-xl font-light'
-                                        />
-                                    </div>
-                                </div>
-                            )
-                            :
-                            null 
-                        }
+                    <div onMouseLeave={()=> setMobile(!mobile)} className=' duration-300 ease-in  z-[999] absolute right-8 top-16  w-1/2 py-2 px-5 mt-2 rounded-lg shadow-xl bg-pink-50'>
+                        <ul  className={`flex flex-col justify-center h-auto overflow-y-scroll scroll-smooth no-scrollbar`}>
+                            <NavLink
+                                onClick={()=> setMobile(!mobile)}
+                                to = '/features' 
+                                style={
+                                    ({isActive}) => {
+                                    return {color: isActive? '#EC094D' : 'black'}
+                                }}
+                                className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
+                                Features
+                            </NavLink>
+                            <NavLink 
+                                onClick={()=> setMobile(!mobile)}
+                                to = '/styleGuide' 
+                                style={
+                                    ({isActive}) => {
+                                    return {color: isActive? '#EC094D' : 'black'}
+                                }}
+                                className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
+                                Style Guide
+                            </NavLink>
+                            <NavLink 
+                                onClick={()=> setMobile(!mobile)}
+                                to = '/tags' 
+                                style={
+                                    ({isActive}) => {
+                                    return {color: isActive? '#EC094D' : 'black'}
+                                }}
+                                className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
+                                Tags
+                            </NavLink>
+                            <NavLink
+                                onClick={()=> setMobile(!mobile)} 
+                                to = '/author' 
+                                style={
+                                    ({isActive}) => {
+                                    return {color: isActive? '#EC094D' : 'black'}
+                                }}
+                                className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
+                                Authors
+                            </NavLink>
+                            <div >
+                                <button className='p-3'><LiaMoonSolid size={20} onClick={()=> setMobile(!mobile)}/></button>
+                                <button className='p-3 hover:text-[#EC094D]'>
+                                    <AiOutlineSearch size={20} className='hover:underline' onClick={()=>setSearch(true)} />
+                                </button>
+                                {
+                                    search? (
+                                        <div className='fixed top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
+                                            <div className='w-full h-full absolute bg-black/40' onClick={()=>setSearch(!search)}></div>
+                                            <div className='z-[999] absolute top-28 w-1/2 flex justify-start items-center bg-stone-50 h-16 rounded p-2 px-3 '>
+                                                <AiOutlineSearch size={20} className=''/>
+                                                <input 
+                                                type="search" name="search-btn" id=""
+                                                required 
+                                                placeholder={`Search posts,tags and authors..`} 
+                                                className='ml-3 w-full outline-none text-xl font-light'
+                                                />
+                                            </div>
+                                        </div>
+                                    )
+                                    :
+                                    null 
+                                }
+                            </div>
+                            <Link to = 'signIn' onClick={()=> setMobile(!mobile)}>
+                                <button className='p-3'>
+                                    Sign In
+                                </button>
+                            </Link>
+                            <button 
+                                onClick={()=> setMobile(!mobile)}
+                                className='p-2 m-2 px-3 bg-[#EC094D] text-stone-100 font-semibold rounded-full hover:scale-95 ease-out duration-200'>
+                                Become member
+                            </button>
+                                
+                        </ul>
                     </div>
-                    <Link to = 'signIn' onClick={()=> setMobile(!mobile)}>
-                        <button className='p-3'>
-                            Sign In
-                        </button>
-                    </Link>
-                    <button 
-                        onClick={()=> setMobile(!mobile)}
-                        className='p-2 m-2 px-3 bg-[#EC094D] text-stone-100 font-semibold rounded-full hover:scale-110 ease-out duration-200'>
-                        Become member
-                    </button>
-                        
-                </ul>
                 </div>
                 )
             :
