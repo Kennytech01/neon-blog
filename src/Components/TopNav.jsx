@@ -164,7 +164,7 @@ export const TopNav = () => {
             mobile? (
                 <div>
                     <div onClick={()=> setMobile(!mobile)} className='bg-black/40 fixed w-full h-full left-0 right-0 top-0 z-20'></div>
-                    <div onMouseLeave={()=> setMobile(!mobile)} className=' duration-300 ease-in  z-[999] absolute right-8 top-16  w-1/2 py-2 px-5 mt-2 rounded-lg shadow-xl bg-pink-50'>
+                    <div onMouseLeave={()=> setMobile(!mobile)} className=' duration-300 ease-in  z-[999] absolute right-8 top-16  w-2/3 py-2 px-5 mt-2 rounded-lg shadow-xl bg-pink-50'>
                         <ul  className={`flex flex-col justify-center h-auto overflow-y-scroll scroll-smooth no-scrollbar`}>
                             <NavLink
                                 onClick={()=> setMobile(!mobile)}
