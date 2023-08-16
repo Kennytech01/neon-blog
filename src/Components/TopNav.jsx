@@ -18,11 +18,17 @@ export const TopNav = () => {
         const body = document.querySelector('body');
         body.style.overflow = mobile? 'scroll' : 'auto';
     }, [mobile]);
+
+    // useEffect(() => {
+    //   const mySearch = document.getElementById('mySearch');
+    //   mySearch.style.overflow = search? 'hidden' : 'auto'
+    // }, [search])
+    
     
     
   return (
-    <div id='topNav' className='max-w-[1040px] m-auto relative'>
-        <div className='bg-stone-100 z-[999] h-20 md:my-20 my-5 border flex items-center justify-between p-3 shadow-lg rounded '>
+    <div id='topNav' className='max-w-[1040px] m-auto relativ'>
+        <div className='bg-stone-100 z-[99] h-20 md:my-20 my-5 border flex items-center justify-between p-3 shadow-lg rounded '>
             <Link to = "/" >
                 <img src={LOGO} alt="logo" className=''/>
             </Link>
@@ -117,14 +123,14 @@ export const TopNav = () => {
                         null
                     }
                 </div>
-                <div >
+                <div className=''>
                     <button className='p-3 hover:text-[#EC094D]'>
                         <AiOutlineSearch size={20} className='hover:underline' onClick={()=>setSearch(true)} />
                     </button>
                     {
                         search? (
-                            <div className='absolute top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
-                                <div className='w-full h-full absolute bg-black/40' onClick={()=>setSearch(!search)}></div>
+                            <div id='mySearch' className=' absolute top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
+                                <div className='w-full h-full absolute  bg-black/40' onClick={()=>setSearch(!search)}></div>
                                 <div className='z-[999] absolute top-28 w-1/2 flex justify-start items-center bg-stone-50 h-16 rounded p-2 px-3 '>
                                     <AiOutlineSearch size={20} className=''/>
                                     <input 
@@ -214,7 +220,7 @@ export const TopNav = () => {
                                 </button>
                                 {
                                     search? (
-                                        <div className='fixed top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
+                                        <div id='mySearch' className=' fixed top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
                                             <div className='w-full h-full absolute bg-black/60' onClick={()=>setSearch(!search)}></div>
                                             <div className='z-[999] absolute top-28 md:w-1/2 mx-2 flex justify-start items-center bg-stone-50 md:h-16 h-12 rounded p-2 px-3 '>
                                                 <AiOutlineSearch size={20} className=''/>
