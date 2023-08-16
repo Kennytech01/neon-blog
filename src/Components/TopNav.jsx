@@ -6,6 +6,7 @@ import {LiaMoonSolid} from 'react-icons/lia'
 import {HiMiniBars3BottomRight} from 'react-icons/hi2'
 import {BsArrowDownShort} from 'react-icons/bs'
 import {LiaTimesSolid} from 'react-icons/lia'
+import { FaTwitter, FaLinkedinIn, FaFacebookF, FaGithub, FaInstagram } from 'react-icons/fa'
 
 
 export const TopNav = () => {
@@ -214,14 +215,14 @@ export const TopNav = () => {
                                 {
                                     search? (
                                         <div className='fixed top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
-                                            <div className='w-full h-full absolute bg-black/40' onClick={()=>setSearch(!search)}></div>
-                                            <div className='z-[999] absolute top-28 w-1/2 flex justify-start items-center bg-stone-50 h-16 rounded p-2 px-3 '>
+                                            <div className='w-full h-full absolute bg-black/60' onClick={()=>setSearch(!search)}></div>
+                                            <div className='z-[999] absolute top-28 md:w-1/2 mx-2 flex justify-start items-center bg-stone-50 md:h-16 h-12 rounded p-2 px-3 '>
                                                 <AiOutlineSearch size={20} className=''/>
                                                 <input 
                                                 type="search" name="search-btn" id=""
                                                 required 
                                                 placeholder={`Search posts,tags and authors..`} 
-                                                className='ml-3 w-full outline-none text-xl font-light'
+                                                className='ml-3 w-full outline-none md:text-xl'
                                                 />
                                             </div>
                                         </div>
@@ -240,7 +241,16 @@ export const TopNav = () => {
                                 className='p-2 m-2 px-3 bg-[#EC094D] text-stone-100 font-semibold rounded-full hover:scale-95 ease-out duration-200'>
                                 Become member
                             </button>
-                                
+                            <div>
+                                <h1 className='font-bold p-2'>Follow Us</h1>
+                                <span className='flex p-2'>
+                                    <FaTwitter className='m-2 text-blue-400 hover:scale-110 ease-in duration-100' size={20}/>
+                                    <FaFacebookF className='m-2 text-blue-800 hover:scale-110 ease-in duration-100' size={20}/>
+                                    <FaInstagram className='m-2 text-red-600 hover:scale-110 ease-in duration-100' size={20}/>
+                                    <FaLinkedinIn className='m-2 text-blue-900 hover:scale-110 ease-in duration-100' size={20}/>
+                                    <FaGithub className='m-2 text-black hover:scale-110 ease-in duration-100' size={20}/>
+                                </span>
+                            </div>   
                         </ul>
                     </div>
                 </div>
