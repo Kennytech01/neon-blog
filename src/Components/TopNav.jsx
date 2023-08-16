@@ -19,10 +19,10 @@ export const TopNav = () => {
         body.style.overflow = mobile? 'scroll' : 'auto';
     }, [mobile]);
 
-    // useEffect(() => {
-    //   const mySearch = document.getElementById('mySearch');
-    //   mySearch.style.overflow = search? 'hidden' : 'auto'
-    // }, [search])
+    useEffect(() => {
+      const body = document.querySelector('body');
+      body.style.overflow = search? 'hidden' : 'auto'
+    }, [search])
     
     
     
@@ -130,14 +130,14 @@ export const TopNav = () => {
                     {
                         search? (
                             <div id='mySearch' className=' absolute top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
-                                <div className='w-full h-full absolute  bg-black/40' onClick={()=>setSearch(!search)}></div>
-                                <div className='z-[999] absolute top-28 w-1/2 flex justify-start items-center bg-stone-50 h-16 rounded p-2 px-3 '>
+                                <div className='w-full h-full fixed left-0 right-0  bg-black/60 z-[999]' onClick={()=>setSearch(!search)}></div>
+                                <div className='z-[999] absolute top-28 w-1/2 flex justify-start items-center bg-white h-16 rounded p-2 px-3 '>
                                     <AiOutlineSearch size={20} className=''/>
                                     <input 
                                     type="search" name="search-btn" id=""
-                                    required 
+                                    autoFocus
                                     placeholder={`Search posts,tags and authors..`} 
-                                    className='ml-3 w-full outline-none text-xl font-light'
+                                    className='ml-3 w-full h-full outline-none'
                                     />
                                 </div>
                             </div>
@@ -171,7 +171,7 @@ export const TopNav = () => {
             mobile? (
                 <div>
                     <div onClick={()=> setMobile(!mobile)} className='bg-black/40 fixed w-full h-full left-0 right-0 top-0 z-20'></div>
-                    <div onMouseLeave={()=> setMobile(!mobile)} className=' duration-300 ease-in  z-[999] absolute right-8 top-16  w-2/3 py-2 px-5 mt-2 rounded-lg shadow-xl bg-pink-50'>
+                    <div onMouseLeave={()=> setMobile(!mobile)} className=' duration-300 ease-in  z-[999] absolute right-8 top-32  w-2/3 py-2 px-5 mt-2 rounded-lg shadow-xl bg-pink-50'>
                         <ul  className={`flex flex-col justify-center h-auto overflow-y-scroll scroll-smooth no-scrollbar`}>
                             <NavLink
                                 onClick={()=> setMobile(!mobile)}
@@ -221,14 +221,14 @@ export const TopNav = () => {
                                 {
                                     search? (
                                         <div id='mySearch' className=' fixed top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
-                                            <div className='w-full h-full absolute bg-black/60' onClick={()=>setSearch(!search)}></div>
+                                            <div className='w-full h-full fixed left-0 right-0  bg-black/60' onClick={()=>setSearch(!search)}></div>
                                             <div className='z-[999] absolute top-28 md:w-1/2 mx-2 flex justify-start items-center bg-stone-50 md:h-16 h-12 rounded p-2 px-3 '>
                                                 <AiOutlineSearch size={20} className=''/>
                                                 <input 
                                                 type="search" name="search-btn" id=""
-                                                required 
+                                                autoFocus 
                                                 placeholder={`Search posts,tags and authors..`} 
-                                                className='ml-3 w-full outline-none md:text-xl'
+                                                className='ml-3 w-full outline-none '
                                                 />
                                             </div>
                                         </div>
