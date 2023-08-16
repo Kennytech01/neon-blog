@@ -1,22 +1,26 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import LOGO from '../assets/images/logo.png'
 import { NavLink, Link } from 'react-router-dom'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {LiaMoonSolid} from 'react-icons/lia'
 import {HiMiniBars3BottomRight} from 'react-icons/hi2'
 import {BsArrowDownShort} from 'react-icons/bs'
+import {LiaTimesSolid} from 'react-icons/lia'
 
 
 export const TopNav = () => {
-    const [nav, setnav] = useState(false)
+    const [mobile, setMobile] = useState(false)
     const [open, setOpen ] = useState(false);
     const [search, setSearch] = useState(false)
 
-    
+    useEffect(()=>{
+        const body = document.querySelector('body');
+        body.style.overflow = mobile? 'hidden' : 'auto';
+    }, [mobile]);
     
     
   return (
-    <div id='topNav' className='max-w-[1040px] m-auto '>
+    <div id='topNav' className='max-w-[1040px] m-auto relative'>
         <div className='bg-stone-100 z-[999] h-20 md:my-20 my-5 border flex items-center justify-between p-3 shadow-lg rounded '>
             <Link to = "/" >
                 <img src={LOGO} alt="logo" className=''/>
@@ -149,23 +153,99 @@ export const TopNav = () => {
             
                  {/*mobile view */}
             <div className='flex flex-cols lg:hidden'>
-                <span><HiMiniBars3BottomRight size={30}/></span>
+                <span onClick={()=> setMobile(!mobile)} className='duration-300'>
+                    {mobile?<LiaTimesSolid size={30} /> : <HiMiniBars3BottomRight size={30} />}
+                </span>
             </div>
 
         </div>
+        {/* mobile view */}
+        {
+            mobile? (
+                <div>
+                    <div onClick={()=> setMobile(!mobile)} className='bg-black/40 fixed w-full h-full left-0 right-0 top-0 z-20'></div>
+                <ul onMouseLeave={()=> setMobile(!mobile)} className={`duration-300 z-[999] absolute right-8 top-16 flex flex-col justify-center w-52 py-2 px-5 mt-2 rounded-lg shadow-xl border bg-stone-50`}>
+                    <NavLink
+                        onClick={()=> setMobile(!mobile)}
+                        to = '/features' 
+                        style={
+                            ({isActive}) => {
+                            return {color: isActive? '#EC094D' : 'black'}
+                        }}
+                        className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
+                        Features
+                    </NavLink>
+                    <NavLink 
+                        onClick={()=> setMobile(!mobile)}
+                        to = '/styleGuide' 
+                        style={
+                            ({isActive}) => {
+                            return {color: isActive? '#EC094D' : 'black'}
+                        }}
+                        className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
+                        Style Guide
+                    </NavLink>
+                    <NavLink 
+                        onClick={()=> setMobile(!mobile)}
+                        to = '/tags' 
+                        style={
+                            ({isActive}) => {
+                            return {color: isActive? '#EC094D' : 'black'}
+                        }}
+                        className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
+                        Tags
+                    </NavLink>
+                    <NavLink
+                        onClick={()=> setMobile(!mobile)} 
+                        to = '/author' 
+                        style={
+                            ({isActive}) => {
+                            return {color: isActive? '#EC094D' : 'black'}
+                        }}
+                        className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
+                        Authors
+                    </NavLink>
+                    <div >
+                        <button className='p-3'><LiaMoonSolid size={20} onClick={()=> setMobile(!mobile)}/></button>
+                        <button className='p-3 hover:text-[#EC094D]'>
+                            <AiOutlineSearch size={20} className='hover:underline' onClick={()=>setSearch(true)} />
+                        </button>
+                        {
+                            search? (
+                                <div className='fixed top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
+                                    <div className='w-full h-full absolute bg-black/40' onClick={()=>setSearch(!search)}></div>
+                                    <div className='z-[999] absolute top-28 w-1/2 flex justify-start items-center bg-stone-50 h-16 rounded p-2 px-3 '>
+                                        <AiOutlineSearch size={20} className=''/>
+                                        <input 
+                                        type="search" name="search-btn" id=""
+                                        required 
+                                        placeholder={`Search posts,tags and authors..`} 
+                                        className='ml-3 w-full outline-none text-xl font-light'
+                                        />
+                                    </div>
+                                </div>
+                            )
+                            :
+                            null 
+                        }
+                    </div>
+                    <Link to = 'signIn' onClick={()=> setMobile(!mobile)}>
+                        <button className='p-3'>
+                            Sign In
+                        </button>
+                    </Link>
+                    <button 
+                        onClick={()=> setMobile(!mobile)}
+                        className='p-2 m-2 px-3 bg-[#EC094D] text-stone-100 font-semibold rounded-full hover:scale-110 ease-out duration-200'>
+                        Become member
+                    </button>
+                        
+                </ul>
+                </div>
+                )
+            :
+            null
+        }
     </div>
   )
 }
-// Home post vertical
-// Home post masonry
-// Post fullwidth
-// Post no sidebar
-// Post cover auto height
-// Post with TOC
-// Tag style two
-// Author style two
-// Author style three
-// Yearly archive
-// Monthly archive
-// Contact
-// Documentation
