@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* goggleFonts */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
 
  /*No scrollBar?. add the code bellow */
 @layer utilities {
@@ -17,4 +19,8 @@
           scrollbar-width: none;  /* Firefox */
       }
     }
+  }
+
+  .inner {
+    transition: transform 0.3s;
   }

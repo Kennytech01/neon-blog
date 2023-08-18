@@ -1,8 +1,8 @@
-import slider5 from '../assets/images/slider5.jpeg'
-import slider3 from '../assets/images/slider3.jpeg'
-import slider4 from '../assets/images/slider4.jpeg'
-import slider2 from '../assets/images/slider2.jpeg'
-import slider1 from '../assets/images/slider1.jpeg'
+import slider5 from '../assets/images/slider5.png'
+import slider3 from '../assets/images/slider3.png'
+import slider4 from '../assets/images/slider4.png'
+import slider2 from '../assets/images/slider2.png'
+import slider1 from '../assets/images/slider1.png'
 
 const SliderData = [
     {
