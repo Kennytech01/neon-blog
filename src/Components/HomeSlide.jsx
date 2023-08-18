@@ -22,7 +22,7 @@ export const HomeSlide = () => {
   }
 
   return (
-    <div className="carousel relative overflow-hidden flex flex-col justify-center items-center bg-blue-200">
+    <div className="carousel relative overflow-hidden flex flex-col justify-center items-center">
       <div id="Slider" className="inner whitespace-nowrap h-full w-full overflow-x-scroll scroll-smooth no-scrollbar relative">
         {
           SliderData.map((item, activeIndex) => {
