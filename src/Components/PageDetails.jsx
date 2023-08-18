@@ -41,7 +41,7 @@ export const PageDetails = () => {
                   { pages.type3? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-blue-600 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{pages?.type3}</span>) : null}
                 </div>
                 <p className=' px-2'><a className='lg:text-2xl hover:cursor-pointer px-1 font-bold hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>{pages.header}</a></p>
-                <p className='md:tracking-wide p-2 text-sm md:text-normal text-stone-600 detail font-thin line-clamp-2 md:line-clamp-none'>{truncateString(pages?.details, 90)}</p>
+                <p className='md:tracking-wide p-2 text-sm md:text-normal text-stone-600 detail font-light line-clamp-2 md:line-clamp-none'>{truncateString(pages?.details, 90)}</p>
                 <p className="font-light text-stone-500 text-xs flex ">
                   <span className="pl-2 px-4 flex justify-center items-center"><BsCalendarDate className="m-1"/>{pages?.date}</span>
                   <span className="px-4 flex justify-center items-center"><TfiTime className="m-1"/>{pages?.time}</span>
