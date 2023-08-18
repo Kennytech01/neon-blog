@@ -37,7 +37,7 @@ export const HomeSlide = () => {
                     {item.titleThree? (<span className='font-light bg-stone-100 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'><span className='bg-orange-400 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{item.titleThree}</span>) : null}
                   </div>
                   <h1 className="lg:text-4xl text-2xl hover:cursor-pointer sm: px-3 font-bold hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">{item.header}</h1>
-                  <h3 className="tracking-wide p-3 text-stone-600 detail font-normal text-ellipsis md:line-clamp-none overflow-hidden">{item.details}</h3>
+                  <h3 className="tracking-wide p-3 text-stone-600 detail font-normal line-clamp-3 md:line-clamp-none overflow-hidden">{item.details}</h3>
                   <p className="font-light text-stone-500 text-sm flex flex-wrap">
                     <span className="p-2 pl-2 px-4 flex justify-center items-center"><BsCalendarDate className="m-1"/>{item.date}</span>
                     <span className="p-2 px-4 flex justify-center items-center"><TfiTime className="m-1"/>{item.time}</span>
