@@ -23,11 +23,11 @@ export const HomeSlide = () => {
 
   return (
     <div className="carousel relative overflow-hidden flex flex-col justify-center items-center">
-      <div id="Slider" className="inner whitespace-nowrap h-full w-full overflow-x-scroll scroll-smooth noscrollbar relative">
+      <div id="Slider" className="inner whitespace-nowrap h-full w-full overflow-x-scroll scroll-smooth no-scrollbar relative">
         {
           SliderData.map((item, activeIndex) => {
             return (
-              <div key={item.details} className="carousel-item h-[30vh]  m-1 inline-flex  items-center justify-center">
+              <div key={item.details} className="carousel-item md:h-[30vh]  m-1 inline-flex  items-center justify-center">
                 {/* leftSide */}
                 <div className="md:w-[100%] h-[100%] whitespace-normal flex flex-col justify-evenly">
                   <div className='flex flex-wrap'>
@@ -54,14 +54,14 @@ export const HomeSlide = () => {
       </div>
       <div className="flex items-center relative justify-between px-5 w-full m-1">
         <div>
-          <BsArrowLeftCircle size={30} onClick={slideLeft} className="cursor-pointer hover:scale-95 ease-in duration-100"/>
+          <BsArrowLeftCircle onClick={slideLeft} className="cursor-pointer hover:scale-95 ease-in duration-100"/>
         </div>
         <div className="indicators">
           {
             SliderData.map((item, index)=>{
               return(
                 <button onClick={()=> updateIndex(index)} >
-                  <span className= {`material-symbols-outlined ${index === activeIndex? '#EC940D' : 'blue'}`} >
+                  <span className= {`material-symbols-outlined text-xs ${index === activeIndex? '#EC940D' : 'blue'}`} >
                     radio_button_checked
                   </span>
                 </button>
@@ -71,7 +71,7 @@ export const HomeSlide = () => {
           
         </div>
         <div>
-          <BsArrowRightCircle size={30} onClick={slideRight} className="cursor-pointer hover:scale-95 ease-in duration-100"/>
+          <BsArrowRightCircle onClick={slideRight} className="cursor-pointer hover:scale-95 ease-in duration-100"/>
         </div>
       </div>
     </div>
