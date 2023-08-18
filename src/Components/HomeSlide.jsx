@@ -52,7 +52,7 @@ export const HomeSlide = () => {
           })
         }
       </div>
-      <div className="flex items-center relative justify-between px-5 w-full m-1 bg-blue-200">
+      <div className="flex items-center relative justify-between px-5 w-full m-1">
         <div>
           <BsArrowLeftCircle size={30} onClick={slideLeft} className="cursor-pointer hover:scale-95 ease-in duration-100"/>
         </div>
