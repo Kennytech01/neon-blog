@@ -7,22 +7,27 @@ import {HiMiniBars3BottomRight} from 'react-icons/hi2'
 import {BsArrowDownShort} from 'react-icons/bs'
 import {LiaTimesSolid} from 'react-icons/lia'
 import { FaTwitter, FaLinkedinIn, FaFacebookF, FaGithub, FaInstagram } from 'react-icons/fa'
-
+import authorData  from '../Pages/Author'
+import { SearchResult } from './SearchResult'
+import useLocalStorage from 'use-local-storage'
 
 export const TopNav = () => {
     const [mobile, setMobile] = useState(false)
     const [open, setOpen ] = useState(false);
-    const [search, setSearch] = useState(false)
+    const [searchToggle, setSearchToggle] = useState(false)
+    const [search, setSearch] = useState('')
+    console.log(search)
 
     useEffect(()=>{
         const body = document.querySelector('body');
         body.style.overflow = mobile? 'scroll' : 'auto';
-        body.style.overflow = search? 'hidden' : 'auto';
-    }, [mobile,search]);
+        body.style.overflow = searchToggle? 'hidden' : 'auto';
+    }, [mobile,searchToggle]);
     
     
   return (
     <div id='topNav' className='max-w-[1040px] m-auto relativ'>
+        {/* topView */}
         <div className='bg-stone-100 z-[99] h-20 md:my-20 my-5 border flex items-center justify-between p-3 shadow-lg rounded '>
             <Link to = "/" >
                 <img src={LOGO} alt="logo" className=''/>
@@ -118,22 +123,41 @@ export const TopNav = () => {
                         null
                     }
                 </div>
+                {/* Search Icon */}
                 <div className=''>
                     <button className='p-3 hover:text-[#EC094D]'>
-                        <AiOutlineSearch size={20} className='hover:underline' onClick={()=>setSearch(true)} />
+                        <AiOutlineSearch size={20} className='hover:underline' onClick={()=>setSearchToggle(true)} />
                     </button>
                     {
-                        search? (
+                        searchToggle? (
                             <div id='mySearch' className=' absolute top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
-                                <div className='w-full h-full fixed left-0 right-0  bg-black/60 z-[999]' onClick={()=>setSearch(!search)}></div>
-                                <div className='z-[999] absolute top-28 w-2/3 flex justify-start items-center bg-white h-16 rounded p-2 px-3 '>
-                                    <AiOutlineSearch size={20} className=''/>
-                                    <input 
-                                    type="search" name="search-btn" id=""
-                                    autoFocus
-                                    placeholder={`Search posts,tags and authors..`} 
-                                    className='ml-3 w-full h-full outline-none'
-                                    />
+                                <div className='w-full h-full fixed left-0 right-0  bg-black/60 z-40' onClick={()=>setSearchToggle(!searchToggle)}></div>
+                                <div className='z-[40] absolute top-28 w-2/3 flex flex-col justify-center items-center h-auto '>
+                                    <div className='bg-white h-16 rounded-full p-2 px-3 flex items-center w-full mb-2'>
+                                        <AiOutlineSearch size={20} className=''/>
+                                        <input 
+                                            onChange={(e)=> setSearch(e.target.value)}
+                                            type="search" name="search-btn" id=""
+                                            autoFocus
+                                            placeholder={`Search posts,tags and authors..`} 
+                                            className='ml-3 w-full h-full outline-none'
+                                        />
+                                    </div>
+                                    <div className={ search ? 'searchResult w-2/3 bg-white rounded z-40 p-5 m-1' : <p>no match found</p> } >
+                                        {
+                                            authorData.filter((item)=> {
+                                                return search.toLowerCase() === ''
+                                                ? null
+                                                : item.name.toLowerCase().includes(search)
+                                            }).map((item)=>{
+                                                return (
+                                                    <div className='p-2'>
+                                                        <SearchResult  key={item.details} item={item} />
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                    </div>
                                 </div>
                             </div>
                         )
@@ -141,12 +165,15 @@ export const TopNav = () => {
                         null 
                     }
                 </div>
+                {/* toggleDarkMode */}
                 <button className='p-3'><LiaMoonSolid size={20}/></button>
+                {/* signIn */}
                 <Link to = 'signIn'>
                     <button className='p-3'>
                         Sign In
                     </button>
                 </Link>
+                {/* becomeMember */}
                 <button 
                     className='p-2 px-3 bg-[#EC094D] text-stone-100 font-semibold rounded-full hover:scale-110 ease-out duration-200'>
                     Become member
@@ -211,12 +238,12 @@ export const TopNav = () => {
                             <div >
                                 <button className='p-3'><LiaMoonSolid size={20} onClick={()=> setMobile(!mobile)}/></button>
                                 <button className='p-3 hover:text-[#EC094D]'>
-                                    <AiOutlineSearch size={20} className='hover:underline' onClick={()=>setSearch(true)} />
+                                    <AiOutlineSearch size={20} className='hover:underline' onClick={()=>setSearchToggle(true)} />
                                 </button>
                                 {
-                                    search? (
+                                    searchToggle? (
                                         <div id='mySearch' className=' fixed top-0 right-0 left-0 h-full w-full flex mx-auto justify-center items-center' >
-                                            <div className='w-full h-full fixed left-0 right-0  bg-black/60' onClick={()=>setSearch(!search)}></div>
+                                            <div className='w-full h-full fixed left-0 right-0  bg-black/60' onClick={()=>setSearchToggle(!searchToggle)}></div>
                                             <div className='z-[999] absolute top-28 w-[80%] mx-2 flex justify-start items-center bg-stone-50 md:h-16 h-12 rounded p-2 px-3 '>
                                                 <AiOutlineSearch size={20} className=''/>
                                                 <input 

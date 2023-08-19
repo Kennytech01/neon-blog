@@ -36,6 +36,7 @@ const authorData = [
         details: 'Apurba is UI & UX designer by profession, photographer by passion. Solo traveller, blogger, badminton player and movie lover.'
     }
 ]
+export default authorData
 export const Author = () => {
     const [toggle, setToggle] = useState(false)
     
@@ -79,7 +80,7 @@ export const Author = () => {
                                     <FaLinkedinIn className='m-2 text-blue-900 hover:scale-110 ease-in duration-100'/>
                                     <FaGithub className='m-2 text-black hover:scale-110 ease-in duration-100'/>
                                 </span>
-                                <p className='font-light text-sm line-clamp-3 lg:line-clamp-none'>{author.details}</p>
+                                <p className='text-sm line-clamp-3 lg:line-clamp-none'>{author.details}</p>
                             </div>
                         </div>
                     </div>
