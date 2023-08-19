@@ -11,23 +11,23 @@ export const HomeSlide = () => {
 
   // leftSlide 
   const slideLeft = () => {
-    let Slider = document.getElementById('Slider')
-    Slider.scrollLeft = Slider.scrollLeft - 300 
+    let Slider = document.getElementById('Slider' + activeIndex)
+    Slider.scrollLeft = Slider.scrollLeft - 1500 
   }
 
    // RightSlide 
    const slideRight = () => {
-    let Slider = document.getElementById('Slider')
-    Slider.scrollLeft = Slider.scrollLeft + 300
+    let Slider = document.getElementById('Slider' + activeIndex)
+    Slider.scrollLeft = Slider.scrollLeft + 1500
   }
 
   return (
     <div className="carousel relative overflow-hidden flex flex-col justify-center items-center">
-      <div id="Slider" className="inner whitespace-nowrap h-full w-full overflow-x-scroll scroll-smooth no-scrollbar relative">
+      <div id={'Slider' + activeIndex} className="inner group whitespace-nowrap h-full w-full overflow-x-scroll scroll-smooth no-scrollbar relative">
         {
-          SliderData.map((item, activeIndex) => {
+          SliderData.map((item, idx) => {
             return (
-              <div key={item.details} className="carousel-item w-full inline-flex items-center justify-center">
+              <div key={idx} className="carousel-item group-hover:cursor-pointer w-[100vm] inline-flex items-center justify-center ">
                 {/* leftSide */}
                 <div className=" w-full h-80 whitespace-normal flex flex-col justify-evenly items-start">
                   <div className='flex flex-wrap'>
@@ -36,8 +36,8 @@ export const HomeSlide = () => {
                     {item.titleTwo? (<span className='font-light bg-stone-100 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'><span className='bg-blue-600 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{item.titleTwo}</span>) : null}
                     {item.titleThree? (<span className='font-light bg-stone-100 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'><span className='bg-orange-400 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{item.titleThree}</span>) : null}
                   </div>
-                  <h1 className="lg:text-4xl text-2xl hover:cursor-pointer sm: px-3 font-bold hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">{item.header}</h1>
-                  <h3 className="tracking-wide p-3 text-stone-600 detail font-normal line-clamp-3 md:line-clamp-none overflow-hidden">{item.details}</h3>
+                  <h1 className="lg:text-4xl text-2xl hover:cursor-pointer px-3 font-bold hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">{item.header}</h1>
+                  <h3 className="tracking-wide p-1 h-20 md:h-auto text-stone-600 detail font-normal line-clamp-3 md:line-clamp-none overflow-hidden">{item.details}</h3>
                   <p className="font-light text-stone-500 text-sm flex flex-wrap">
                     <span className="p-2 pl-2 px-4 flex justify-center items-center"><BsCalendarDate className="m-1"/>{item.date}</span>
                     <span className="p-2 px-4 flex justify-center items-center"><TfiTime className="m-1"/>{item.time}</span>
