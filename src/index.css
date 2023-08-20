@@ -2,8 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* goggleFonts */
-/* @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext'); */
+:root{
+  --background: #e5e7eb;
+  --text-primary: #000000;
+  --text-secondary: #f4ebe2;
+  --accent: #44403c;
+  --form-bg: #fff;
+  --button-bg: #EC094D;
+}
+
+[data-theme = 'dark'] {
+  --text-primary: #e5e7eb;
+  --background: #000000;
+  --text-secondary: #f4ebe2;
+  --accent: #44403c;
+  --form-bg: #fff;
+  --button-bg: #EC094D;
+}
+
+.submit {
+  background-color: var(--button-bg);
+  color: var(--text-secondary)
+}
+
+.sign{
+  color: var(--accent)
+}
 
  /*No scrollBar?. add the code bellow */
 @layer utilities {

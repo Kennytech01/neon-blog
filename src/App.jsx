@@ -7,12 +7,15 @@ import { Author } from './Pages/Author'
 import { Tags } from './Pages/Tags'
 import { HomePage } from './Pages/HomePage'
 import { Footer } from './Pages/Footer'
+import { SignIn } from './Pages/SignIn'
+import { SignUp } from './Pages/SignUp'
+
 
 
 function App() {
 
   return (
-    <>
+    <div >
       <TopNav/>
       <Routes>
         <Route path='/' element= {<HomePage/>}/>
@@ -20,9 +23,11 @@ function App() {
         <Route path='/styleGuide' element= {<StyleGuide/>}/>
         <Route path='/tags' element= {<Tags/>}/>
         <Route path='/author' element= {<Author/>}/>
+        <Route path='/signin' element={<SignIn/>} />
+        <Route path='/signup' element={<SignUp/>} />
       </Routes>
       <Footer/>
-    </>
+    </div>
   )
 }
 

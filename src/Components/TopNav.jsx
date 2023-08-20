@@ -11,13 +11,19 @@ import authorData  from '../Pages/Author'
 import { SearchResult } from './SearchResult'
 import useLocalStorage from 'use-local-storage'
 
+
 export const TopNav = () => {
     const [mobile, setMobile] = useState(false)
     const [open, setOpen ] = useState(false);
     const [searchToggle, setSearchToggle] = useState(false)
     const [search, setSearch] = useState('')
-    console.log(search)
-
+    
+    const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
+    const switchTheme = () => {
+        const newTheme = theme === 'light' ? 'dark' : 'light'
+        setTheme(newTheme)
+        console.log(newTheme)
+    }
     useEffect(()=>{
         const body = document.querySelector('body');
         body.style.overflow = mobile? 'scroll' : 'auto';
@@ -26,7 +32,7 @@ export const TopNav = () => {
     
     
   return (
-    <div id='topNav' className='max-w-[1040px] m-auto relativ'>
+    <div id='topNav' className='max-w-[1040px] m-auto' >
         {/* topView */}
         <div className='bg-stone-100 z-[99] h-20 md:my-20 my-5 border flex items-center justify-between p-3 shadow-lg rounded '>
             <Link to = "/" >
@@ -166,18 +172,20 @@ export const TopNav = () => {
                     }
                 </div>
                 {/* toggleDarkMode */}
-                <button className='p-3'><LiaMoonSolid size={20}/></button>
+                <button onClick={switchTheme}  className='p-3'><LiaMoonSolid size={20}/></button>
                 {/* signIn */}
-                <Link to = 'signIn'>
+                <Link to = 'signin'>
                     <button className='p-3'>
                         Sign In
                     </button>
                 </Link>
                 {/* becomeMember */}
-                <button 
-                    className='p-2 px-3 bg-[#EC094D] text-stone-100 font-semibold rounded-full hover:scale-110 ease-out duration-200'>
-                    Become member
-                </button>
+                <Link to = 'signup'>
+                    <button 
+                        className='p-2 px-3 bg-[#EC094D] text-stone-100 font-semibold rounded-full hover:scale-110 ease-out duration-200'>
+                        Become member
+                    </button>
+                </Link>
             </div>
             
                  {/*mobile view */}
