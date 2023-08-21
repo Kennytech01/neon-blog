@@ -8,6 +8,17 @@ import {MdKeyboardArrowUp} from 'react-icons/md'
 import productCard from '../assets/images/productCard.png'
 import fiveStar from '../assets/images/fiveStar.png'
 import {ImStarFull} from 'react-icons/im'
+import {CiWarning} from 'react-icons/ci'
+import {PiHandWavingLight} from 'react-icons/pi'
+import {LuPencil} from 'react-icons/lu'
+import image1 from '../assets/images/image1.png'
+import image2 from '../assets/images/image2.png'
+import image3 from '../assets/images/image3.png'
+import image4 from '../assets/images/image4.png'
+import image5 from '../assets/images/image5.png'
+import html from '../assets/images/html.png'
+import css from '../assets/images/css.png'
+import javascript from '../assets/images/javascript.png'
 
 export const StyleGuide = () => {
   const [toggleOne, setToggleOne] = useState(false)
@@ -146,21 +157,21 @@ export const StyleGuide = () => {
           {/* div-2 */}
           <div className=' md:m-10 mt-5 bg-orange-100  rounded-lg shadow'>
             <div className='flex sm:flex-row flex-col items-center justify-center md:p-4 p-2'>
-              <BsPencilSquare size={30}/>
+              <CiWarning size={30}/>
               <p className='md:pl-3 p-1'>Proin at pharetra enim, quis sagittis eros. Nulla placerat ultrices arcu a iaculis. Mauris dolor orci, vehicula quis efficitur quis, venenatis in ex. Integer est neque, volutpat id pellentesque vitae, tempor vel est.</p>
             </div>
           </div>
           {/* div-3 */}
           <div className=' md:m-10 mt-5 bg-stone-300/30  rounded-lg shadow'>
             <div className='flex sm:flex-row flex-col items-center justify-center md:p-4 p-2'>
-              <BsPencilSquare size={30}/>
+              <PiHandWavingLight size={30}/>
               <p className='md:pl-3 p-1'>Proin at pharetra enim, quis sagittis eros. Nulla placerat ultrices arcu a iaculis. Mauris dolor orci, vehicula quis efficitur quis, venenatis in ex. Integer est neque, volutpat id pellentesque vitae, tempor vel est.</p>
             </div>
           </div>
           {/* div-4 */}
           <div className=' md:m-10 mt-5 bg-emerald-400/20  rounded-lg shadow'>
             <div className='flex sm:flex-row flex-col items-center justify-center md:p-4 p-2'>
-              <BsPencilSquare size={30}/>
+              <LuPencil  size={30}/>
               <p className='md:pl-3 p-1'>Proin at pharetra enim, quis sagittis eros. Nulla placerat ultrices arcu a iaculis. Mauris dolor orci, vehicula quis efficitur quis, venenatis in ex. Integer est neque, volutpat id pellentesque vitae, tempor vel est.</p>
             </div>
           </div>
@@ -239,7 +250,43 @@ export const StyleGuide = () => {
         </div>
         {/* Audio Card */}
         <div className='p-2 md:p-5 lg:mx-20 md:mx-10'>
-          <h1 className='font-bold text-black text-3xl py-5'>Video Card</h1>
+          <h1 className='font-bold text-black text-3xl py-5'>Audio Card</h1>
+        </div>
+        {/*gallary */}
+        <div className='p-2 md:p-5 lg:mx-20 mx-2'>
+          <h1 className='font-bold text-black text-3xl py-5'>Gallery</h1>
+          <p >In ghost, you can add images in a gallery. the gallery supports up to 9 images, each row containing a maximum of 3 images. Below is an example of a gallery with 5 image</p>
+          <div className='p-3 rounded-lg'>
+            <div className='grid grid-cols-3 gap-2 '>
+              <div className='md:h-[70vh] h-[30vh]'><img className='object-cover object-top rounded-l-lg w-full h-full' src={image1} alt="" /></div>
+              <div className='md:h-[70vh] h-[30vh]'><img className='object-cover object-top  w-full h-full' src={image2} alt="" /></div>
+              <div className='md:h-[70vh] h-[30vh]'><img className='object-cover object-top rounded-r-lg w-full h-full' src={image3} alt="" /></div>
+            </div>
+            <div className='grid grid-cols-2 gap-2 py-1'>
+              <div className='md:h-[90vh] h-[50vh]'><img className='object-cover object-top  w-full h-full rounded-l-lg'  src={image4} alt="" /></div>
+              <div className='md:h-[90vh] h-[50vh]'><img className='object-cover object-top  w-full h-full rounded-r-lg'  src={image5} alt="" /></div>
+            </div>
+          </div>
+          <h4 className='text-center cursor-pointer text-sm hover:underline'>Images from Unsplash</h4>
+        </div>
+        {/* code highlight */}
+        <div className='p-2 md:p-5 lg:mx-20 mx-10'>
+          <div className='mx-10'>
+            <h1 className='font-bold text-black text-3xl p-5'>Syntax highlighting</h1>
+            <p className='p-1'>If you write about programming then you are covered too. Syntax highlighting feature is also implemented within this theme. If you hover over to code you can also see the language the code is written at and also your user can copy entire block of code by one clicking on copy button.</p>
+          </div>
+          <div className='mx-10'>
+            <h1 className='font-bold text-black text-xl p-5'>HTML</h1>
+            <p classname="p-2"><img className='rounded-lg' src={html} alt="" /></p>
+          </div>
+          <div className='mx-10'>
+            <h1 className='font-bold text-black text-xl p-5'>CSS</h1>
+            <p classname="p-2"><img className='rounded-lg' src={css} alt="" /></p>
+          </div>
+          <div className='mx-10'>
+            <h1 className='font-bold text-black text-xl p-5'>JavaScript</h1>
+            <p classname="p-2"><img className='rounded-lg' src={javascript} alt="" /></p>
+          </div>
         </div>
       </div>
     </div>
@@ -247,7 +294,7 @@ export const StyleGuide = () => {
 }
 
 
-// https://ads.google.com/
+
 
 
 
