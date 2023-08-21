@@ -9,12 +9,12 @@ export const SignUp = () => {
       <div className='md:w-1/3 sm:w-2/3 w-[90%] mx-1/2'>
         <div className='flex justify-center items-center p-2'>
           <button 
-            className='p-2 px-3 flex items-center justify-center border font-semibold rounded-full hover:scale-95 ease-out duration-200'>
+            className='p-2 bg-white border px-3 flex items-center justify-centerg5t font-semibold rounded-full hover:scale-95 ease-out duration-200'>
             <WiDirectionLeft size={20}/>
             back to home
           </button>
         </div>
-        <div className='rounded w-full text-center shadow-xl border'>
+        <div className='bg-white rounded-xl w-full text-center shadow-xl border'>
           <p className='p-5 flex justify-center'><img src={LOGO} alt="logo" /></p>
           <h1 className='font-bold text-3xl p-5 text-cente'>Sign up!</h1>
           <h4 className='sign text-lg p-2 text-center'>Get access to members only content.</h4>

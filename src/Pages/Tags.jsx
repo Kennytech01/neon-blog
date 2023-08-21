@@ -73,7 +73,7 @@ export const Tags = () => {
   return (
     <div className='max-w-[1400px]'>
         <div className='text-center font-bold text-3xl pt mb-16'>
-            <h1 className='text-stone-700'>Tags</h1>
+            <h1>Tags</h1>
         </div>
         <div onClick={handleClick} className='p-2 md:p-5 md:mx-10 flex items-center '>
             {
@@ -97,9 +97,9 @@ export const Tags = () => {
                                 <div className='bg-blue h-2/3 w-full group'>
                                     <img src={item.image} alt="" className='rounded-t-xl object-cover h-full w-full group-hover:scale-95 ease-in duration-300' />
                                 </div>
-                                <div className='h-1/3 text-stone-700  p-2 mt-1 rounded-xl'>
+                                <div className='h-1/3  p-2 mt-1 rounded-xl'>
                                     <p className='font-bold'>{item.title}</p>
-                                    <p>{item.post}</p>
+                                    <p className='text-stone-700 '>{item.post}</p>
                                 </div>
                             </div>
                         </div>

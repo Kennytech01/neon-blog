@@ -49,7 +49,7 @@ export const Author = () => {
   return (
     <div className='max-w-[1400px]'>
         <div className='text-center font-bold text-3xl pt mb-16'>
-            <h1 className='text-stone-700'>Authors</h1>
+            <h1>Authors</h1>
         </div>
         <div onClick={handleClick} className='p-2 md:p-5 md:mx-10 flex items-center '>
             {
