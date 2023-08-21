@@ -34,7 +34,7 @@ export const StyleGuide = () => {
         <h1>Styled Guide</h1>
       </div>
       {/*  */}
-      <div className='md:mx-10 mx-3 text-stone-700 bg-stone-100 rounded-xl mb-24'>
+      <div className='md:mx-20 mx-3 text-stone-700 bg-stone-100 rounded-xl mb-20 p-10'>
         <p className='p-5 py-10 lg:mx-20 md:mx-10 first-letter:text-3xl first-letter:ml-3 first-letter:font-bold'>This page demonstrates some basic elements and typography which you will use frequently within your site. Make the text bold or make it italic. Why not bold and italic both at a time. Here is the link to Ghost website. Do you want to link a long text here how it looks in this theme.</p>
         {/* Headings */}
         <div className='p-5 lg:mx-20 md:mx-10'>
@@ -270,31 +270,129 @@ export const StyleGuide = () => {
           <h4 className='text-center cursor-pointer text-sm hover:underline'>Images from Unsplash</h4>
         </div>
         {/* code highlight */}
-        <div className='p-2 md:p-5 lg:mx-20 mx-10'>
-          <div className='mx-10'>
+        <div className='p-2 md:p-5 lg:mx-20 sm:mx-10 mx-1'>
+          <div className='sm:mx-10 mx-1'>
             <h1 className='font-bold text-black text-3xl p-5'>Syntax highlighting</h1>
             <p className='p-1'>If you write about programming then you are covered too. Syntax highlighting feature is also implemented within this theme. If you hover over to code you can also see the language the code is written at and also your user can copy entire block of code by one clicking on copy button.</p>
           </div>
-          <div className='mx-10'>
+          <div className='sm:mx-10 mx-1'>
             <h1 className='font-bold text-black text-xl p-5'>HTML</h1>
             <p classname="p-2"><img className='rounded-lg' src={html} alt="" /></p>
           </div>
-          <div className='mx-10'>
+          <div className='sm:mx-10 mx-1'>
             <h1 className='font-bold text-black text-xl p-5'>CSS</h1>
             <p classname="p-2"><img className='rounded-lg' src={css} alt="" /></p>
           </div>
-          <div className='mx-10'>
+          <div className='sm:mx-10 mx-1'>
             <h1 className='font-bold text-black text-xl p-5'>JavaScript</h1>
             <p classname="p-2"><img className='rounded-lg' src={javascript} alt="" /></p>
           </div>
+        </div>
+        {/* responsibleTable */}
+        <div className='p-2 md:p-5 lg:mx-20 sm:mx-10 mx-1'>
+          <h1 className='font-bold text-black text-3xl p-5'>Responsive Table</h1>
+          <p className='p-1'>You can use Html card or Markdown card in the Koenig Editor to add table in your content. This theme automatically make all table responsive.</p>
+          <h1 className='font-bold text-black text-3xl p-5'>Markdown Table</h1>
+          <p>As this table in the example below is not too wide, it do not needs responsive scrollbar in large screen. But In small screen a scroll bar will be visible if needed.</p>
+          {/* Markdown table */}
+          <div className='my-10 overflow-x-scroll no-scrollbar'>
+            <table className='w-full border border-collapse '>
+              <tr className='font-bold'>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Age</td>
+                <td>Lives in</td>
+                <td>Profession</td>
+                <td>Hobby</td>
+              </tr>
+              <tr>
+                <td>Ben</td>
+                <td>Smith</td>
+                <td>29</td>
+                <td>Califonia</td>
+                <td>Developer</td>
+                <td>Coding</td>
+              </tr>
+              <tr>
+                <td>Henty</td>
+                <td>Peters</td>
+                <td>25</td>
+                <td>Canadan</td>
+                <td>Designer</td>
+                <td>Football</td>
+              </tr>
+            </table>
+          </div>
+          {/* Html Table */}
+          <h1 className='font-bold text-black text-3xl p-5'>Html Table</h1>
+          <p>Example of wide table. Horizontal scrollbar automatically added.</p>
+          <div className='my-10 overflow-x-auto no-scrollbar'>
+            <table className='w-full border border-collapse '>
+              <tr className='font-bold'>
+                <td>Heading</td>
+                <td>Heading</td>
+                <td>Heading</td>
+                <td>Heading</td>
+                <td>Heading</td>
+                <td>Heading</td>
+                <td>Heading</td>
+                <td>Heading</td>
+                <td>Heading</td>
+                <td>Heading</td>
+                <td>Heading</td>
+                <td>Heading</td>
+              </tr>
+              <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+              </tr>
+              <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        {/* video Youtube Embeded */}
+        <div class = "text-center relative h-96 p-2 md:p-5 lg:mx-20 sm:mx-10 mx-1">
+            <iframe class=" m-auto w-2/3 h-full shadow-md" src="https://www.youtube.com/embed/1La4QzGeaaQ" title="Everything about me" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <a href="#"><em>Youtube embeded</em></a>
+        </div>
+        {/* video vimeo Embeded */}
+        <div class = "text-center  relative h-96 p-2 md:p-5 sm:mx-10 ">
+            <iframe class=" m-auto h-full w-full" title="vimeo-player" src="https://player.vimeo.com/video/54802209?h=53340e8e30"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+            <a href="#"><em>vimeo emebeded</em></a>
+        </div>
+        {/* Ghost twitter embeded */}
+        <div class = "text-center  relative h-96 p-2 md:p-5 sm:mx-10 ">
+          {/* <iframe class=" m-auto h-full w-full" title="vimeo-player" src=" https://twitter.com/Sprout Social/status/1544347965061570560"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe> */}
+          <a class="twitter-timeline h-full w-full " data-width="250" data-height="450" data-theme="light" href="https://twitter.com/BradleyLJones?ref_src=twsrc%5Etfw">Tweets by BradleyLJones</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          {/* <a href="#"><em>twitter emebeded</em></a> */}
         </div>
       </div>
     </div>
   )
 }
-
-
-
 
 
 

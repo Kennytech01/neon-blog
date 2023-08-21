@@ -29,6 +29,12 @@
   color: var(--accent)
 }
 
+table, td, th {
+  border: 1px solid #44403c;
+  padding: .5rem;
+
+}
+
  /*No scrollBar?. add the code bellow */
 @layer utilities {
     @variants responsive {
