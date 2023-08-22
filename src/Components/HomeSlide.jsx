@@ -5,29 +5,40 @@ import {TfiTime} from 'react-icons/tfi'
 import {BsArrowRightCircle,BsArrowLeftCircle} from 'react-icons/bs'
 import {PiRadioButtonDuotone} from 'react-icons/pi'
 
+const delay = 5000;
 export const HomeSlide = () => {
-  // const [data] = useState(SliderData);
-  const [activeIndex,setActiveIndex] = useState(0)
+  const [index,setIndex] = useState(0)
 
-  // leftSlide 
-  const slideLeft = () => {
-    let Slider = document.getElementById('Slider' + activeIndex)
-    Slider.scrollLeft = Slider.scrollLeft - `${100}` 
+  const timeoutRef = React.useRef(null);
+
+  const resetTimeout = ()=> {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
   }
 
-   // RightSlide 
-   const slideRight = () => {
-    let Slider = document.getElementById('Slider' + activeIndex)
-    Slider.scrollLeft = Slider.scrollLeft + `${100}`
-  }
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(() =>
+        setIndex((prevIndex) =>
+          prevIndex === SliderData.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
+
+    return () => {
+      resetTimeout();
+    };
+  }, [index]);
+ 
 
   return (
-    <div className=" relative overflow-hidden ">
-      <div id={'Slider' + activeIndex} className="flex inner group h-full w-full relative">
+    <div className=" relative overflow-hidden slideshow ">
+      <div  style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }} className="slideshowSlider flex inner group h-full w-full relative">
         {
-          SliderData.map((item, idx) => {
+          SliderData.map((item, index) => {
             return (
-              <div key={idx} className="w-full displayItems group-hover:cursor-pointer flex-shrink-0 flex ">
+              <div key={index} className="slide w-full displayItems group-hover:cursor-pointer flex-shrink-0 flex ">
                 {/* leftSide */}
                 <div className=" w-full h-80 whitespace-normal flex flex-col justify-evenly items-start">
                   <div className='flex flex-wrap'>
@@ -52,9 +63,19 @@ export const HomeSlide = () => {
           })
         }
       </div>
-
-
-      <div className="flex items-center relative justify-between px-5 w-full">
+      <div className="slideshowDots ">
+        {SliderData.map((_, idx) => (
+          <div
+            key={idx}
+            className={`slideshowDot${index === idx ? ` active` : ""}`}
+            onClick={() => {
+              setIndex(idx);
+            }}
+          ></div>
+        ))}
+      </div>
+      {/*button  */}
+      {/* <div className="flex items-center relative justify-between px-5 w-full">
         <div>
           <BsArrowLeftCircle onClick={slideLeft} className="cursor-pointer hover:scale-95 ease-in duration-100"/>
         </div>
@@ -75,7 +96,67 @@ export const HomeSlide = () => {
         <div>
           <BsArrowRightCircle onClick={slideRight} className="cursor-pointer hover:scale-95 ease-in duration-100"/>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
+
+// const colors = ["#0088FE", "#00C49F", "#FFBB28"];
+// const delay = 2500;
+
+// function Slideshow() {
+//   const [index, setIndex] = React.useState(0);
+//   const timeoutRef = React.useRef(null);
+
+//   function resetTimeout() {
+//     if (timeoutRef.current) {
+//       clearTimeout(timeoutRef.current);
+//     }
+//   }
+
+//   React.useEffect(() => {
+//     resetTimeout();
+//     timeoutRef.current = setTimeout(
+//       () =>
+//         setIndex((prevIndex) =>
+//           prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+//         ),
+//       delay
+//     );
+
+//     return () => {
+//       resetTimeout();
+//     };
+//   }, [index]);
+
+//   return (
+//     <div className="slideshow">
+//       <div
+//         className="slideshowSlider"
+//         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+//       >
+//         {colors.map((backgroundColor, index) => (
+//           <div
+//             className="slide"
+//             key={index}
+//             style={{ backgroundColor }}
+//           ></div>
+//         ))}
+//       </div>
+
+//       <div className="slideshowDots">
+//         {colors.map((_, idx) => (
+//           <div
+//             key={idx}
+//             className={`slideshowDot${index === idx ? " active" : ""}`}
+//             onClick={() => {
+//               setIndex(idx);
+//             }}
+//           ></div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+// ReactDOM.render(<Slideshow />, document.getElementById("App"));

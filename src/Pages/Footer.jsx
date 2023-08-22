@@ -5,6 +5,7 @@ import PageData from '../Components/PageData'
 import {BsClockHistory} from 'react-icons/bs'
 
 
+
 export const Footer = () => {
     
     const truncateString = (str, num) => {
@@ -14,6 +15,10 @@ export const Footer = () => {
             return str
         }
     }
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      };
   return (
     <div className='bg-stone-300/30'>
         <div className='grid md:grid-cols-3 grid-cols-1 p-3 gap-8'>
@@ -80,9 +85,13 @@ export const Footer = () => {
         </div>
         {/* last div */}
         <div className='flex flex-wrap justify-between items-center p-3 py-5'>
-            <div >© 2023 Neon - All right Reserved. Proudly Published with Ghost</div>
-            <div className='flex justify-center items-center'><WiDirectionUp/>back top top</div>
+            <div className='p-2' >© 2023 Neon - All right Reserved. Proudly Published with Ghost</div>
+            <div onClick={scrollToTop} className='flex justify-center items-center p-2 cursor-pointer '>
+                <WiDirectionUp/>    
+                back top top    
+            </div>
         </div>
     </div>
   )
 }
+
