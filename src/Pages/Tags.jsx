@@ -71,7 +71,7 @@ export const Tags = () => {
         toggle?  tagData.reverse() : tagData.sort((a,b) => a.title.localeCompare(b.title))
     }
   return (
-    <div className='max-w-[1400px]'>
+    <div className='max-w-[1400px]'> 
         <div className='text-center font-bold text-3xl pt mb-16'>
             <h1>Tags</h1>
         </div>
@@ -95,7 +95,7 @@ export const Tags = () => {
                         <div key={idx} className='bg-stone-100 rounded-xl p-3 group'>
                             <div className='flex flex-col justify-between w-full h-60  border rounded-xl group-hover:cursor-pointer ' >
                                 <div className='bg-blue h-2/3 w-full group'>
-                                    <img src={item.image} alt="" className='rounded-t-xl object-cover h-full w-full group-hover:scale-95 ease-in duration-300' />
+                                    <img src={item.image} alt="" className='rounded-t-xl object-cover h-full w-full group-hover:scale-95 ease-in duration-300 transition delay-150' />
                                 </div>
                                 <div className='h-1/3  p-2 mt-1 rounded-xl'>
                                     <p className='font-bold'>{item.title}</p>

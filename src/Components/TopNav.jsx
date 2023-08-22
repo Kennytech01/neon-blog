@@ -201,7 +201,7 @@ export const TopNav = () => {
             mobile? (
                 <div>
                     <div onClick={()=> setMobile(!mobile)} className='bg-black/60 fixed w-full h-full left-0 right-0 top-0 z-20'></div>
-                    <div onMouseLeave={()=> setMobile(!mobile)} className=' duration-300 ease-in  z-[999] absolute sm:right-8 right-4  top-24 md:top-32  sm:w-[70%] w-[80%] py-2 px-5 mt-2 rounded-lg shadow-xl bg-pink-50'>
+                    <div onMouseLeave={()=> setMobile(!mobile)} className=' duration-300 ease-in transition-all delay-150 z-[999] absolute sm:right-8 right-4  top-24 md:top-32  sm:w-[70%] w-[80%] py-2 px-5 mt-2 rounded-lg shadow-xl bg-stone-50'>
                         <ul  className={`flex flex-col justify-center h-auto overflow-y-scroll scroll-smooth no-scrollbar`}>
                             {/* features */}
                             <NavLink
@@ -281,7 +281,7 @@ export const TopNav = () => {
                             {/* becomeMember */}
                             <Link to = '/membership' onClick={()=> setMobile(!mobile)}>
                                 <button 
-                                    className='p-2 px-3 bg-[#EC094D] text-stone-100 font-semibold rounded-full hover:scale-95 ease-out duration-200'>
+                                    className='p-2 px-3 w-full bg-[#EC094D] text-stone-100 font-semibold rounded-full hover:scale-95 ease-out duration-200 transition-all delay-150'>
                                     Become member
                                 </button>
                             </Link>
