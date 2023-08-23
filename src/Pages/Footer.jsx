@@ -20,15 +20,15 @@ export const Footer = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       };
   return (
-    <div className='bg-stone-300/30'>
+    <div className='bg-stone-200/30'>
         <div className='grid md:grid-cols-3 grid-cols-1 p-3 gap-8'>
             {/* News letter */}
             <div>
                 <h1 className='font-bold p-2 text-lg'>New Letter</h1>
                 <p className='p-3 py-5'>Get the latest posts delivered straight to your inbox.</p>
-                <div className='border h-12 bg-blue-200 flex justify-between items-center rounded-full '>
+                <div className='border h-12 flex justify-between items-center rounded-full '>
                     <input type="search" name="" placeholder='Your email address' className='outline-none w-full h-full rounded-l-full p-3' />
-                    <button type="submit" className='p-2 bg-[#EC094D] rounded-r-full text-stone-100 h-full hover:scale-95 ease-in duration-100'>Subscribe</button>
+                    <button type="submit" className='p-2 bg-[#EC094D] rounded-r-full font-bold text-stone-100 h-full hover:scale-95 ease-in duration-100'>Subscribe</button>
                 </div>
                 <div>
                     <h1 className='font-bold p-2 py-5 text-lg'>Follow Us</h1>
@@ -48,7 +48,7 @@ export const Footer = () => {
                     {
                         PageData.filter((show)=> show.id === 'footer').map((item, idx)=> (
                             <div key={idx} >
-                                <div className=' duration-100 relative flex h-20 overflow-hidden bg-stone-100 shadow-inner my-3 rounded-xl'>
+                                <div className=' duration-100 relative flex h-20 overflow-hidden bg-white shadow-inner my-3 rounded-xl'>
                                     <div className='w-1/4'>
                                         <img src={item.image} alt="image " className='w-full h-full object-cover '/>
                                     </div>

@@ -66,7 +66,7 @@ export const Author = () => {
         <div className='grid md:grid-cols-2 grid-cols-1 gap-8 lg:mx-12 mx-5 mb-40'>
             {
                 authorData.map((author, id) => (
-                    <div className='bg-stone-100 rounded-lg'>
+                    <div className='bg-white rounded-lg'>
                         <div className='flex justify-center p-2 h-48'>
                             <div className='w-1/3 h-full '>
                                 <img src={author.image} alt="image" className='w-full h-full object-cover rounded-2xl'/>

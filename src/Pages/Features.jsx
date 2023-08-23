@@ -6,7 +6,7 @@ export const Features = () => {
       <div className='text-center font-bold text-3xl pb-10'>
         <h1>Features</h1>
       </div>
-      <div className='md:mx-32 mx-3 text-stone-700 bg-stone-100 rounded-xl mb-24'>
+      <div className='md:mx-32 mx-3 text-stone-700 bg-white rounded-xl mb-24'>
         <div className='p-5 pt-10 lg:mx-20 md:mx-10 '>
           <p className='py-5'><span className='font-bold text-black'>Neon</span> is a multipurpose theme for the Ghost blog/publishing platform. If you are looking for a good theme for your Ghost site then "Neon" is a suitable theme for your website.</p>
           <p className='py-5'>You can use this theme for your company blog or personal blog. The theme is built with a minimalistic approach but it is a fully featured-packed theme.</p>

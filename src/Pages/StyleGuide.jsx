@@ -34,7 +34,7 @@ export const StyleGuide = () => {
         <h1>Styled Guide</h1>
       </div>
       {/*  */}
-      <div className='md:mx-32 mx-3 text-stone-700 bg-stone-100 rounded-xl mb-20 p-10'>
+      <div className='md:mx-32 mx-3 text-stone-700 bg-white rounded-xl mb-20 p-10'>
         <p className='p-5 py-10 lg:mx-20 md:mx-10 first-letter:text-3xl first-letter:ml-3 first-letter:font-bold'>This page demonstrates some basic elements and typography which you will use frequently within your site. Make the text bold or make it italic. Why not bold and italic both at a time. Here is the link to Ghost website. Do you want to link a long text here how it looks in this theme.</p>
         {/* Headings */}
         <div className='p-5 lg:mx-20 md:mx-10'>

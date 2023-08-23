@@ -72,3 +72,12 @@ table, td, th {
 .slideshowDot.active {
   background-color: #EC094D;
 }
+
+/* .trans{
+  transition: all 0.4s ease 0s;
+  width: 100%;
+}
+
+img.trans:hover {
+  transform: scale(1.25);
+} */

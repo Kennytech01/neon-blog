@@ -32,7 +32,7 @@ export const PageDetails = () => {
         <NavLink to= '/blogpages'>
           {
             PageData?.filter((data)=> data.location === 'page').slice(0, visible).map((pages, id) => (
-              <div key={id} className='md:h-80 h-auto lg:flex w-full flex flex-col justify-around lg:justify-center mb-10 items-center rounded-xl shadow-inner bg-stone-100'>
+              <div key={id} className='md:h-80 h-auto lg:flex w-full flex flex-col justify-around lg:justify-center mb-10 items-center rounded-xl shadow-inner bg-white'>
                 <div className='relative h-1/2 flex justify-center mx-5'>
                   <img src={pages.image} alt="image" className='rounded-xl object-cover w-full '/>
                 </div>

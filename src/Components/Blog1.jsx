@@ -12,30 +12,30 @@ import author3 from '../assets/images/author3.png'
 import travel from '../assets/images/travel.jpeg'
 import { Link } from 'react-router-dom'
 
-export const BlogOne = () => {
+export const Blog1 = () => {
     // const [visible, setVisible] = useState(0)
   return (
     <div className='h-[100rem] overflow-auto no-scrollbar ' >
         <div className=''>
             <div className='bg-stone-50 rounded-xl mb-10' >
                 <div className='h- text-center'>
-                    <p className='h-96 group'>
-                    <img src={nature} alt="image" className='group-hover:scale-95 ease-in duration-300 object-cover object-center w-full h-full rounded-[3rem] p-5'/>
+                    <p className='h-96 group overflow-hidden'>
+                    <img src={nature} alt="image" className='duration-300 ease-in hover:scale-95 trans  object-cover object-center w-full h-full rounded-[3rem] p-5'/>
                     </p>
-                    <em className='hover:underline hover:text-[#EC094D] text-stone-700'>photo by Microsoft 360/unsplash</em>
+                    <em className='hover:underline decoration-[#EC094D] underline-offset-2 text-stone-700 text-sm'>photo by Microsoft 360/unsplash</em>
                 </div>
-                <div className='mx-10'>
-                    <span className='w-24 h-10 font-light bg-stone-200 rounded-full mx-10 sm:text-normal text-sm capitalize relative flex justify-center items-center'>
+                <div className='md:mx-10 mx-5'>
+                    <span className='w-24 my-2 h-10 font-light bg-stone-200 rounded-full sm:text-normal text-sm capitalize relative flex justify-center items-center'>
                         <span className='bg-green-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center'></span>Nature
                     </span>
                     <h1 className='lg:text-4xl hover:cursor-pointer px-1 py-4 font-bold hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>Autumn is a second spring when every leaf is a flower</h1>
-                    <p className="font-light text-stone-500 flex items-center">
+                    <p className="font-light text-sm text-stone-500 flex items-center justify-start">
                         <span className='flex items-center'> <LiaUserEditSolid className='mr-1'/>Harini Banerjee</span>
                         <span className="pl-2 px-2 flex items-center"><BsCalendarDate className="m-1"/>May 2, 2023</span>
-                        <span className="px-2 flex items-center"><TfiTime className="m-1"/>4 min read</span>
+                        <span className="px-1 flex items-center"><TfiTime className="m-1"/>4 min read</span>
                     </p>
                 </div>
-                <div className='mx-10 py-5 text-stone-700'>
+                <div className='md:mx-10 mx-5 py-5 text-stone-700'>
                     <p className='py-5'>She then expatiated very warmly upon the advantages I should reap from her plan; 
                         talked in a high style of my future grandeur; assured me how heartily I should despise
                         almost every body and every thing I had hitherto seen; predicted my marrying into some family
@@ -52,8 +52,8 @@ export const BlogOne = () => {
                         In the midst of this discourse, I was relieved by a summons to tea. Madame Duval was in great spirits; but my emotion was too painful for concealment, and every body enquired into the cause. I would fain have waived the subject, but Madame Duval was determined to make it public. She told tham that she had it in her head to make something of me, and that they should soon call me by another name than that of Anville; and yet that she was not going to have the child married neither.
                     </p>
                     <div className='my-10 text-center'>
-                        <p className='h-96 group'>
-                            <img src={flower} alt="image" className='group-hover:scale-95 ease-in duration-300 object-cover object-center w-full h-full rounded-[3rem] p-5'/>
+                        <p className='md:h-96 h-60 group'>
+                            <img src={flower} alt="image" className='group-hover:scale-95 ease-in duration-300 object-cover object-center w-full h-full rounded-[3rem] md:p-5'/>
                         </p>
                         <em className='hover:underline underline-[#EC094D] text-stone-700'>photo by Microsoft 360/unsplash</em>
                     </div>
@@ -71,10 +71,10 @@ export const BlogOne = () => {
                         </p>
                     </div>
                     <div className='h- text-center'>
-                        <p className='h-96 group'>
+                        <p className='md:h-96 h-60 group'>
                         <img src={flower2} alt="image" className='object-cover object-center w-full h-full rounded-[3rem] p-5 group-hover:scale-95 ease-in duration-300'/>
                         </p>
-                        <em className='hover:underline hover:text-[#EC094D] text-stone-700'>photo by Microsoft 360/unsplash</em>
+                        <em className='hover:underline decoration-[#EC094D] text-stone-700'>photo by Microsoft 360/unsplash</em>
                     </div>
                     <p className='py-5'>
                         As to Miss Mirvan, she is my second self, and neither hopes nor fears but as I do. And as to me,-I know not what to say, nor even what to wish; I have often thought my fate peculiarly cruel, to have but one parent, and from that one to be banished for ever;-while, on the other side, I have but too well known and felt the propriety of the separation. And yet, you may much better imagine, than I can express, the internal anguish which sometimes oppresses my heart, when I reflect upon the strange indifference that must occasion a father never to make the least enquiry after the health, the welfare, or even the life of his child!
@@ -171,20 +171,22 @@ export const BlogOne = () => {
                 </div>
             </div>
             {/* member discusion */}
-            <div className='h-96 bg-stone-50 rounded-xl my-5 mb-10 '>
-                <ul className='flex justify-around items-center md:p-10 p-5'>
-                    <li className='font-bold md:text-3xl text-lg'>Member discusion</li>
-                    <li className='text-stone-500'>0 comments</li>
-                </ul>
-                <div className='border-y-2 md:mx-16 mx-5 py-5  text-center text-stone-500 h-2/3 flex flex-col justify-center items-center'>
-                    <h1 className='text-2xl font-bold p-2'>Start the conversation</h1>
-                    <p className='p-2'>Become a member of neon to start commenting</p>
-                    <form action="" method="post">
-                        <button className='bg-[#EC094D] text-stone-50 p-2 rounded-xl font-bold px-3 hover:scale-95 ease-in duration-300'>Sign up now</button>
-                        <p className='md:py-5 font-light p-2'>Already a member?
-                            <Link to='/signin' style={{color: 'var(--button-bg)'}} className='px-2 font-bold'>SignIn</Link>
-                        </p>
-                    </form>
+            <div className='h-96 bg-stone-50 rounded-xl my-5 mb-10 flex flex-col justify-center items-center'>
+                <div>
+                    <ul className='flex justify-between items-center p-5 w-full'>
+                        <li className='font-bold md:text-3xl text-lg'>Member discusion</li>
+                        <li className='text-stone-500'>0 comments</li>
+                    </ul>
+                    <div className='border-y-2 mx-2 w-full text-center text-stone-500'>
+                        <h1 className='text-2xl font-bold p-2'>Start the conversation</h1>
+                        <p className='p-2'>Become a member of neon to start commenting</p>
+                        <form action="" method="post" className='mb-4'>
+                            <button className='bg-[#EC094D] text-stone-50 p-2 rounded-xl font-bold px-3 hover:scale-95 ease-in duration-300'>Sign up now</button>
+                            <p className='md:py-5 font-light p-2'>Already a member?
+                                <Link to='/signin' style={{color: 'var(--button-bg)'}} className='px-2 font-bold'>SignIn</Link>
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

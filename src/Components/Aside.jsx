@@ -15,14 +15,14 @@ export const Aside = () => {
     }
   }
   return (
-    <div className='lg:ml-10 md:ml-5 md:w-1/3 h-full mx-auto py-3 rounded-xl border bg-stone-100 shadow-inner'>
+    <div className='lg:ml-10 md:ml-5 md:w-1/3 h-full mx-auto py-3 rounded-xl border bg-stone-100 '>
       {/* featured Posts */}
       <div className='m-5'>
         <h1 className='font-bold p-5 text-lg'>Featured Posts</h1>
         {
           PageData.filter((data)=> data.id === 'featured').map((item, idx)=> (
             <div className='mb-10 sm:mx-auto ' >
-              <div key={idx} className='ease-in duration-100 relative flex h-20 overflow-hidden my-3 rounded-xl'>
+              <div key={idx} className='ease-in bg-white duration-300 hover:scale-95 relative flex h-20 overflow-hidden my-3 rounded-xl'>
                 <div className='w-1/4'>
                   <img src={item.image} alt="image " className='w-full h-full object-cover '/>
                 </div>
@@ -61,7 +61,7 @@ export const Aside = () => {
         {
           PageData.filter((data)=> data.id === 'latest').map((item, idx)=> (
             <div className='mb-10 sm:mx-auto' >
-              <div key={idx} className='duration-100 relative flex h-20 overflow-hidden shadow my-3 rounded-xl'>
+              <div key={idx} className='duration-100 relative flex h-20 overflow-hidden shadow my-3 rounded-xl bg-white'>
                 <div className='w-1/4'>
                   <img src={item.image} alt="image " className='w-full h-full object-cover '/>
                 </div>

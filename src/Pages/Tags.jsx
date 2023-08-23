@@ -92,7 +92,7 @@ export const Tags = () => {
                     
                 tagData?.map((item,idx)=> {
                     return (
-                        <div key={idx} className='bg-stone-100 rounded-xl p-3 group'>
+                        <div key={idx} className='bg-white rounded-xl p-3 group'>
                             <div className='flex flex-col justify-between w-full h-60  border rounded-xl group-hover:cursor-pointer ' >
                                 <div className='bg-blue h-2/3 w-full group'>
                                     <img src={item.image} alt="" className='rounded-t-xl object-cover h-full w-full group-hover:scale-95 ease-in duration-300 transition delay-150' />
