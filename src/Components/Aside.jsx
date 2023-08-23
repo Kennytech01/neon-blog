@@ -27,7 +27,7 @@ export const Aside = () => {
                   <img src={item.image} alt="image " className='w-full h-full object-cover '/>
                 </div>
                 <div className='border pl-2 w-full h-full flex flex-col items-start justify-around'>
-                  <h2 className='text-sm text-normal text-stone-600 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4 line-clamp-2 md:line-clamp-none'>{truncateString(item?.header,50)}</h2>
+                  <h2 className='text-stone-600 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4 line-clamp-2 md:line-clamp-none'>{truncateString(item?.header,50)}</h2>
                   <p className='flex justify-start items-center text-sm font-thin'><BsClockHistory className='mx-1' />{item.time}</p>
                 </div>
               </div>
@@ -61,12 +61,12 @@ export const Aside = () => {
         {
           PageData.filter((data)=> data.id === 'latest').map((item, idx)=> (
             <div className='mb-10 sm:mx-auto' >
-              <div key={idx} className='duration-100 relative flex h-20 overflow-hidden shadow-inner my-3 rounded-xl'>
+              <div key={idx} className='duration-100 relative flex h-20 overflow-hidden shadow my-3 rounded-xl'>
                 <div className='w-1/4'>
                   <img src={item.image} alt="image " className='w-full h-full object-cover '/>
                 </div>
                 <div className=' p-2 w-full h-full flex flex-col items-start justify-around'>
-                  <h2 className='lg:text-normal text-sm text-stone-600 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4 line-clamp-2 md:line-clamp-none'>{truncateString(item?.header,50)}</h2>
+                  <h2 className='text-stone-600 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4 line-clamp-2 md:line-clamp-none'>{truncateString(item?.header,50)}</h2>
                   <p className='flex justify-start items-center text-sm font-thin'><BsClockHistory className='mx-1' />{item.time}</p>
                 </div>
               </div>

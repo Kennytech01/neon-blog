@@ -10,6 +10,7 @@ import viox from '../assets/images/viox.png'
 import { FaGithub, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import author3 from '../assets/images/author3.png'
 import travel from '../assets/images/travel.jpeg'
+import { Link } from 'react-router-dom'
 
 export const BlogOne = () => {
     // const [visible, setVisible] = useState(0)
@@ -167,6 +168,23 @@ export const BlogOne = () => {
                             )
                         })
                     }
+                </div>
+            </div>
+            {/* member discusion */}
+            <div className='h-96 bg-stone-50 rounded-xl my-5 mb-10 '>
+                <ul className='flex justify-around items-center md:p-10 p-5'>
+                    <li className='font-bold md:text-3xl text-lg'>Member discusion</li>
+                    <li className='text-stone-500'>0 comments</li>
+                </ul>
+                <div className='border-y-2 md:mx-16 mx-5 py-5  text-center text-stone-500 h-2/3 flex flex-col justify-center items-center'>
+                    <h1 className='text-2xl font-bold p-2'>Start the conversation</h1>
+                    <p className='p-2'>Become a member of neon to start commenting</p>
+                    <form action="" method="post">
+                        <button className='bg-[#EC094D] text-stone-50 p-2 rounded-xl font-bold px-3 hover:scale-95 ease-in duration-300'>Sign up now</button>
+                        <p className='md:py-5 font-light p-2'>Already a member?
+                            <Link to='/signin' style={{color: 'var(--button-bg)'}} className='px-2 font-bold'>SignIn</Link>
+                        </p>
+                    </form>
                 </div>
             </div>
         </div>
