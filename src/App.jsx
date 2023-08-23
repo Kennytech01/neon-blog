@@ -10,6 +10,7 @@ import { Footer } from './Pages/Footer'
 import { SignIn } from './Pages/SignIn'
 import { SignUp } from './Pages/SignUp'
 import { Membership } from './Pages/Membership'
+import { BlogPages } from './Pages/BlogPages'
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/signin' element={<SignIn/>} />
         <Route path='/signup' element={<SignUp/>} />
         <Route path='/membership' element={<Membership/>} />
+        <Route path='/blogpages' element = {<BlogPages/>}/>
       </Routes>
       <Footer/>
     </div>

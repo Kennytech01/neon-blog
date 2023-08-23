@@ -2,7 +2,6 @@ import React, { useState, useEffect} from "react";
 import SliderData from "./HomeSlideData";
 import {BsCalendarDate} from 'react-icons/bs'
 import {TfiTime} from 'react-icons/tfi'
-import {BsArrowRightCircle,BsArrowLeftCircle} from 'react-icons/bs'
 import {PiRadioButtonDuotone} from 'react-icons/pi'
 
 const delay = 5000;
@@ -56,18 +55,20 @@ export const HomeSlide = () => {
                 </div> 
                 {/* picture Display */}
                 <div className="hidden md:flex items-center justify-center p-3 sm:flex w-full h-80 order-first md:order-2 ">
-                  <img src={item?.image} alt="slider" className="w-full h-full rounded-[2rem] object-cover" />
+                  {/* <div className="p-2 bg-stone-50"> */}
+                    <img src={item?.image} alt="slider" className="w-full h-full rounded-[2rem] object-cover" />
+                  {/* </div> */}
                 </div>
               </div>
             )
           })
         }
       </div>
-      <div className="slideshowDots ">
+      <div className="slideshowDots text-center py-10">
         {SliderData.map((_, idx) => (
           <div
             key={idx}
-            className={`slideshowDot${index === idx ? ` active` : ""}`}
+            className={`slideshowDot${index === idx ? ` active` : ""} rounded-full h-[10px] w-[10px] inline-block cursor-pointer bg-[#c4c4c4]`}
             onClick={() => {
               setIndex(idx);
             }}
@@ -101,62 +102,9 @@ export const HomeSlide = () => {
   )
 }
 
-// const colors = ["#0088FE", "#00C49F", "#FFBB28"];
-// const delay = 2500;
-
-// function Slideshow() {
-//   const [index, setIndex] = React.useState(0);
-//   const timeoutRef = React.useRef(null);
-
-//   function resetTimeout() {
-//     if (timeoutRef.current) {
-//       clearTimeout(timeoutRef.current);
-//     }
-//   }
-
-//   React.useEffect(() => {
-//     resetTimeout();
-//     timeoutRef.current = setTimeout(
-//       () =>
-//         setIndex((prevIndex) =>
-//           prevIndex === colors.length - 1 ? 0 : prevIndex + 1
-//         ),
-//       delay
-//     );
-
-//     return () => {
-//       resetTimeout();
-//     };
-//   }, [index]);
-
-//   return (
-//     <div className="slideshow">
-//       <div
-//         className="slideshowSlider"
-//         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-//       >
-//         {colors.map((backgroundColor, index) => (
-//           <div
-//             className="slide"
-//             key={index}
-//             style={{ backgroundColor }}
-//           ></div>
-//         ))}
-//       </div>
-
-//       <div className="slideshowDots">
-//         {colors.map((_, idx) => (
-//           <div
-//             key={idx}
-//             className={`slideshowDot${index === idx ? " active" : ""}`}
-//             onClick={() => {
-//               setIndex(idx);
-//             }}
-//           ></div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// ReactDOM.render(<Slideshow />, document.getElementById("App"));
+{/* <button>
+  <svg class="motion-safe:animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
+     <!-- ... -->
+  </svg>
+  Processing
+</button> */}

@@ -138,13 +138,11 @@ export const Membership = () => {
                                     {
                                         dropdown === item.title && (
                                             <div>
-                                                <p className='text-start px-3 text-stone-700'>{item.details}</p>
-                                                
+                                                <p className='text-start px-3 text-stone-700'>{item.details}</p> 
                                             </div>
                                         )
                                     }
-                                </div>
-                                
+                                </div> 
                             )
                         })
                     }

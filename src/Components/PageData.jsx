@@ -15,6 +15,7 @@ import mountain from '../assets/images/mountain.jpeg'
 import ladyEating from '../assets/images/ladyEating.jpeg'
 import goodHealth from '../assets/images/goodHealth.jpeg'
 
+
 // export const dataSet = [
 //     {
 //         tags: "id",
@@ -46,7 +47,8 @@ const PageData = [
         header: 'Autumn is a second spring when every leaf is a flower',
         details: 'She then expatiated very warmly upon the advantages I should reap from her plan; talked in a high style of my future grandeur; assured me how heartily I should despise almost every body and...',
         date: 'August 2, 2023',
-        time: '4 min read'
+        time: '4 min read',
+        name: 'Harini Banerjee'
     },
     {
         location: 'page',
@@ -55,7 +57,8 @@ const PageData = [
         header: 'Never let your memories be greater than your dreams',
         details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
         date: 'July 30, 2023',
-        time: '4 min read '
+        time: '4 min read ',
+        name: 'Apurba Talukdar & Ishan Sharma'
     },
     {
         location: 'page',
@@ -64,7 +67,8 @@ const PageData = [
         header: 'Dramatically improve your cooking using just your imagination',
         details: 'You cannot too assiduously attend to Madame Duval herself; but I would wish you to mix as little as possible with her associates, who are not likely to be among those whose acquaintance would',
         date: 'July 28, 2023',
-        time: '4 min read'
+        time: '4 min read',
+        name: 'Biswajit Saha'
     },
     {
         location: 'page',
@@ -73,7 +77,9 @@ const PageData = [
         header: 'Self-observation is the first step of inner unfolding',
         details: "Mr. Branghton's house is small and inconvenient; though his shop, which takes in all the ground floor, is large and commodious. I believe I told you before, that he is a silver-smith.",
         date: 'July 20, 2023',
-        time: '5 min read'
+        time: '5 min read',
+        name: 'Harini Banerjee'
+
     },
     {
         id: "featured",
@@ -83,7 +89,8 @@ const PageData = [
         header: 'It is during our darkest moments that we must focus to see the light',
         details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
         date: 'July 19, 2023',
-        time: '4 min read'
+        time: '4 min read',
+        name: 'Surabhi Gupta'
     },
     {
         location: 'page',
