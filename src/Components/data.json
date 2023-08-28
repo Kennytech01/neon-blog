@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "The 48 Laws Of Power",
+      "blog": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
+      "img": "https://i.ibb.co/RpP2LGp/48-Laws-Of-Power.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Rich Dad Poor Dad",
+      "blog": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantit, sed quia consequuntur magni dolores eos qui ratione voluptatem seel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
+      "img": "https://i.ibb.co/8Brh2Nc/rich-Dad-Poor-Dad.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Show Your Work",
+      "blog": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
+      "img": "https://i.ibb.co/VjLBT1T/show-Your-Work.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Atomic Habits",
+      "blog": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto tiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
+      "img": "https://i.ibb.co/ss0kLQw/atomic-Habits.jpg"
+    },
+    {
+      "id": 5,
+      "name": "The Almanack Of Naval Ravikant",
+      "blog": "Sed ut perspiciatis unde omnis iste natus error sur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
+      "img": "https://i.ibb.co/87SmcFz/alamanack-naval.jpg"
+    },
+    {
+      "id": 6,
+      "name": "The 4-Hour Work Week",
+      "blog": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa qrelit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
+      "img": "https://i.ibb.co/Pxtt4dH/4-hour-work-week.jpg"
+    }
+  ]

@@ -41,7 +41,7 @@ const PageData = [
  
     {
         id: 'footer',
-        location: 'page',
+        // location: 'page',
         image: `${nature}`,
         type1: 'Nature',
         header: 'Autumn is a second spring when every leaf is a flower',
@@ -51,6 +51,7 @@ const PageData = [
         name: 'Harini Banerjee'
     },
     {
+        id: 1,
         location: 'page',
         image: `${travel}`,
         type1: 'Travel',
@@ -61,6 +62,7 @@ const PageData = [
         name: 'Apurba Talukdar & Ishan Sharma'
     },
     {
+        id: 2,
         location: 'page',
         image: `${food}`,
         type1: 'Food',
@@ -71,6 +73,7 @@ const PageData = [
         name: 'Biswajit Saha'
     },
     {
+        id: 3,
         location: 'page',
         image: `${lifestyle}`,
         type1: 'Lifestyle',
@@ -83,7 +86,7 @@ const PageData = [
     },
     {
         id: "featured",
-        location: 'page',
+        // location: 'page',
         image: `${inspiration}`,
         type1: 'Inspiration',
         header: 'It is during our darkest moments that we must focus to see the light',
@@ -93,6 +96,7 @@ const PageData = [
         name: 'Surabhi Gupta'
     },
     {
+        id: 4,
         location: 'page',
         image: `${bag}`,
         type1: 'Technology',
@@ -104,6 +108,7 @@ const PageData = [
         time: '3 min read'
     },
     {
+        id: 5,
         location: 'page',
         image: `${food2}`,
         type1: 'Food',
@@ -113,6 +118,7 @@ const PageData = [
         time: '4 min read'
     },
     {
+        id: 6,
         location: 'page',
         image: `${health}`,
         type1: 'health',
@@ -123,7 +129,7 @@ const PageData = [
     },
     {
         id: "featured",
-        location: 'page',
+        // location: 'page',
         image: `${drones}`,
         type1: 'Technology',
         header: 'Amphibious drone are being used to send medicine to flooded area',
@@ -133,7 +139,7 @@ const PageData = [
     },
     {
         id: "featured",
-        location: 'page',
+        // location: 'page',
         image: `${forestTree}`,
         type1: 'Nature',
         header: 'In all things of nature there is something of the marvelous',
@@ -143,7 +149,7 @@ const PageData = [
     },
     {
         id: "latest",
-        location: 'page',
+        // location: 'page',
         image: `${animal}`,
         type1: 'Travel',
         header: "Don't listen to what they say, go see",
@@ -153,7 +159,7 @@ const PageData = [
     },
     {
         location: 'page',
-        id: "footer",
+        // id: "footer",
         image: `${schoolGirl}`,
         type1: 'Travel',
         header: "Stop worrying about the potholes in the road and enjoy the journey",
@@ -162,6 +168,7 @@ const PageData = [
         time: '3 min read'
     },
     {
+        id: 7,
         location: 'page',
         image: `${friuts}`,
         type1: 'Food',
@@ -173,7 +180,7 @@ const PageData = [
     },
     {
         id: "latest",
-        location: 'page',
+        // location: 'page',
         image: `${mountain}`,
         type1: 'Nature',
         type2: "Travel",
@@ -183,7 +190,7 @@ const PageData = [
         time: '4 min read'
     },
     {
-        location: 'page',
+        // location: 'page',
         id: 'footer',
         image: `${ladyEating}`,
         type1: 'Food',
@@ -194,7 +201,7 @@ const PageData = [
     },
     {
         id: "latest",
-        location: 'page',
+        // location: 'page',
         image: `${goodHealth}`,
         type1: 'Health',
         type2: "Lifstyle",

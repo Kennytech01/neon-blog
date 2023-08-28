@@ -34,9 +34,9 @@ export const TopNav = () => {
   return (
     <div id='topNav' className='max-w-[1040px] m-auto' >
         {/* topView */}
-        <div className='bg-stone-100 z-[99] h-20 md:my-20 my-5 border flex items-center justify-between p-3 shadow-lg rounded '>
+        <div className='bg-stone-100 z-[99] h-20 md:my-20 my-5 border flex items-center justify-between p-3 shadow-lg rounded-lg '>
             <Link to = "/" >
-                <img src={LOGO} alt="logo" className=''/>
+                <img src={LOGO} alt="logo" className='hover:scale-105 duration-500 ease-in-out'/>
             </Link>
             <div className='hidden lg:flex flex-wrap justify-center items-center ' >
                 <NavLink 
@@ -176,7 +176,7 @@ export const TopNav = () => {
                 {/* signIn */}
                 <Link to = 'signin'>
                     <button className='p-3'>
-                        Sign In
+                        Sign Out
                     </button>
                 </Link>
                 {/* becomeMember */}
@@ -196,7 +196,7 @@ export const TopNav = () => {
             </div>
 
         </div>
-        {/* mobile view */}
+        {/* mobile DropDown */}
         {
             mobile? (
                 <div>

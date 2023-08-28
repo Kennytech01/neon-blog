@@ -3,6 +3,8 @@ import SliderData from "./HomeSlideData";
 import {BsCalendarDate} from 'react-icons/bs'
 import {TfiTime} from 'react-icons/tfi'
 import {PiRadioButtonDuotone} from 'react-icons/pi'
+import { Blog } from "../Pages/Blog";
+import { Link } from "react-router-dom";
 
 const delay = 5000;
 export const HomeSlide = () => {
@@ -35,9 +37,9 @@ export const HomeSlide = () => {
     <div className=" relative overflow-hidden slideshow ">
       <div  style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }} className="slideshowSlider flex inner group h-full w-full relative">
         {
-          SliderData.map((item, index) => {
+          SliderData.map((item) => {
             return (
-              <div key={index} className="slide w-full displayItems group-hover:cursor-pointer flex-shrink-0 flex ">
+              <Link key={item.header} to = {`/blog/${item.header}`} element={<Blog/>} className="slide w-full displayItems group-hover:cursor-pointer flex-shrink-0 flex ">
                 {/* leftSide */}
                 <div className=" w-full h-80 whitespace-normal flex flex-col justify-evenly items-start">
                   <div className='flex flex-wrap'>
@@ -59,7 +61,7 @@ export const HomeSlide = () => {
                     <img src={item?.image} alt="slider" className="w-full h-full rounded-[2rem] object-cover" />
                   {/* </div> */}
                 </div>
-              </div>
+              </Link>
             )
           })
         }
@@ -75,36 +77,7 @@ export const HomeSlide = () => {
           ></div>
         ))}
       </div>
-      {/*button  */}
-      {/* <div className="flex items-center relative justify-between px-5 w-full">
-        <div>
-          <BsArrowLeftCircle onClick={slideLeft} className="cursor-pointer hover:scale-95 ease-in duration-100"/>
-        </div>
-        <div className="indicators">
-          {
-            SliderData.map((item, index)=>{
-              return(
-                <button onClick={()=> updateIndex(index)} >
-                  <span className= {`material-symbols-outlined text-xs ${index === activeIndex? '#EC940D' : 'blue'}`} >
-                    radio_button_checked
-                  </span>
-                </button>
-              )
-            })
-          }
-          
-        </div>
-        <div>
-          <BsArrowRightCircle onClick={slideRight} className="cursor-pointer hover:scale-95 ease-in duration-100"/>
-        </div>
-      </div> */}
     </div>
   )
 }
 
-{/* <button>
-  <svg class="motion-safe:animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
-     <!-- ... -->
-  </svg>
-  Processing
-</button> */}

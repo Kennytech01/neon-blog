@@ -9,7 +9,7 @@ import healthTag from '../assets/images/healthTag.png'
 import {PiToggleLeftDuotone} from 'react-icons/pi'
 import {PiToggleRightDuotone} from 'react-icons/pi'
 
-const tagData = [
+export const tagData = [
 
     {
         id: 1,
