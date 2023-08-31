@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import PageData from './PageData'
+import PageData from '../Components/PageData'
 import {BsClockHistory} from 'react-icons/bs'
 import {FaTwitter, FaFacebookF,FaInstagram,FaLinkedinIn,FaGithub} from 'react-icons/fa'
 
@@ -59,9 +59,9 @@ export const Aside = () => {
       <div className='m-5'>
         <h1 className='font-bold p-5 text-lg'>Latest Posts</h1>
         {
-          PageData.filter((data)=> data.id === 'latest').map((item, idx)=> (
+          PageData.filter((item)=> item.id === 'latest').map((item, idx)=> (
             <div className='mb-10 sm:mx-auto' >
-              <div key={idx} className='duration-100 relative flex h-20 overflow-hidden shadow my-3 rounded-xl bg-white'>
+              <div key={item.image} className='duration-100 relative flex h-20 overflow-hidden shadow my-3 rounded-xl bg-white'>
                 <div className='w-1/4'>
                   <img src={item.image} alt="image " className='w-full h-full object-cover '/>
                 </div>

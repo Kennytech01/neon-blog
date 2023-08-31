@@ -9,7 +9,6 @@ import health from '../assets/images/health.jpeg'
 import drones from '../assets/images/drones.jpeg'
 import forestTree from '../assets/images/forestTree.jpeg'
 import animal from '../assets/images/animal.jpeg'
-import schoolGirl from '../assets/images/schoolGirl.jpeg'
 import friuts from '../assets/images/fruits.jpeg'
 import mountain from '../assets/images/mountain.jpeg'
 import ladyEating from '../assets/images/ladyEating.jpeg'
@@ -30,28 +29,40 @@ import goodHealth from '../assets/images/goodHealth.jpeg'
 
 const PageData = [
     {
-        tags: "id",
-        tag1: "Food",
-        tag2: "Health",
-        tag3: "Lifestyle",
-        tag4: "Nature",
-        tag5: "Technology",
-        tag6: "Travel"
+        id: 7,
+        location: 'page',
+        image: `${friuts}`,
+        type1: 'Food',
+        type2: 'Inspiration',
+        header: 'The secret ingredient in good food is always love',
+        details: "I am surely in the toils. Last night the Count asked me in the suavest tones to write three letters, one saying that my work here was nearly done, and that I should start for home within a few",
+        date: 'April 28, 2022',
+        time: '3 min read'
     },
- 
     {
-        id: 'footer',
-        // location: 'page',
-        image: `${nature}`,
-        type1: 'Nature',
-        header: 'Autumn is a second spring when every leaf is a flower',
-        details: 'She then expatiated very warmly upon the advantages I should reap from her plan; talked in a high style of my future grandeur; assured me how heartily I should despise almost every body and...',
-        date: 'August 2, 2023',
-        time: '4 min read',
-        name: 'Harini Banerjee'
+        id: 4,
+        location: 'page',
+        image: `${bag}`,
+        type1: 'Technology',
+        type2: 'Nature',
+        type3: 'Inspiration',
+        header: 'Bangladesh has developed plastic alternative using jute',
+        details: "Dr. Johnson, as usual, spoke contemptuously of Colley Cibber. 'It is wonderful that a man, who for forty years had lived with the great and the witty, should have acquired so ill the talents of",
+        date: 'June 18, 2023',
+        time: '3 min read'
     },
     {
         id: 1,
+        location: 'page',
+        image: `${food2}`,
+        type1: 'Food',
+        header: 'I do not stick to rules when cooking. I rely on my imagination',
+        details: "I walked down to the station with them, and then wandered through the streets of the little town, finally returning to the hotel, where I lay upon the sofa and tried to interest myself in a yellow-",
+        date: 'June 12, 2023',
+        time: '4 min read'
+    },
+    {
+        id: 5,
         location: 'page',
         image: `${travel}`,
         type1: 'Travel',
@@ -61,6 +72,7 @@ const PageData = [
         time: '4 min read ',
         name: 'Apurba Talukdar & Ishan Sharma'
     },
+    
     {
         id: 2,
         location: 'page',
@@ -84,39 +96,7 @@ const PageData = [
         name: 'Harini Banerjee'
 
     },
-    {
-        id: "featured",
-        // location: 'page',
-        image: `${inspiration}`,
-        type1: 'Inspiration',
-        header: 'It is during our darkest moments that we must focus to see the light',
-        details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
-        date: 'July 19, 2023',
-        time: '4 min read',
-        name: 'Surabhi Gupta'
-    },
-    {
-        id: 4,
-        location: 'page',
-        image: `${bag}`,
-        type1: 'Technology',
-        type2: 'Nature',
-        type3: 'Inspiration',
-        header: 'Bangladesh has developed plastic alternative using jute',
-        details: "Dr. Johnson, as usual, spoke contemptuously of Colley Cibber. 'It is wonderful that a man, who for forty years had lived with the great and the witty, should have acquired so ill the talents of",
-        date: 'June 18, 2023',
-        time: '3 min read'
-    },
-    {
-        id: 5,
-        location: 'page',
-        image: `${food2}`,
-        type1: 'Food',
-        header: 'I do not stick to rules when cooking. I rely on my imagination',
-        details: "I walked down to the station with them, and then wandered through the streets of the little town, finally returning to the hotel, where I lay upon the sofa and tried to interest myself in a yellow-",
-        date: 'June 12, 2023',
-        time: '4 min read'
-    },
+   
     {
         id: 6,
         location: 'page',
@@ -128,8 +108,36 @@ const PageData = [
         time: '3 min read'
     },
     {
+        tags: "id",
+        tag1: "Food",
+        tag2: "Health",
+        tag3: "Lifestyle",
+        tag4: "Nature",
+        tag5: "Technology",
+        tag6: "Travel"
+    },
+    {
         id: "featured",
-        // location: 'page',
+        image: `${inspiration}`,
+        type1: 'Inspiration',
+        header: 'It is during our darkest moments that we must focus to see the light',
+        details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
+        date: 'July 19, 2023',
+        time: '4 min read',
+        name: 'Surabhi Gupta'
+    },
+    {
+        id: 'footer',
+        image: `${nature}`,
+        type1: 'Nature',
+        header: 'Autumn is a second spring when every leaf is a flower',
+        details: 'She then expatiated very warmly upon the advantages I should reap from her plan; talked in a high style of my future grandeur; assured me how heartily I should despise almost every body and...',
+        date: 'August 2, 2023',
+        time: '4 min read',
+        name: 'Harini Banerjee'
+    },
+    {
+        id: "featured",
         image: `${drones}`,
         type1: 'Technology',
         header: 'Amphibious drone are being used to send medicine to flooded area',
@@ -139,7 +147,6 @@ const PageData = [
     },
     {
         id: "featured",
-        // location: 'page',
         image: `${forestTree}`,
         type1: 'Nature',
         header: 'In all things of nature there is something of the marvelous',
@@ -149,7 +156,6 @@ const PageData = [
     },
     {
         id: "latest",
-        // location: 'page',
         image: `${animal}`,
         type1: 'Travel',
         header: "Don't listen to what they say, go see",
@@ -157,30 +163,9 @@ const PageData = [
         date: 'May 19, 2022',
         time: '4 min read'
     },
-    {
-        location: 'page',
-        // id: "footer",
-        image: `${schoolGirl}`,
-        type1: 'Travel',
-        header: "Stop worrying about the potholes in the road and enjoy the journey",
-        details: "Six o’clock struck on the bells of the church that was so conveniently near to Mr. Utterson’s dwelling, and still he was digging at the problem. Hitherto it had touched him on the...",
-        date: 'May 2, 2022',
-        time: '3 min read'
-    },
-    {
-        id: 7,
-        location: 'page',
-        image: `${friuts}`,
-        type1: 'Food',
-        type2: 'Inspiration',
-        header: 'The secret ingredient in good food is always love',
-        details: "I am surely in the toils. Last night the Count asked me in the suavest tones to write three letters, one saying that my work here was nearly done, and that I should start for home within a few",
-        date: 'April 28, 2022',
-        time: '3 min read'
-    },
+   
     {
         id: "latest",
-        // location: 'page',
         image: `${mountain}`,
         type1: 'Nature',
         type2: "Travel",
@@ -190,7 +175,6 @@ const PageData = [
         time: '4 min read'
     },
     {
-        // location: 'page',
         id: 'footer',
         image: `${ladyEating}`,
         type1: 'Food',
@@ -201,7 +185,6 @@ const PageData = [
     },
     {
         id: "latest",
-        // location: 'page',
         image: `${goodHealth}`,
         type1: 'Health',
         type2: "Lifstyle",
@@ -212,4 +195,3 @@ const PageData = [
     }
 ]
 export default PageData
-// export default myData

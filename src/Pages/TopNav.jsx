@@ -7,8 +7,8 @@ import {HiMiniBars3BottomRight} from 'react-icons/hi2'
 import {BsArrowDownShort} from 'react-icons/bs'
 import {LiaTimesSolid} from 'react-icons/lia'
 import { FaTwitter, FaLinkedinIn, FaFacebookF, FaGithub, FaInstagram } from 'react-icons/fa'
-import authorData  from '../Pages/Author'
-import { SearchResult } from './SearchResult'
+import authorData  from './Author'
+import { SearchResult } from '../Components/SearchResult'
 import useLocalStorage from 'use-local-storage'
 
 
