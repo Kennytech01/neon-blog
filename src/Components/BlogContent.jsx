@@ -114,14 +114,16 @@ export const BlogContent = () => {
             <div className='bg-stone-50 rounded-xl mb-10'>
                 <div className='h- text-center'>
                     <p className='h-96 group'>
-                    <img src={blog.image} alt="image" className='group-hover:scale-95 ease-in duration-300 object-cover object-center w-full h-full rounded-[3rem] p-5'/>
+                    <img src={blog.image} alt="image" className='group-hover:scale-105 ease-in duration-500 object-cover object-center w-full h-full rounded-[3rem] p-5'/>
                     </p>
                     <em className='hover:underline decoration-[#EC094D] underline-offset-2 text-stone-700 text-sm'>photo by Microsoft 360/unsplash</em>
                 </div>
                 <div className='md:mx-10 mx-5'>
-                    <span className='w-24 my-2 h-10 font-light bg-stone-200 rounded-full sm:text-normal text-sm capitalize relative flex justify-center items-center'>
-                        <span className='bg-[#EC094D] rounded-full mr-1 w-2 h-2 flex justify-center items-center'></span>{blog.travel}
-                    </span>
+                    <div className='list-disc flex flex-wrap '>
+                        { blog.type1? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-green-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>{blog?.type1}</span>) : null}
+                        { blog.type2? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-pink-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{blog?.type2}</span>) : null}
+                        { blog.type3? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-blue-600 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{blog?.type3}</span>) : null}
+                    </div>
                     <h1 className='lg:text-4xl hover:cursor-pointer px-1 py-4 font-bold hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>
                         {blog.header}
                     </h1>
@@ -150,7 +152,7 @@ export const BlogContent = () => {
                     </p>
                     <div className='my-10 text-center'>
                         <p className='md:h-96 h-60 group'>
-                            <img src={Jakob} alt="image" className='group-hover:scale-95 ease-in duration-300 object-cover object-center w-full h-full rounded-[3rem] md:p-5'/>
+                            <img src={Jakob} alt="image" className='group-hover:scale-105 ease-in duration-500 object-cover object-center w-full h-full rounded-[3rem] md:p-5'/>
                         </p>
                         <em className='hover:underline underline-[#EC094D] text-stone-700'>photo by Microsoft 360/unsplash</em>
                     </div>
@@ -169,7 +171,7 @@ export const BlogContent = () => {
                     </div>
                     <div className='h- text-center'>
                         <p className='md:h-96 h-60 group'>
-                        <img src={austin} alt="image" className='object-cover object-center w-full h-full rounded-[3rem] p-5 group-hover:scale-95 ease-in duration-300'/>
+                        <img src={austin} alt="image" className='object-cover object-center w-full h-full rounded-[3rem] p-5 group-hover:scale-105 ease-in duration-500'/>
                         </p>
                         <em className='hover:underline decoration-[#EC094D] text-stone-700'>photo by Microsoft 360/unsplash</em>
                     </div>
@@ -212,7 +214,7 @@ export const BlogContent = () => {
             <div className='bg-stone-100 rounded-lg border mb-5'>
                 <div className='flex justify-center p-2 h-48'>
                     <div className='w-1/3 h-full group transition-all'>
-                        <img src={author2} alt="image" className='w-full h-full object-cover rounded-2xl group-hover:scale-95 ease-out duration-300 '/>
+                        <img src={author2} alt="image" className='w-full h-full object-cover rounded-2xl group-hover:scale-105 ease-out duration-300 '/>
                     </div>
                     <div className='w-2/3 p-3 '>
                         <p className='font-bold text-stone-700 text-lg p-2'>{blog.name}</p>
@@ -233,7 +235,7 @@ export const BlogContent = () => {
             <div className='rounded-lg border hover:cursor-pointer flex flex-col justify-center items-end '>
                 <div className='sm:flex justify-center items-center p-2 sm:h-40  md:w-1/2 w-2/3 bg-stone-100 rounded-2xl'>
                     <div className='w-1/3 h-2/3 p-2  order-2 group transition-all'>
-                        <img src={nature} alt="image" className='w-full h-full object-cover rounded-2xl group-hover:scale-95 ease-in duration-300'/>
+                        <img src={nature} alt="image" className='w-full h-full object-cover rounded-2xl group-hover:scale-95 ease-in duration-500'/>
                     </div>
                     <div className='sm:w-2/3 p- '>
                         <p className='font-bold text-stone-500 text-lg p-2 hover:underline'>older posts</p>
@@ -278,7 +280,7 @@ export const BlogContent = () => {
                         <h1 className='text-2xl font-bold p-2'>Start the conversation</h1>
                         <p className='p-2'>Become a member of neon to start commenting</p>
                         <form action="" method="post" className='mb-4'>
-                            <button className='bg-[#EC094D] text-stone-50 p-2 rounded-xl font-bold px-3 hover:scale-95 ease-in duration-300'>Sign up now</button>
+                            <button className='bg-[#EC094D] text-stone-50 p-2 rounded-xl font-bold px-3 hover:scale-105 ease-in duration-500'>Sign up now</button>
                             <p className='md:py-5 font-light p-2'>Already a member?
                                 <Link to='/signin' style={{color: 'var(--button-bg)'}} className='px-2 font-bold'>SignIn</Link>
                             </p>
