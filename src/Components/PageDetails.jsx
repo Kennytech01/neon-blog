@@ -10,6 +10,7 @@ import lifestyle from '../assets/images/lifestyle.jpeg'
 import bag from '../assets/images/bag.jpeg'
 import food2 from '../assets/images/food2.jpeg'
 import health from '../assets/images/health.jpeg'
+import friuts from '../assets/images/fruits.jpeg'
 import PageData from './PageData'
 
 export const PageDetails = ({ID}) => {

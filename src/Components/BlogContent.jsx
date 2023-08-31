@@ -111,8 +111,7 @@ export const BlogContent = () => {
   return (
     <div className='h-[100rem] overflow-auto no-scrollbar ' >
         <div className=''>
-            <div className='bg-stone-50 rounded-xl mb-10' >
-                <h1 className='font-bold'>Page:{id}</h1>
+            <div className='bg-stone-50 rounded-xl mb-10'>
                 <div className='h- text-center'>
                     <p className='h-96 group'>
                     <img src={blog.image} alt="image" className='group-hover:scale-95 ease-in duration-300 object-cover object-center w-full h-full rounded-[3rem] p-5'/>
