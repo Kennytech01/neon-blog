@@ -3,9 +3,12 @@ import slider3 from '../assets/images/slider3.png'
 import slider4 from '../assets/images/slider4.png'
 import slider2 from '../assets/images/slider2.png'
 import slider1 from '../assets/images/slider1.png'
+import bag from '../assets/images/bag.jpeg'
+import food2 from '../assets/images/food2.jpeg'
 
 const SliderData = [
     {
+        id: 1,
         titleOne: "Technology",
         titleTwo: "Nature",
         titleThree: "Health",
@@ -16,14 +19,18 @@ const SliderData = [
         image: `${slider1}`
     },
     {
-        title: " Health",
-        header: "The mind and body are not separate. what affects one, affects the other",
-        details: "His recital put the Captain into an ecstasy; he went from the lady to the gentleman, and from the gentleman to the lady, to enjoy alternately the sight of their distress. He really shouted with pleasure; and, shaking Monsieur Du Bois strenuously by the hand",
-        date: "Mar 28, 2022",
-        time: "3 min read",
-        image: `${slider2}`
-    },
+        id: 2,
+        location: 'page',
+        image: `${food2}`,
+        titleOne: 'Food',
+        header: 'I do not stick to rules when cooking. I rely on my imagination',
+        details: "I walked down to the station with them, and then wandered through the streets of the little town, finally returning to the hotel, where I lay upon the sofa and tried to interest myself in a yellow-",
+        date: 'June 12, 2023',
+        time: '4 min read'
+    }, 
     {
+        id: 3,
+        titleTwo: 'Inspiration',
         title: 'Travel',
         header: 'Never let your memories be greater than your dreams',
         details: "Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time backed to the east, and there was a shudder amongst the watchers on",
@@ -32,6 +39,7 @@ const SliderData = [
         image: `${slider3}`
     },
     {
+        id: 4,
         title: "Lifestyle",
         header: "Self-observation is the first step of inner unfolding",
         details: "Mr. Branghton's house is small and inconvenient; though his shop, which takes in all the ground floor, is large and commodious. I believe I told you before, that he is a silver-smith.",
@@ -40,6 +48,7 @@ const SliderData = [
         image: `${slider4}`
     },
     {
+        id: 5,
         titleOne: 'Health',
         titleTwo: 'Lifestyle',
         header: "All the money in the world can't buy you back good health",
@@ -47,7 +56,28 @@ const SliderData = [
         date: " Oct 9, 2021",
         time: "3 min read",
         image: `${slider5}`
-    }   
+    },
+    {
+        id: 6,
+        location: 'page',
+        image: `${bag}`,
+        titleThree: 'Technology',
+        titleTwo: 'Nature',
+        header: 'Bangladesh has developed plastic alternative using jute',
+        details: "Dr. Johnson, as usual, spoke contemptuously of Colley Cibber. 'It is wonderful that a man, who for forty years had lived with the great and the witty, should have acquired so ill the talents of",
+        date: 'June 18, 2023',
+        time: '3 min read'
+    },
+    {
+        id: 7,
+        titleTwo: "Food",
+        title: " Health",
+        header: "The mind and body are not separate. what affects one, affects the other",
+        details: "His recital put the Captain into an ecstasy; he went from the lady to the gentleman, and from the gentleman to the lady, to enjoy alternately the sight of their distress. He really shouted with pleasure; and, shaking Monsieur Du Bois strenuously by the hand",
+        date: "Mar 28, 2022",
+        time: "3 min read",
+        image: `${slider2}`
+    }  
 ]
 
 export default SliderData;

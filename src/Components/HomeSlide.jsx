@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect,useRef} from "react";
 import SliderData from "./HomeSlideData";
 import {BsCalendarDate} from 'react-icons/bs'
 import {TfiTime} from 'react-icons/tfi'
@@ -10,7 +10,7 @@ const delay = 5000;
 export const HomeSlide = () => {
   const [index,setIndex] = useState(0)
 
-  const timeoutRef = React.useRef(null);
+  const timeoutRef = useRef(null);
 
   const resetTimeout = ()=> {
     if (timeoutRef.current) {
@@ -39,7 +39,7 @@ export const HomeSlide = () => {
         {
           SliderData.map((item) => {
             return (
-              <Link key={item.header} to = {`/blog/${item.header}`} element={<Blog/>} className="slide w-full displayItems group-hover:cursor-pointer flex-shrink-0 flex ">
+              <Link key={item.id} to = {`/blog/${item.id}`} element={<Blog/>} className="slide w-full displayItems group-hover:cursor-pointer flex-shrink-0 flex ">
                 {/* leftSide */}
                 <div className=" w-full h-80 whitespace-normal flex flex-col justify-evenly items-start">
                   <div className='flex flex-wrap'>

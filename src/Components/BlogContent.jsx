@@ -8,101 +8,110 @@ import Jakob from '../assets/images/Jakob.png'
 import dreamBig from '../assets/images/dreamBig.jpeg'
 import { FaGithub, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import author2 from '../assets/images/author2.png'
-import travel from '../assets/images/travel.jpeg'
+import author1 from '../assets/images/author1.png'
+import author4 from '../assets/images/author4.png'
+import author5 from '../assets/images/author5.png'
 import austin from '../assets/images/austin.png'
-import lifestyle from '../assets/images/lifestyle.jpeg'
-import food from '../assets/images/food.jpeg'
+import slider5 from '../assets/images/slider5.png'
+import slider3 from '../assets/images/slider3.png'
+import slider4 from '../assets/images/slider4.png'
+import slider2 from '../assets/images/slider2.png'
+import slider1 from '../assets/images/slider1.png'
 import bag from '../assets/images/bag.jpeg'
 import food2 from '../assets/images/food2.jpeg'
-import health from '../assets/images/health.jpeg'
-import friuts from '../assets/images/fruits.jpeg'
-
+import PageData from './PageData'
 
 export const BlogContent = () => {
     const {id} = useParams() 
 
     const Data = [
         {
-          "id": 1,
-          'location': 'page',
-          'image': `${bag}`,
-          'type1': 'Technology',
-          'type2': 'Nature',
-          'type3': 'Inspiration',
-          'header': 'Bangladesh has developed plastic alternative using jute',
-          'details': "Dr. Johnson, as usual, spoke contemptuously of Colley Cibber. 'It is wonderful that a man, who for forty years had lived with the great and the witty, should have acquired so ill the talents of",
-          'date': 'June 18, 2023',
-          'time': '3 min read',
-          'name': 'Biswajit Saha'
+            id: 1,
+            type1: "Technology",
+            type2: "Nature",
+            type3: "Health",
+            header: "New tech innovation for low cost ocean cleanup",
+            details: "Nearly a year later, in the month of October, London was startled by a crime of singular ferocity and rendered all the more notable by the high position of the victim. The details were few and startling. A maid servant living alone in a house not far from the river.",
+            date: "Dec 14, 2021",
+            time: "2 min read",
+            image: `${slider1}`,
+            'name': 'Biswajit Saha',
+            authorImage: `${author1}`
         },
         {
-          "id": 2,
-          'location': 'page',
-          'image': `${food2}`,
-          'type1': 'Food',
-          'header': 'I do not stick to rules when cooking. I rely on my imagination',
-          'details': "I walked down to the station with them, and then wandered through the streets of the little town, finally returning to the hotel, where I lay upon the sofa and tried to interest myself in a yellow-",
-          'date': 'June 12, 2023',
-          'time': '4 min read',
-          'name': 'Biswajit Saha'
+            id: 2,
+            location: 'page',
+            image: `${food2}`,
+            type1: 'Food',
+            header: 'I do not stick to rules when cooking. I rely on my imagination',
+            details: "I walked down to the station with them, and then wandered through the streets of the little town, finally returning to the hotel, where I lay upon the sofa and tried to interest myself in a yellow-",
+            date: 'June 12, 2023',
+            time: '4 min read',
+            name: 'Ishan Sharma',
+            authorImage: `${author2}`
+
+        }, 
+        {
+            id: 3,
+            type2: 'Inspiration',
+            type3: 'Travel',
+            header: 'Never let your memories be greater than your dreams',
+            details: "Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time backed to the east, and there was a shudder amongst the watchers on",
+            date: "May 2, 2022",
+            time: "4 min read",
+            name: 'Surabhi Gupta',
+            image: `${slider3}`,
+            authorImage: `${author1}`
         },
         {
-          "id": 3,
-          'location': 'page',
-          'image': `${health}`,
-          'type1': 'health',
-          'header': 'The mind and body are not separate. what affects one, affects the other',
-          'details': 'His recital put the Captain into an ecstasy; he went from the lady to the gentleman, and from the gentleman to the lady, to enjoy alternately the sight of their distress. He really shouted with',
-          'date': 'June 05, 2023',
-          'time': '3 min read',
-          'name': 'Banerjee Harini '
-      }, 
-      {
-        "id": 4,
-        'location': 'page',
-        'image': `${lifestyle}`,
-        'type1': 'Lifestyle',
-        'header': 'Self-observation is the first step of inner unfolding',
-        'details': "Mr. Branghton's house is small and inconvenient; though his shop, which takes in all the ground floor, is large and commodious. I believe I told you before, that he is a silver-smith.",
-        'date': 'July 20, 2023',
-        'time': '5 min read',
-        'name': 'Harini Banerjee'
-      },     
-       {
-          "id": 5,
-          'location': 'page',
-          'image': `${friuts}`,
-          'type1': 'Food',
-          'type2': 'Inspiration',
-          'header': 'The secret ingredient in good food is always love',
-          'details': "I am surely in the toils. Last night the Count asked me in the suavest tones to write three letters, one saying that my work here was nearly done, and that I should start for home within a few",
-          'date': 'April 28, 2022',
-          'time': '3 min read',
-          'name': 'Ishan Sharma'
+            id: 4,
+            type2: "Lifestyle",
+            header: "Self-observation is the first step of inner unfolding",
+            details: "Mr. Branghton's house is small and inconvenient; though his shop, which takes in all the ground floor, is large and commodious. I believe I told you before, that he is a silver-smith.",
+            date: "May 2, 2022",
+            time: "5 min read",
+            name: 'Harini Banerjee',
+            image: `${slider4}`,
+            authorImage: `${author4}`
         },
         {
-          "id": 6,
-          'location': 'page',
-          'image': `${travel}`,
-          'type1': 'Travel',
-          'header': 'Never let your memories be greater than your dreams',
-          'details': 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
-          'date': 'July 30, 2023',
-          'time': '4 min read ',
-          'name': 'Apurba Talukdar'
+            id: 5,
+            type2: 'Health',
+            type3: 'Lifestyle',
+            header: "All the money in the world can't buy you back good health",
+            details: "My dear, it never rains but it pours. How true the old proverbs are. Here am I, who shall be twenty in September, and yet I never had a proposal till to-day, not a real proposal, and to-day I have had three. Just fancy! THREE proposals in one day! Isn't",
+            date: " Oct 9, 2021",
+            time: "3 min read",
+            name: 'Apurba Talukdar',
+            image: `${slider5}`,
+            authorImage: `${author5}`
         },
         {
-          "id": 7,
-          'location': 'page',
-          'image': `${food}`,
-          'type1': 'Food',
-          'header': 'Dramatically improve your cooking using just your imagination',
-          'details': 'You cannot too assiduously attend to Madame Duval herself; but I would wish you to mix as little as possible with her associates, who are not likely to be among those whose acquaintance would',
-          'date': 'July 28, 2023',
-          'time': '4 min read',
-          'name': 'Biswajit Saha'
-        },             
-    ]
+            id: 6,
+            location: 'page',
+            image: `${bag}`,
+            type3: 'Technology',
+            titleTwo: 'Nature',
+            header: 'Bangladesh has developed plastic alternative using jute',
+            details: "Dr. Johnson, as usual, spoke contemptuously of Colley Cibber. 'It is wonderful that a man, who for forty years had lived with the great and the witty, should have acquired so ill the talents of",
+            date: 'June 18, 2023',
+            time: '3 min read',
+            name: 'Harini Banerjee',
+            authorImage: `${author4}`
+        },
+        {
+            id: 7,
+            type1: "Food",
+            type2: " Health",
+            header: "The mind and body are not separate. what affects one, affects the other",
+            details: "His recital put the Captain into an ecstasy; he went from the lady to the gentleman, and from the gentleman to the lady, to enjoy alternately the sight of their distress. He really shouted with pleasure; and, shaking Monsieur Du Bois strenuously by the hand",
+            date: "Mar 28, 2022",
+            time: "3 min read",
+            name: 'Ishan Sharma',
+            image: `${slider2}`,
+            authorImage: `${author2}`
+        }  
+      ]
 
     let blog = Data.filter((data)=> data.id == id)
     blog = blog[0]
@@ -120,9 +129,9 @@ export const BlogContent = () => {
                 </div>
                 <div className='md:mx-10 mx-5'>
                     <div className='list-disc flex flex-wrap '>
-                        { blog.type1? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-green-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>{blog?.type1}</span>) : null}
-                        { blog.type2? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-pink-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{blog?.type2}</span>) : null}
-                        { blog.type3? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-blue-600 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{blog?.type3}</span>) : null}
+                        { blog.type1? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-green-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>{blog.type1}</span>) : null}
+                        { blog.type2? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-pink-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{blog.type2}</span>) : null}
+                        { blog.type3? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-blue-600 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{blog.type3}</span>) : null}
                     </div>
                     <h1 className='lg:text-4xl hover:cursor-pointer px-1 py-4 font-bold hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>
                         {blog.header}
@@ -183,7 +192,7 @@ export const BlogContent = () => {
                         <div className='w-full md:mx-5 p-2 items-cente flex flex-col justify-center'>
                             <h2 className='font-bold text-lg text-black pt-4 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>Es durante nuestros momentos más oscuros que debemos concentrarnos para ver la luz.</h2>
                             <p className='capitalize md:py-3 text-sm '>Mina se interesó cada vez más por todo y me alegró ver que la exigencia de las cosas la ayudaba a olvidar por un tiempo la terrible experiencia de la noche. Estaba muy, muy pálida.</p>
-                            <p className='text-xs py-2 text-stone-600 font-bold'>Viox Surabhi Gupta</p>
+                            <p className='text-xs py-2 text-stone-600 font-bold'>{blog.name}</p>
                         </div>
                         <div className='h-2/3 md:h-full md:w-1/2 w-full p-3 order-first sm:order-2 group'>
                             <img src={dreamBig} alt="image" className='rounded-lg w-full h-full object-cover group-hover:scale-95 duration-300 ease-linear' />
@@ -214,7 +223,7 @@ export const BlogContent = () => {
             <div className='bg-stone-100 rounded-lg border mb-5'>
                 <div className='flex justify-center p-2 h-48'>
                     <div className='w-1/3 h-full group transition-all'>
-                        <img src={author2} alt="image" className='w-full h-full object-cover rounded-2xl group-hover:scale-105 ease-out duration-300 '/>
+                        <img src={blog.authorImage} alt="image" className='w-full h-full object-cover rounded-2xl group-hover:scale-105 ease-out duration-300 '/>
                     </div>
                     <div className='w-2/3 p-3 '>
                         <p className='font-bold text-stone-700 text-lg p-2'>{blog.name}</p>
@@ -251,7 +260,7 @@ export const BlogContent = () => {
                 <h1 className='font-bold text-center text-xl p-3'>También te puede interesar</h1>
                 <div className='grid lg:grid-cols-3 sm:grid-cols-2 gap-4 transition-all sm:p-10 p-5'>
                     {
-                        Data.filter(item => item.type1 === 'Travel' ).map((item) => {
+                        PageData.filter(item => item.type1 === 'Travel' ).map((item) => {
                             return (
                                 <div key={item.image} className='border p-2 m-1 rounded-2xl group'>
                                     <div className='group-hover:scale-95 ease-in duration-300'>

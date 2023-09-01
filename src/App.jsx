@@ -20,8 +20,6 @@ function App({}) {
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/membership' element={<Membership/>} />
           <Route path='/blog/:id' element={<Blog/>}/>
-            {/* <Route path=':id' element={<Blog/>}/>
-          </Route> */}
         </Routes>
         <Footer/>
       </AuthProvider>
