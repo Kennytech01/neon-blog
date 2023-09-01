@@ -111,10 +111,10 @@ export const PageDetails = ({ID}) => {
           Data.slice(0, visible).map((pages) => (
             <Link to={`/blog/${pages.id}`}  element={<Blog/>} key={pages.id}>
               <div className='h-96 w-full flex md:flex-col flex-row mb-10 items-center rounded-xl shadow-inner bg-white'>
-                <div className='image relative h-1/2 w-2/3 flex justify-center border'>
+                <div className='image relative h-1/2 w-2/3 flex justify-center '>
                   <img src={pages.image} alt="image" className='rounded-xl object-cover w-full p-2'/>
                 </div>
-                <div className='details p-1 sm:h-2/3 h-full w-4/5 flex-col flex justify-center border'>
+                <div className='details p-1 sm:h-2/3 h-full w-4/5 flex-col flex justify-center '>
                   <div className='list-disc flex flex-wrap items-start justify-start'>
                     { pages.titleOne? (<span className='font-light bg-stone-200 rounded-full my-1 mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-green-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>{pages?.titleOne}</span>) : null}
                     { pages.titleTwo? (<span className='font-light bg-stone-200 rounded-full my-1 mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-pink-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{pages?.titleTwo}</span>) : null}
