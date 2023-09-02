@@ -16,7 +16,7 @@ const data = [
     id: 8,
     type: "featured",
     image: `${drones}`,
-    type1: 'Technology',
+    tech: 'Technology',
     header: 'Amphibious drone are being used to send medicine to flooded area',
     details: "Another tragedy. Had single watch to-night, as crew too tired to double. When morning watch came on deck could find no one except steersman. Raised outcry, and all came on deck. Thorough",
     date: 'May 28, 2022',
@@ -26,7 +26,6 @@ const data = [
     id: 9,
     type: "featured",
     image: `${forestTree}`,
-    type1: 'Nature',
     header: 'In all things of nature there is something of the marvelous',
     details: "Though thus elevated into fame, and conscious of uncommon powers, he had not that bustling confidence, or, I may rather say, that animated ambition, which one might have supposed would...",
     date: 'May 20, 2022',
@@ -36,43 +35,19 @@ const data = [
   id: 10,
   type: "featured",
   image: `${inspiration}`,
-  type1: 'Inspiration',
+  inspire: 'Inspiration',
   header: 'It is during our darkest moments that we must focus to see the light',
   details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
   date: 'July 19, 2023',
   time: '4 min read',
   name: 'Surabhi Gupta'
 },
-{
-  idx: 1,
-  tag: 'Food',
-},
-{
-  idx: 2,
-  tag: 'Nature',
-},
-{
-  idx: 3,
-  tag: 'Technology',
-},
-{
-  idx: 4,
-  tag: 'Health',
-},
-{
-  idx: 5,
-  tag: 'Inspiration',
-},
-{
-  idx: 6,
-  tag: 'Lifestyle',
-},
 
 {
   id: 11,
   type: "latest",
   image: `${animal}`,
-  type1: 'Travel',
+  travel: 'Travel',
   header: "Don't listen to what they say, go see",
   details: "They got up and put on their coats, sipping their coffee standing. The painter was silent and preoccupied. There was a gloom over him. He could not bear this marriage, and yet it seemed to him to",
   date: 'May 19, 2022',
@@ -83,8 +58,7 @@ const data = [
   id: 12,
   type: "latest",
   image: `${mountain}`,
-  type1: 'Nature',
-  type2: "Travel",
+  nature: 'Nature',
   header: "With age, comes wisdom. With travel, comes understanding",
   details: "It was a cold morning of the early spring, and we sat after breakfast on either side of a cheery fire in the old room at Baker Street. A thick fog rolled down between the lines of dun-coloured",
   date: 'April 01, 2022',
@@ -93,19 +67,27 @@ const data = [
 {
   id: 13,
   type: 'latest',
-  type3: 'Lifestyle',
+  health: 'Health',
   header: "All the money in the world can't buy you back good health",
   details: "My dear, it never rains but it pours. How true the old proverbs are. Here am I, who shall be twenty in September, and yet I never had a proposal till to-day, not a real proposal, and to-day I have had three. Just fancy! THREE proposals in one day! Isn't",
   date: " Oct 9, 2021",
   time: "3 min read",
   image: `${slider5}`,
 },
+{
+  food: 'Food'
+},
+{
+  life: 'Lifestyle'
+}
 
 ]
 
 export const Aside = () => {
 
-  
+  // let blog = data.filter((data)=> data.idx)
+  // // blog = blog[1]
+  // console.log(blog)
   return (
     <div className='flex flex-col lg:ml-10 md:ml-5 md:w-1/3 h-full mx-auto py-3 rounded-xl border bg-stone-100 '>
       {/* featured Posts */}
@@ -132,14 +114,68 @@ export const Aside = () => {
         <h1 className='font-bold p-2 text-lg'>Tags</h1>
         <div className='flex flex-wrap'>
           {
-            data?.filter((tag)=> tag.idx).map((tag)=>{
+            data?.map((tag)=>{
               return(
                 <div key={tag.idx} >
                   <div className='py-2 text-stone-600 hover:scale-105 duration-500 ease-in '>
-                    <p className='bg-stone-200 p-1 m-1 rounded-full px-3 py-2 flex items-center justify-center hover:cursor-pointer'>
-                      <span className='bg-green-500 rounded-full mr-1 w-2 h-2'></span>
-                      <span>{tag.tag}</span>
-                    </p>
+                  <div className='flex flex-wrap'>
+                        {tag.food? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#B43ADF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {tag.food}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {tag.health? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#1DBF2F] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {tag.health}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {tag.inspire? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#c9afeb] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {tag.inspire}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {tag.life? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#4D61FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {tag.life}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {tag.nature? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#FD94FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {tag.nature}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {tag.tech? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#F18509] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {tag.tech}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {tag.travel? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#E10689] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {tag.travel}
+                            </span>) 
+                            : 
+                            null
+                        }
+                    </div>
                   </div>
                 </div>
               )
@@ -187,12 +223,22 @@ export const Aside = () => {
       {/* follow us  */}
       <div className='m-5'>
           <h1 className='font-bold p-2 py-5 text-lg'>Follow Us</h1>
-          <div className='flex p-2'>
-              <p className='bg-stone-200 mx-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaTwitter className=' text-blue-400 ' size={30}/></p>
-              <p className='bg-stone-200 mx-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaFacebookF className=' text-blue-800' size={30}/></p>
-              <p className='bg-stone-200 mx-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaInstagram className=' text-red-600' size={30}/></p>
-              <p className='bg-stone-200 mx-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaLinkedinIn className=' text-blue-900' size={30}/></p>
-              <p className='bg-stone-200 mx-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaGithub className=' text-black' size={30}/></p>
+          <div className='flex flex-wrap p-2'>
+              <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                <FaTwitter className=' text-blue-400 ' size={30}/>
+              </p>
+              <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                <FaFacebookF className=' text-blue-800' size={30}/>
+              </p>
+              <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                <FaInstagram className=' text-red-600' size={30}/>
+              </p>
+              <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                <FaLinkedinIn className=' text-blue-900' size={30}/>
+              </p>
+              <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                <FaGithub className=' text-black' size={30}/>
+              </p>
           </div>
       </div>
     </div>

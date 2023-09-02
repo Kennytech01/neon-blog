@@ -4,12 +4,13 @@ import { NavLink, Link } from 'react-router-dom'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {LiaMoonSolid} from 'react-icons/lia'
 import {HiMiniBars3BottomRight} from 'react-icons/hi2'
-import {BsArrowDownShort} from 'react-icons/bs'
+import {MdKeyboardArrowDown} from 'react-icons/md'
 import {LiaTimesSolid} from 'react-icons/lia'
 import { FaTwitter, FaLinkedinIn, FaFacebookF, FaGithub, FaInstagram } from 'react-icons/fa'
 import authorData  from './Author'
 import { SearchResult } from '../Components/SearchResult'
 import useLocalStorage from 'use-local-storage'
+import { HomePage } from './HomePage'
 
 
 export const TopNav = () => {
@@ -32,7 +33,7 @@ export const TopNav = () => {
     
     
   return (
-    <div id='topNav' className='max-w-[1040px] m-auto' >
+    <div id='topNav' className='max-w-[1040px] m-auto top-10 right-0 left-0 z-[999] sticky' >
         {/* topView */}
         <div className='bg-stone-100 z-[99] h-20 md:my-20 my-5 border flex items-center justify-between p-3 shadow-lg rounded-lg '>
             <Link to = "/" >
@@ -72,55 +73,55 @@ export const TopNav = () => {
                         ({isActive}) => {
                         return {color: isActive? '#EC094D' : 'black'}
                     }}
-                    className ="p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">
+                    className ="p-3 hover:underline  decoration-[#EC094D] decoration-2 underline-offset-4">
                     Authors
                 </NavLink>
                 <div className="relative" onMouseLeave={() => setOpen(false)} >
                     <button 
-                        className='p-3 items-center flex hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'
+                        className='p-3 items-center flex justify-center hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'
                         onMouseOver={()=> setOpen(true)}>
-                            More 
-                            <BsArrowDownShort size={20}/>
+                            <span>More </span>
+                            <MdKeyboardArrowDown size={20}/>
                     </button>
                     { open? (
                         <ul className={`z-[99] absolute right-0 left-0 top-10 flex flex-col justify-center w-52 py-2 mt-2 rounded-lg shadow-xl border bg-stone-50`}>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Home post vertical</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Home post masonry</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Post fullwidth</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Post no sidebar</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Post cover auto height</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Post with TOC</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Tag style two</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Authur style two</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Author style three</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Yearly archive</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Monthly archive</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Contact</li>
                             </NavLink>
-                            <NavLink to = '/#' className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
+                            <NavLink to = '/' element={<HomePage/>} onClick={()=> setOpen(false)} className= "hover:underline decoration-[#EC094D] decoration-2 underline-offset-4" >
                                 <li className='flex items-center px-3 py-2 text-sm hover:bg-stone-100 m-1 rounded-lg'>Documentation</li>
                             </NavLink>
                         </ul>
@@ -175,14 +176,14 @@ export const TopNav = () => {
                 <button onClick={switchTheme}  className='p-3'><LiaMoonSolid size={20}/></button>
                 {/* signIn */}
                 <Link to = 'signin'>
-                    <button className='p-3'>
-                        Sign Out
+                    <button className ="p-3 hover:underline  decoration-[#EC094D] decoration-2 underline-offset-4">
+                        Sign In
                     </button>
                 </Link>
                 {/* becomeMember */}
                 <Link to = 'membership'>
                     <button 
-                        className='p-2 px-3 bg-[#EC094D] text-stone-100 font-semibold rounded-full hover:scale-95 ease-out duration-200'>
+                        className='p-2 px-3 bg-[#EC094D] text-stone-100 font-bold rounded-full hover:scale-95 ease-out duration-500'>
                         Become member
                     </button>
                 </Link>
@@ -285,17 +286,17 @@ export const TopNav = () => {
                                     Become member
                                 </button>
                             </Link>
-                            {/* followUs */}
+                            {/* follow us  */}
                             <div>
-                                <h1 className='font-bold p-2'>Follow Us</h1>
-                                <span className='flex p-2'>
-                                    <FaTwitter className='m-2 text-blue-400 hover:scale-110 ease-in duration-100' size={20}/>
-                                    <FaFacebookF className='m-2 text-blue-800 hover:scale-110 ease-in duration-100' size={20}/>
-                                    <FaInstagram className='m-2 text-red-600 hover:scale-110 ease-in duration-100' size={20}/>
-                                    <FaLinkedinIn className='m-2 text-blue-900 hover:scale-110 ease-in duration-100' size={20}/>
-                                    <FaGithub className='m-2 text-black hover:scale-110 ease-in duration-100' size={20}/>
-                                </span>
-                            </div>   
+                                <h1 className='font-bold p-2 py-5 text-lg'>Follow Us</h1>
+                                <div className='flex flex-wrap p-2'>
+                                    <p className='bg-stone-200 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaTwitter className=' text-blue-400 '/></p>
+                                    <p className='bg-stone-200 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaFacebookF className=' text-blue-800'/></p>
+                                    <p className='bg-stone-200 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaInstagram className=' text-red-600'/></p>
+                                    <p className='bg-stone-200 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaLinkedinIn className=' text-blue-900'/></p>
+                                    <p className='bg-stone-200 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaGithub className=' text-black'/></p>
+                                </div>
+                            </div>  
                         </ul>
                     </div>
                 </div>

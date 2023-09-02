@@ -2,7 +2,6 @@ import React, { useState, useEffect,useRef} from "react";
 import SliderData from "./HomeSlideData";
 import {BsCalendarDate} from 'react-icons/bs'
 import {TfiTime} from 'react-icons/tfi'
-import {PiRadioButtonDuotone} from 'react-icons/pi'
 import { Blog } from "../Pages/Blog";
 import { Link } from "react-router-dom";
 
@@ -43,14 +42,66 @@ export const HomeSlide = () => {
                 {/* leftSide */}
                 <div className=" w-full h-80 whitespace-normal flex flex-col justify-evenly items-start">
                   <div className='flex flex-wrap'>
-                    {item.title? (<span className='font-light bg-stone-100 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'><span className='bg-green-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>{item.title}</span>) : null}
-                    {item.titleOne? (<span className='font-light bg-stone-100 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'><span className='bg-pink-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{item.titleOne}</span>) : null}
-                    {item.titleTwo? (<span className='font-light bg-stone-100 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'><span className='bg-blue-600 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{item.titleTwo}</span>) : null}
-                    {item.titleThree? (<span className='font-light bg-stone-100 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'><span className='bg-orange-400 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{item.titleThree}</span>) : null}
+                    {item.food? (
+                      <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                      <span className='bg-[#B43ADF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                        {item.food}
+                      </span>) 
+                      : 
+                      null
+                    }
+                    {item.health? (
+                      <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                      <span className='bg-[#1DBF2F] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                        {item.health}
+                      </span>) 
+                      : 
+                      null
+                    }
+                    {item.inspire? (
+                      <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                      <span className='bg-[#D4BAF6] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                        {item.inspire}
+                      </span>) 
+                      : 
+                      null
+                    }
+                    {item.life? (
+                      <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                      <span className='bg-[#4D61FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                        {item.life}
+                      </span>) 
+                      : 
+                      null
+                    }
+                    {item.nature? (
+                      <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                      <span className='bg-[#FD94FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                        {item.nature}
+                      </span>) 
+                      : 
+                      null
+                    }
+                    {item.tech? (
+                      <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                      <span className='bg-[#F18509] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                        {item.tech}
+                      </span>) 
+                      : 
+                      null
+                    }
+                    {item.travel? (
+                      <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                      <span className='bg-[#E10689] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                        {item.travel}
+                      </span>) 
+                      : 
+                      null
+                    }
                   </div>
                   <h1 className="lg:text-4xl text-2xl hover:cursor-pointer px-3 font-bold hover:underline decoration-[#EC094D] decoration-2 underline-offset-4">{item.header}</h1>
                   <h3 className="tracking-wide p-3 h-20 md:h-auto text-stone-600 detail font-normal line-clamp-3 md:line-clamp-none overflow-hidden">{item.details}</h3>
-                  <p className="font-light text-stone-500 text-sm flex flex-wrap">
+                  <p className=" text-stone-500 text-sm flex flex-wrap">
                     <span className="p-2 pl-2 px-4 flex justify-center items-center"><BsCalendarDate className="m-1"/>{item.date}</span>
                     <span className="p-2 px-4 flex justify-center items-center"><TfiTime className="m-1"/>{item.time}</span>
                   </p>

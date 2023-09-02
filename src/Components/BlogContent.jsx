@@ -33,9 +33,9 @@ export const BlogContent = () => {
     const Data = [
         {
             id: 1,
-            type1: "Technology",
-            type2: "Nature",
-            type3: "Health",
+            tech: "Technology",
+            nature: "Nature",
+            health: "Health",
             header: "New tech innovation for low cost ocean cleanup",
             details: "Nearly a year later, in the month of October, London was startled by a crime of singular ferocity and rendered all the more notable by the high position of the victim. The details were few and startling. A maid servant living alone in a house not far from the river.",
             date: "Dec 14, 2021",
@@ -48,7 +48,8 @@ export const BlogContent = () => {
             id: 2,
             location: 'page',
             image: `${food2}`,
-            type1: 'Food',
+            food: 'Food',
+            inspire: 'Inspiration',
             header: 'I do not stick to rules when cooking. I rely on my imagination',
             details: "I walked down to the station with them, and then wandered through the streets of the little town, finally returning to the hotel, where I lay upon the sofa and tried to interest myself in a yellow-",
             date: 'June 12, 2023',
@@ -60,8 +61,8 @@ export const BlogContent = () => {
         {
             id: 3,
             image: `${ladyEating}`,
-            type2: 'Inspiration',
-            type3: 'Food',
+            inspiration: 'Inspiration',
+            food: 'Food',
             header: "I like better than talking about food is eating",
             details: "In one point he was more fortunate than the novel's fantastic hero. He never knew--never, indeed, had any cause to know--that somewhat grotesque dread of mirrors, and polished metal",
             date: 'March 10, 2022',
@@ -71,7 +72,8 @@ export const BlogContent = () => {
         },
         {
             id: 4,
-            type2: "Lifestyle",
+            life: "Lifestyle",
+            inspire: 'Inspiration',
             header: "Self-observation is the first step of inner unfolding",
             details: "Mr. Branghton's house is small and inconvenient; though his shop, which takes in all the ground floor, is large and commodious. I believe I told you before, that he is a silver-smith.",
             date: "May 2, 2022",
@@ -82,8 +84,8 @@ export const BlogContent = () => {
         },
         {
             id: 5,
-            type2: 'Health',
-            type3: 'Lifestyle',
+            health: 'Health',
+            life: 'Lifestyle',
             header: "All the money in the world can't buy you back good health",
             details: "My dear, it never rains but it pours. How true the old proverbs are. Here am I, who shall be twenty in September, and yet I never had a proposal till to-day, not a real proposal, and to-day I have had three. Just fancy! THREE proposals in one day! Isn't",
             date: " Oct 9, 2021",
@@ -96,8 +98,8 @@ export const BlogContent = () => {
             id: 6,
             location: 'page',
             image: `${bag}`,
-            type3: 'Technology',
-            titleTwo: 'Nature',
+            life: 'Inspiration',
+            travel: 'Travel',
             header: 'Bangladesh has developed plastic alternative using jute',
             details: "Dr. Johnson, as usual, spoke contemptuously of Colley Cibber. 'It is wonderful that a man, who for forty years had lived with the great and the witty, should have acquired so ill the talents of",
             date: 'June 18, 2023',
@@ -107,8 +109,9 @@ export const BlogContent = () => {
         },
         {
             id: 7,
-            type1: "Food",
-            type2: " Health",
+            food: "Food",
+            health: " Health",
+            nature: 'Nature',
             header: "The mind and body are not separate. what affects one, affects the other",
             details: "His recital put the Captain into an ecstasy; he went from the lady to the gentleman, and from the gentleman to the lady, to enjoy alternately the sight of their distress. He really shouted with pleasure; and, shaking Monsieur Du Bois strenuously by the hand",
             date: "Mar 28, 2022",
@@ -121,7 +124,8 @@ export const BlogContent = () => {
             id: 8,
             type: "featured",
             image: `${drones}`,
-            type1: 'Technology',
+            tech: 'Technology',
+            travel: 'Travel',
             header: 'Amphibious drone are being used to send medicine to flooded area',
             details: "Another tragedy. Had single watch to-night, as crew too tired to double. When morning watch came on deck could find no one except steersman. Raised outcry, and all came on deck. Thorough",
             date: 'May 28, 2022',
@@ -132,7 +136,8 @@ export const BlogContent = () => {
             id: 9,
             type: "featured",
             image: `${forestTree}`,
-            type1: 'Nature',
+            nature: 'Nature',
+            inspire: 'Inspiration',
             header: 'In all things of nature there is something of the marvelous',
             details: "Though thus elevated into fame, and conscious of uncommon powers, he had not that bustling confidence, or, I may rather say, that animated ambition, which one might have supposed would...",
             date: 'May 20, 2022',
@@ -143,18 +148,21 @@ export const BlogContent = () => {
             id: 10,
             type: "featured",
             image: `${inspiration}`,
-            type1: 'Inspiration',
+            inspire: 'Inspiration',
+            nature: 'Nature',
             header: 'It is during our darkest moments that we must focus to see the light',
             details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
             date: 'July 19, 2023',
             time: '4 min read',
-            name: 'Surabhi Gupta'
+            name: 'Surabhi Gupta',
+            authorImage: `${author2}`
         },
         {
             id: 11,
             type: "latest",
             image: `${animal}`,
-            type2: 'Nature',
+            nature: 'Nature',
+            travel: 'Travel',
             header: "Don't listen to what they say, go see",
             details: "They got up and put on their coats, sipping their coffee standing. The painter was silent and preoccupied. There was a gloom over him. He could not bear this marriage, and yet it seemed to him to",
             date: 'May 19, 2022',
@@ -165,8 +173,9 @@ export const BlogContent = () => {
             id: 12,
             type: "latest",
             image: `${mountain}`,
-            type1: 'Nature',
-            type2: "Travel",
+            nature: 'Nature',
+            travel: "Travel",
+            inspire: 'Inspiration',
             header: "With age, comes wisdom. With travel, comes understanding",
             details: "It was a cold morning of the early spring, and we sat after breakfast on either side of a cheery fire in the old room at Baker Street. A thick fog rolled down between the lines of dun-coloured",
             date: 'April 01, 2022',
@@ -175,7 +184,8 @@ export const BlogContent = () => {
           {
             id: 13,
             type: 'latest',
-            type3: 'Lifestyle',
+            life: 'Lifestyle',
+            health: 'Health',
             header: "All the money in the world can't buy you back good health",
             details: "My dear, it never rains but it pours. How true the old proverbs are. Here am I, who shall be twenty in September, and yet I never had a proposal till to-day, not a real proposal, and to-day I have had three. Just fancy! THREE proposals in one day! Isn't",
             date: " Oct 9, 2021",
@@ -194,20 +204,73 @@ export const BlogContent = () => {
             <div className='bg-stone-50 rounded-xl mb-10'>
                 <div className='h- text-center'>
                     <p className='h-96 group'>
-                    <img src={blog.image} alt="image" className='group-hover:scale-105 ease-in duration-500 object-cover object-center w-full h-full rounded-[3rem] p-5'/>
+                    <img src={blog.image} alt="image" className='cursor-pointer object-cover object-top w-full h-full rounded-[2rem] p-5'/>
                     </p>
-                    <em className='hover:underline decoration-[#EC094D] underline-offset-2 text-stone-700 text-sm'>photo by Microsoft 360/unsplash</em>
+                    <em className='hover:underline underline-offset-2 text-stone-700 text-sm'>Photo by Microsoft 360/unsplash</em>
                 </div>
                 <div className='md:mx-10 mx-5'>
-                    <div className='list-disc flex flex-wrap '>
-                        { blog.type1? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-green-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>{blog.type1}</span>) : null}
-                        { blog.type2? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-pink-500 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{blog.type2}</span>) : null}
-                        { blog.type3? (<span className='font-light bg-stone-200 rounded-full mx-2 p-1 px-3 sm:text-normal text-sm capitalize relative flex justify-center items-center'><span className='bg-blue-600 rounded-full mr-1 w-2 h-2 flex justify-center items-center '></span>{blog.type3}</span>) : null}
+                    <div className='flex flex-wrap'>
+                        {blog.food? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#B43ADF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {blog.food}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {blog.health? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#1DBF2F] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {blog.health}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {blog.inspire? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#D4BAF6] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {blog.inspire}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {blog.life? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#4D61FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {blog.life}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {blog.nature? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#FD94FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {blog.nature}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {blog.tech? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#F18509] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {blog.tech}
+                            </span>) 
+                            : 
+                            null
+                        }
+                        {blog.travel? (
+                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-[#E10689] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                            {blog.travel}
+                            </span>) 
+                            : 
+                            null
+                        }
                     </div>
                     <h1 className='lg:text-4xl hover:cursor-pointer px-1 py-4 font-bold hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>
                         {blog.header}
                     </h1>
-                    <p className="font-light text-sm text-stone-500 flex items-center justify-start">
+                    <p className=" text-sm text-stone-500 flex items-center justify-start">
                         <span className='flex items-center'> <LiaUserEditSolid className='mr-1'/>{blog.name}</span>
                         <span className="pl-2 px-2 flex items-center"><BsCalendarDate className="m-1"/>{blog.date}</span>
                         <span className="px-1 flex items-center"><TfiTime className="m-1"/>{blog.time}</span>
@@ -232,9 +295,9 @@ export const BlogContent = () => {
                     </p>
                     <div className='my-10 text-center'>
                         <p className='md:h-96 h-60 group'>
-                            <img src={Jakob} alt="image" className='group-hover:scale-105 ease-in duration-500 object-cover object-center w-full h-full rounded-[3rem] md:p-5'/>
+                            <img src={Jakob} alt="image" className='cursor-pointer object-cover object-center w-full h-full rounded-[2rem] md:p-5'/>
                         </p>
-                        <em className='hover:underline underline-[#EC094D] text-stone-700'>photo by Microsoft 360/unsplash</em>
+                        <em className='hover:underline underline-[#EC094D] text-stone-700'>Photo by Microsoft 360/unsplash</em>
                     </div>
                     <p>
                         No pude soportar oírla proceder e iba a salir de la habitación; Lo cual, cuando Lady Howard se dio cuenta, rogó a Madame Duval que dejara su información para otra oportunidad; pero estaba tan ansiosa por comunicar su plan que no pudo soportar ninguna demora; y por eso me permitieron ir sin oposición. En efecto, cada vez que madame Duval menciona mi situación o mis asuntos, habla de ellos con tanta franqueza y severidad, que no se me puede encomendar tarea más cruel que escucharla.
@@ -251,22 +314,26 @@ export const BlogContent = () => {
                     </div>
                     <div className='h- text-center'>
                         <p className='md:h-96 h-60 group'>
-                        <img src={austin} alt="image" className='object-cover object-center w-full h-full rounded-[3rem] p-5 group-hover:scale-105 ease-in duration-500'/>
+                           <img src={austin} alt="image" className='cursor-pointer object-cover object-top w-full h-full rounded-[2rem] p-5'/>
                         </p>
-                        <em className='hover:underline decoration-[#EC094D] text-stone-700'>photo by Microsoft 360/unsplash</em>
+                        <em className='hover:underline text-stone-700'>Photo by Microsoft 360/unsplash</em>
                     </div>
                     <p className='py-5'>
                         En cuanto a la señorita Mirvan, ella es mi segundo yo, y no tiene esperanzas ni temores, sino lo mismo que yo. Y en cuanto a mí, no sé qué decir, ni siquiera qué desear; A menudo he pensado que mi destino es particularmente cruel: tener un solo padre y ser desterrado de él para siempre; mientras que, por otro lado, he conocido y sentido demasiado bien lo apropiado de la separación. Y, sin embargo, es mucho mejor que usted se imagine de lo que yo puedo expresar la angustia interna que a veces oprime mi corazón cuando reflexiono sobre la extraña indiferencia que debe ocasionar a un padre que nunca hace la más mínima preocupación por la salud, el bienestar o incluso la vida de su hijo!
                     </p>
                     {/* ghost */}
-                    <div className='border md:mx- my-5 rounded-lg flex flex-col sm:flex-row md:h-80 lg:h-72 h-auto bg-white hover:cursor-pointer'>
-                        <div className='w-full md:mx-5 p-2 items-cente flex flex-col justify-center'>
-                            <h2 className='font-bold text-lg text-black pt-4 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>Es durante nuestros momentos más oscuros que debemos concentrarnos para ver la luz.</h2>
-                            <p className='capitalize md:py-3 text-sm '>Mina se interesó cada vez más por todo y me alegró ver que la exigencia de las cosas la ayudaba a olvidar por un tiempo la terrible experiencia de la noche. Estaba muy, muy pálida.</p>
+                    <div className='border md:mx- my-5 rounded-lg flex flex-col sm:flex-row h-auto bg-white hover:cursor-pointer'>
+                        <div className='w-full p-2 flex flex-col justify-center'>
+                            <h2 className=' font-bold text-lg text-black hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>
+                                <p className='h-20'>Es durante nuestros momentos más oscuros que debemos concentrarnos para ver la luz.</p>
+                            </h2>
+                            <p className='capitalize md:py-3 text-sm h-20 p-2'>
+                                <span className='line-clamp-3 '>Mina se interesó cada vez más por todo y me alegró ver que la exigencia de las cosas la ayudaba a olvidar por un tiempo la terrible experiencia de la noche. Estaba muy, muy pálida</span>
+                            </p>
                             <p className='text-xs py-2 text-stone-600 font-bold'>{blog.name}</p>
                         </div>
-                        <div className='h-2/3 md:h-full md:w-1/2 w-full p-3 order-first sm:order-2 group'>
-                            <img src={dreamBig} alt="image" className='rounded-lg w-full h-full object-cover group-hover:scale-95 duration-300 ease-linear' />
+                        <div className=' sm:w-1/3 sm:h-auto h-40 p-1 order-first sm:order-2 group'>
+                            <img src={dreamBig} alt="image" className='rounded-lg w-full h-full object-cover group-hover:scale-95 duration-500 ease-linear' />
                         </div>
                     </div>
                     <p className='py-5'>
@@ -282,19 +349,29 @@ export const BlogContent = () => {
                 <h1 className='font-bold text-xl p-3'>
                     Share this article:
                 </h1>
-                <span className='flex p-2 transition-transform'>
-                    <FaTwitter className='m-2 text-blue-400 hover:scale-110 ease-in duration-100' size={20}/>
-                    <FaFacebookF className='m-2 text-blue-800 hover:scale-110 ease-in duration-100' size={20}/>
-                    <FaInstagram className='m-2 text-red-600 hover:scale-110 ease-in duration-100' size={20}/>
-                    <FaLinkedinIn className='m-2 text-blue-900 hover:scale-110 ease-in duration-100' size={20}/>
-                    <FaGithub className='m-2 text-black hover:scale-110 ease-in duration-100' size={20}/>
-                </span>
+                <div className='flex flex-wrap p-2'>
+                    <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                        <FaTwitter className=' text-blue-400 ' size={30}/>
+                    </p>
+                    <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                        <FaFacebookF className=' text-blue-800' size={30}/>
+                    </p>
+                    <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                        <FaInstagram className=' text-red-600' size={30}/>
+                    </p>
+                    <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                        <FaLinkedinIn className=' text-blue-900' size={30}/>
+                    </p>
+                    <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                        <FaGithub className=' text-black' size={30}/>
+                    </p>
+                </div>
             </div>
             {/* the Author */}
             <div className='bg-stone-100 rounded-lg border mb-5'>
                 <div className='flex justify-center p-2 h-48'>
                     <div className='w-1/3 h-full group transition-all'>
-                        <img src={blog.authorImage} alt="image" className='w-full h-full object-cover rounded-2xl group-hover:scale-105 ease-out duration-300 '/>
+                        <img src={blog.authorImage} alt="image" className='w-full h-full object-cover object-top rounded-2xl group-hover:scale-105 ease-out duration-300 '/>
                     </div>
                     <div className='w-2/3 p-3 '>
                         <p className='font-bold text-stone-700 text-lg p-2'>{blog.name}</p>
@@ -312,13 +389,13 @@ export const BlogContent = () => {
                 </div>
             </div>
             {/* older posts */}
-            <div className='rounded-lg border hover:cursor-pointer flex flex-col justify-center items-end '>
-                <div className='sm:flex justify-center items-center p-2 sm:h-40  md:w-1/2 w-2/3 bg-stone-100 rounded-2xl'>
-                    <div className='w-1/3 h-2/3 p-2  order-2 group transition-all'>
-                        <img src={nature} alt="image" className='w-full h-full object-cover rounded-2xl group-hover:scale-95 ease-in duration-500'/>
+            <div className='rounded-lg border hover:cursor-pointer '>
+                <div className='flex justify-between items-center p-1 h-32 bg-stone-100 rounded-xl'>
+                    <div className='w-1/3 h-full order-2'>
+                        <img src={mountain} alt="image" className='w-full h-full object-cover object-center rounded-lg'/>
                     </div>
-                    <div className='sm:w-2/3 p- '>
-                        <p className='font-bold text-stone-500 text-lg p-2 hover:underline'>older posts</p>
+                    <div className='sm:w-2/3'>
+                        <p className='font-bold text-stone-500 text-lg p-2 hover:underline'>Older posts</p>
                         <p className='hover:underline decoration-[#EC094D] decoration-2 underline-offset-4 px-2'>
                             Never let your memories be greater than your dreams
                         </p>
@@ -334,9 +411,9 @@ export const BlogContent = () => {
                         PageData.filter(item => item.type1 === 'Travel' ).map((item) => {
                             return (
                                 <div key={item.image} className='border p-2 m-1 rounded-2xl group'>
-                                    <div className='group-hover:scale-95 ease-in duration-300'>
+                                    <div className='cursor-pointer'>
                                         <p>
-                                            <img src={item.image} alt="image" className='w-full h-full rounded-2xl' />
+                                            <img src={item.image} alt="image" className='w-full h-full rounded-xl' />
                                         </p>
                                         <h1 className=''>
                                             <p className='p-2'>{item.header}</p>

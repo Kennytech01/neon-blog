@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import { Blog } from './Blog'
 
 export const Footer = () => {
-
+    
     const scrollToTop = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       };
@@ -25,12 +25,12 @@ export const Footer = () => {
                 {/* follow us  */}
                 <div className='my-10'>
                     <h1 className='font-bold p-2 py-5 text-lg'>Follow Us</h1>
-                    <div className='flex p-2'>
-                        <p className='bg-stone-200 mx-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaTwitter className=' text-blue-400 ' size={30}/></p>
-                        <p className='bg-stone-200 mx-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaFacebookF className=' text-blue-800' size={30}/></p>
-                        <p className='bg-stone-200 mx-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaInstagram className=' text-red-600' size={30}/></p>
-                        <p className='bg-stone-200 mx-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaLinkedinIn className=' text-blue-900' size={30}/></p>
-                        <p className='bg-stone-200 mx-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaGithub className=' text-black' size={30}/></p>
+                    <div className='flex flex-wrap p-2'>
+                        <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaTwitter className=' text-blue-400 ' size={30}/></p>
+                        <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaFacebookF className=' text-blue-800' size={30}/></p>
+                        <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaInstagram className=' text-red-600' size={30}/></p>
+                        <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaLinkedinIn className=' text-blue-900' size={30}/></p>
+                        <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaGithub className=' text-black' size={30}/></p>
                     </div>
                 </div>
             </div>
@@ -58,15 +58,69 @@ export const Footer = () => {
                 <h1 className='font-bold p-2 text-lg'>Tags</h1>
                 <div className='flex flex-wrap'>
                 {
-                    data?.filter((tag)=> tag.idx).map((tag)=>{
+                    data?.map((item)=>{
                     return(
-                        <div key={tag.idx} >
-                        <div className='py-2 text-stone-600 hover:scale-105 duration-500 ease-in '>
-                            <p className='bg-stone-200 p-1 m-1 rounded-full px-3 py-2 flex items-center hover:cursor-pointer'>
-                                <span className='bg-green-500 rounded-full mr-1 w-2 h-2'></span>
-                                <span>{tag.tag}</span>
-                            </p>
-                        </div>
+                        <div key={item.idx} >
+                            <div className='py-2 text-stone-600 hover:scale-105 duration-500 ease-in '>
+                                <div className='flex flex-wrap'>
+                                    {item.food? (
+                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-[#B43ADF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                                        {item.food}
+                                        </span>) 
+                                        : 
+                                        null
+                                    }
+                                    {item.health? (
+                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-[#1DBF2F] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                                        {item.health}
+                                        </span>) 
+                                        : 
+                                        null
+                                    }
+                                    {item.inspire? (
+                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-[#D4BAF6] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                                        {item.inspire}
+                                        </span>) 
+                                        : 
+                                        null
+                                    }
+                                    {item.life? (
+                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-[#4D61FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                                        {item.life}
+                                        </span>) 
+                                        : 
+                                        null
+                                    }
+                                    {item.nature? (
+                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-[#FD94FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                                        {item.nature}
+                                        </span>) 
+                                        : 
+                                        null
+                                    }
+                                    {item.tech? (
+                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-[#F18509] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                                        {item.tech}
+                                        </span>) 
+                                        : 
+                                        null
+                                    }
+                                    {item.travel? (
+                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-[#E10689] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
+                                        {item.travel}
+                                        </span>) 
+                                        : 
+                                        null
+                                    }
+                                </div> 
+                            </div>
                         </div>
                     )
                     })
