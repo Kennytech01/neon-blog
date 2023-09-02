@@ -120,7 +120,7 @@ export const Aside = () => {
                   <div className='py-2 text-stone-600 hover:scale-105 duration-500 ease-in '>
                   <div className='flex flex-wrap'>
                         {tag.food? (
-                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                             <span className='bg-[#B43ADF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                             {tag.food}
                             </span>) 
@@ -128,7 +128,7 @@ export const Aside = () => {
                             null
                         }
                         {tag.health? (
-                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                             <span className='bg-[#1DBF2F] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                             {tag.health}
                             </span>) 
@@ -136,7 +136,7 @@ export const Aside = () => {
                             null
                         }
                         {tag.inspire? (
-                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                             <span className='bg-[#c9afeb] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                             {tag.inspire}
                             </span>) 
@@ -144,7 +144,7 @@ export const Aside = () => {
                             null
                         }
                         {tag.life? (
-                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                             <span className='bg-[#4D61FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                             {tag.life}
                             </span>) 
@@ -152,7 +152,7 @@ export const Aside = () => {
                             null
                         }
                         {tag.nature? (
-                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                             <span className='bg-[#FD94FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                             {tag.nature}
                             </span>) 
@@ -160,7 +160,7 @@ export const Aside = () => {
                             null
                         }
                         {tag.tech? (
-                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                             <span className='bg-[#F18509] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                             {tag.tech}
                             </span>) 
@@ -168,7 +168,7 @@ export const Aside = () => {
                             null
                         }
                         {tag.travel? (
-                            <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                            <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                             <span className='bg-[#E10689] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                             {tag.travel}
                             </span>) 

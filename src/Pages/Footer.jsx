@@ -23,14 +23,14 @@ export const Footer = () => {
                     <button type="submit" className='p-2 bg-[#EC094D] rounded-r-full font-bold text-stone-100 h-full hover:scale-95 ease-in duration-100'>Subscribe</button>
                 </form>
                 {/* follow us  */}
-                <div className='my-10'>
-                    <h1 className='font-bold p-2 py-5 text-lg'>Follow Us</h1>
+                <div className=''>
+                    <h1 className='font-bold pt-10 text-lg'>Follow Us</h1>
                     <div className='flex flex-wrap p-2'>
-                        <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaTwitter className=' text-blue-400 ' size={30}/></p>
-                        <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaFacebookF className=' text-blue-800' size={30}/></p>
-                        <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaInstagram className=' text-red-600' size={30}/></p>
-                        <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaLinkedinIn className=' text-blue-900' size={30}/></p>
-                        <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaGithub className=' text-black' size={30}/></p>
+                        <p className='bg-stone-200/30 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaTwitter className=' text-blue-400 ' size={20}/></p>
+                        <p className='bg-stone-200/30 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaFacebookF className=' text-blue-800' size={20}/></p>
+                        <p className='bg-stone-200/30 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaInstagram className=' text-red-600' size={20}/></p>
+                        <p className='bg-stone-200/30 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaLinkedinIn className=' text-blue-900' size={20}/></p>
+                        <p className='bg-stone-200/30 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaGithub className=' text-black' size={20}/></p>
                     </div>
                 </div>
             </div>
@@ -54,8 +54,8 @@ export const Footer = () => {
                 }
             </div>
             {/* Tags */}
-            <div className='m-5'>
-                <h1 className='font-bold p-2 text-lg'>Tags</h1>
+            <div className=''>
+                <h1 className='font-bold text-lg p-5'>Tags</h1>
                 <div className='flex flex-wrap'>
                 {
                     data?.map((item)=>{
@@ -64,7 +64,7 @@ export const Footer = () => {
                             <div className='py-2 text-stone-600 hover:scale-105 duration-500 ease-in '>
                                 <div className='flex flex-wrap'>
                                     {item.food? (
-                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                                         <span className='bg-[#B43ADF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                                         {item.food}
                                         </span>) 
@@ -72,7 +72,7 @@ export const Footer = () => {
                                         null
                                     }
                                     {item.health? (
-                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                                         <span className='bg-[#1DBF2F] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                                         {item.health}
                                         </span>) 
@@ -80,7 +80,7 @@ export const Footer = () => {
                                         null
                                     }
                                     {item.inspire? (
-                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                                         <span className='bg-[#D4BAF6] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                                         {item.inspire}
                                         </span>) 
@@ -88,7 +88,7 @@ export const Footer = () => {
                                         null
                                     }
                                     {item.life? (
-                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                                         <span className='bg-[#4D61FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                                         {item.life}
                                         </span>) 
@@ -96,7 +96,7 @@ export const Footer = () => {
                                         null
                                     }
                                     {item.nature? (
-                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                                         <span className='bg-[#FD94FF] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                                         {item.nature}
                                         </span>) 
@@ -104,7 +104,7 @@ export const Footer = () => {
                                         null
                                     }
                                     {item.tech? (
-                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                                         <span className='bg-[#F18509] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                                         {item.tech}
                                         </span>) 
@@ -112,7 +112,7 @@ export const Footer = () => {
                                         null
                                     }
                                     {item.travel? (
-                                        <span className='bg-stone-200 rounded-full m-2 p-2 px-3 capitalize relative flex justify-center items-center'>
+                                        <span className='bg-stone-200 rounded-full mx-1 p-2 px-3 capitalize relative flex justify-center items-center'>
                                         <span className='bg-[#E10689] rounded-full mr-1 w-2 h-2 flex justify-center items-center  '></span>
                                         {item.travel}
                                         </span>) 
