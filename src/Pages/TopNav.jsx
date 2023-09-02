@@ -33,7 +33,7 @@ export const TopNav = () => {
     
     
   return (
-    <div id='topNav' className='max-w-[1040px] m-auto top-10 right-0 left-0 z-[999] sticky' >
+    <div id='topNav' className='max-w-[1040px] m-auto md:top-10 top-0 right-0 left-0 z-[999] sticky' >
         {/* topView */}
         <div className='bg-stone-100 z-[99] h-20 md:my-20 my-5 border flex items-center justify-between p-3 shadow-lg rounded-lg '>
             <Link to = "/" >
