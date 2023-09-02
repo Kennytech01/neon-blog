@@ -221,23 +221,23 @@ export const Aside = () => {
         </form>
       </div>
       {/* follow us  */}
-      <div className='m-5'>
-          <h1 className='font-bold p-2 py-5 text-lg'>Follow Us</h1>
+      <div className=''>
+          <h1 className='font-bold p-2 text-lg m-3'>Follow Us</h1>
           <div className='flex flex-wrap p-2'>
-              <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
-                <FaTwitter className=' text-blue-400 ' size={30}/>
+              <p className='bg-stone-200/30 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                <FaTwitter className=' text-blue-400 ' size={20}/>
               </p>
-              <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
-                <FaFacebookF className=' text-blue-800' size={30}/>
+              <p className='bg-stone-200/30 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                <FaFacebookF className=' text-blue-800' size={20}/>
               </p>
-              <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
-                <FaInstagram className=' text-red-600' size={30}/>
+              <p className='bg-stone-200/30 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                <FaInstagram className=' text-red-600' size={20}/>
               </p>
-              <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
-                <FaLinkedinIn className=' text-blue-900' size={30}/>
+              <p className='bg-stone-200/30 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                <FaLinkedinIn className=' text-blue-900' size={20}/>
               </p>
-              <p className='bg-stone-200 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
-                <FaGithub className=' text-black' size={30}/>
+              <p className='bg-stone-200/30 m-2 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                <FaGithub className=' text-black' size={20}/>
               </p>
           </div>
       </div>
