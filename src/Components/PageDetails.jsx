@@ -4,16 +4,13 @@ import {TfiTime} from 'react-icons/tfi'
 import { Aside } from '../Pages/Aside'
 import { Link} from 'react-router-dom'
 import { Blog } from '../Pages/Blog'
-import PageData from './PageData'
 import slider5 from '../assets/images/slider5.png'
-import slider3 from '../assets/images/slider3.png'
 import slider4 from '../assets/images/slider4.png'
 import slider2 from '../assets/images/slider2.png'
 import slider1 from '../assets/images/slider1.png'
 import bag from '../assets/images/bag.jpeg'
 import food2 from '../assets/images/food2.jpeg'
 import ladyEating from '../assets/images/ladyEating.jpeg'
-
 
 
 const Data = [
@@ -89,13 +86,12 @@ const Data = [
     time: '4 min read'
 }  
 ]
-export const PageDetails = ({ID}) => {
+export const PageDetails = () => {
   const [visible, setVisible] = useState(4)
   
   const ShowMore = ()=>{
     setVisible((prev) => prev + 4)
   }
-
 
   const truncateString = (str, num) => { 
     if (str?.length > num) {

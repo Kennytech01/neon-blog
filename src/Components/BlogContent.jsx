@@ -13,13 +13,19 @@ import author4 from '../assets/images/author4.png'
 import author5 from '../assets/images/author5.png'
 import austin from '../assets/images/austin.png'
 import slider5 from '../assets/images/slider5.png'
-import slider3 from '../assets/images/slider3.png'
+import ladyEating from '../assets/images/ladyEating.jpeg'
 import slider4 from '../assets/images/slider4.png'
 import slider2 from '../assets/images/slider2.png'
 import slider1 from '../assets/images/slider1.png'
 import bag from '../assets/images/bag.jpeg'
 import food2 from '../assets/images/food2.jpeg'
 import PageData from './PageData'
+import drones from '../assets/images/drones.jpeg'
+import forestTree from '../assets/images/forestTree.jpeg'
+import inspiration from '../assets/images/inspiration.jpeg'
+import animal from '../assets/images/animal.jpeg'
+import mountain from '../assets/images/mountain.jpeg'
+
 
 export const BlogContent = () => {
     const {id} = useParams() 
@@ -35,7 +41,7 @@ export const BlogContent = () => {
             date: "Dec 14, 2021",
             time: "2 min read",
             image: `${slider1}`,
-            'name': 'Biswajit Saha',
+            name: 'Biswajit Saha',
             authorImage: `${author1}`
         },
         {
@@ -53,15 +59,15 @@ export const BlogContent = () => {
         }, 
         {
             id: 3,
+            image: `${ladyEating}`,
             type2: 'Inspiration',
-            type3: 'Travel',
-            header: 'Never let your memories be greater than your dreams',
-            details: "Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time backed to the east, and there was a shudder amongst the watchers on",
-            date: "May 2, 2022",
-            time: "4 min read",
+            type3: 'Food',
+            header: "I like better than talking about food is eating",
+            details: "In one point he was more fortunate than the novel's fantastic hero. He never knew--never, indeed, had any cause to know--that somewhat grotesque dread of mirrors, and polished metal",
+            date: 'March 10, 2022',
+            time: '2 min read',
+            authorImage: `${author1}`,
             name: 'Surabhi Gupta',
-            image: `${slider3}`,
-            authorImage: `${author1}`
         },
         {
             id: 4,
@@ -110,7 +116,72 @@ export const BlogContent = () => {
             name: 'Ishan Sharma',
             image: `${slider2}`,
             authorImage: `${author2}`
-        }  
+        },
+        {
+            id: 8,
+            type: "featured",
+            image: `${drones}`,
+            type1: 'Technology',
+            header: 'Amphibious drone are being used to send medicine to flooded area',
+            details: "Another tragedy. Had single watch to-night, as crew too tired to double. When morning watch came on deck could find no one except steersman. Raised outcry, and all came on deck. Thorough",
+            date: 'May 28, 2022',
+            time: '4 min read',
+            name: 'Surabhi Gupta',
+        },
+        {
+            id: 9,
+            type: "featured",
+            image: `${forestTree}`,
+            type1: 'Nature',
+            header: 'In all things of nature there is something of the marvelous',
+            details: "Though thus elevated into fame, and conscious of uncommon powers, he had not that bustling confidence, or, I may rather say, that animated ambition, which one might have supposed would...",
+            date: 'May 20, 2022',
+            time: '3 min read',
+            name: 'Harini Banerjee',
+        },
+        {
+            id: 10,
+            type: "featured",
+            image: `${inspiration}`,
+            type1: 'Inspiration',
+            header: 'It is during our darkest moments that we must focus to see the light',
+            details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
+            date: 'July 19, 2023',
+            time: '4 min read',
+            name: 'Surabhi Gupta'
+        },
+        {
+            id: 11,
+            type: "latest",
+            image: `${animal}`,
+            type2: 'Nature',
+            header: "Don't listen to what they say, go see",
+            details: "They got up and put on their coats, sipping their coffee standing. The painter was silent and preoccupied. There was a gloom over him. He could not bear this marriage, and yet it seemed to him to",
+            date: 'May 19, 2022',
+            time: '4 min read'
+        },
+        
+        {
+            id: 12,
+            type: "latest",
+            image: `${mountain}`,
+            type1: 'Nature',
+            type2: "Travel",
+            header: "With age, comes wisdom. With travel, comes understanding",
+            details: "It was a cold morning of the early spring, and we sat after breakfast on either side of a cheery fire in the old room at Baker Street. A thick fog rolled down between the lines of dun-coloured",
+            date: 'April 01, 2022',
+            time: '4 min read'
+          },
+          {
+            id: 13,
+            type: 'latest',
+            type3: 'Lifestyle',
+            header: "All the money in the world can't buy you back good health",
+            details: "My dear, it never rains but it pours. How true the old proverbs are. Here am I, who shall be twenty in September, and yet I never had a proposal till to-day, not a real proposal, and to-day I have had three. Just fancy! THREE proposals in one day! Isn't",
+            date: " Oct 9, 2021",
+            time: "3 min read",
+            image: `${slider5}`,
+        },
       ]
 
     let blog = Data.filter((data)=> data.id == id)

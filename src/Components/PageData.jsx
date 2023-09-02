@@ -6,8 +6,6 @@ import inspiration from '../assets/images/inspiration.jpeg'
 import bag from '../assets/images/bag.jpeg'
 import food2 from '../assets/images/food2.jpeg'
 import health from '../assets/images/health.jpeg'
-import drones from '../assets/images/drones.jpeg'
-import forestTree from '../assets/images/forestTree.jpeg'
 import animal from '../assets/images/animal.jpeg'
 import friuts from '../assets/images/fruits.jpeg'
 import mountain from '../assets/images/mountain.jpeg'
@@ -107,25 +105,7 @@ const PageData = [
         date: 'June 05, 2023',
         time: '3 min read'
     },
-    {
-        tags: "id",
-        tag1: "Food",
-        tag2: "Health",
-        tag3: "Lifestyle",
-        tag4: "Nature",
-        tag5: "Technology",
-        tag6: "Travel"
-    },
-    {
-        id: "featured",
-        image: `${inspiration}`,
-        type1: 'Inspiration',
-        header: 'It is during our darkest moments that we must focus to see the light',
-        details: 'Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time',
-        date: 'July 19, 2023',
-        time: '4 min read',
-        name: 'Surabhi Gupta'
-    },
+    
     {
         id: 'footer',
         image: `${nature}`,
@@ -137,44 +117,6 @@ const PageData = [
         name: 'Harini Banerjee'
     },
     {
-        id: "featured",
-        image: `${drones}`,
-        type1: 'Technology',
-        header: 'Amphibious drone are being used to send medicine to flooded area',
-        details: "Another tragedy. Had single watch to-night, as crew too tired to double. When morning watch came on deck could find no one except steersman. Raised outcry, and all came on deck. Thorough",
-        date: 'May 28, 2022',
-        time: '4 min read'
-    },
-    {
-        id: "featured",
-        image: `${forestTree}`,
-        type1: 'Nature',
-        header: 'In all things of nature there is something of the marvelous',
-        details: "Though thus elevated into fame, and conscious of uncommon powers, he had not that bustling confidence, or, I may rather say, that animated ambition, which one might have supposed would...",
-        date: 'May 20, 2022',
-        time: '3 min read'
-    },
-    {
-        id: "latest",
-        image: `${animal}`,
-        type1: 'Travel',
-        header: "Don't listen to what they say, go see",
-        details: "They got up and put on their coats, sipping their coffee standing. The painter was silent and preoccupied. There was a gloom over him. He could not bear this marriage, and yet it seemed to him to",
-        date: 'May 19, 2022',
-        time: '4 min read'
-    },
-   
-    {
-        id: "latest",
-        image: `${mountain}`,
-        type1: 'Nature',
-        type2: "Travel",
-        header: "With age, comes wisdom. With travel, comes understanding",
-        details: "It was a cold morning of the early spring, and we sat after breakfast on either side of a cheery fire in the old room at Baker Street. A thick fog rolled down between the lines of dun-coloured",
-        date: 'April 01, 2022',
-        time: '4 min read'
-    },
-    {
         id: 'footer',
         image: `${ladyEating}`,
         type1: 'Food',
@@ -183,15 +125,6 @@ const PageData = [
         date: 'March 10, 2022',
         time: '2 min read'
     },
-    {
-        id: "latest",
-        image: `${goodHealth}`,
-        type1: 'Health',
-        type2: "Lifstyle",
-        header: "All the money in the world can't buy you back good health",
-        details: "My dear, it never rains but it pours. How true the old proverbs are. Here am I, who shall be twenty in September, and yet I never had a proposal till to-day, not a real proposal, and to-day I have had",
-        date: 'Feb, 2022',
-        time: '3 min read'
-    }
+
 ]
 export default PageData

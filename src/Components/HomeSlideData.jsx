@@ -1,5 +1,5 @@
 import slider5 from '../assets/images/slider5.png'
-import slider3 from '../assets/images/slider3.png'
+import ladyEating from '../assets/images/ladyEating.jpeg'
 import slider4 from '../assets/images/slider4.png'
 import slider2 from '../assets/images/slider2.png'
 import slider1 from '../assets/images/slider1.png'
@@ -30,13 +30,12 @@ const SliderData = [
     }, 
     {
         id: 3,
-        titleTwo: 'Inspiration',
-        title: 'Travel',
-        header: 'Never let your memories be greater than your dreams',
-        details: "Before long the searchlight discovered some distance away a schooner with all sails set, apparently the same vessel which had been noticed earlier in the evening. The wind had by this time backed to the east, and there was a shudder amongst the watchers on",
-        date: "May 2, 2022",
-        time: "4 min read",
-        image: `${slider3}`
+        image: `${ladyEating}`,
+        titleTwo: 'Food',
+        header: "I like better than talking about food is eating",
+        details: "In one point he was more fortunate than the novel's fantastic hero. He never knew--never, indeed, had any cause to know--that somewhat grotesque dread of mirrors, and polished metal",
+        date: 'March 10, 2022',
+        time: '2 min read'
     },
     {
         id: 4,
