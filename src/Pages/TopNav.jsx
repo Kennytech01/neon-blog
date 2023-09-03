@@ -273,7 +273,7 @@ export const TopNav = () => {
                                 }
                             </div>
                             {/* signIn */}
-                            <Link to = '/signIn' onClick={()=> setMobile(!mobile)}>
+                            <Link to = '/signin' onClick={()=> setMobile(!mobile)}>
                                 <button className='p-3 hover:underline decoration-[#EC094D] decoration-2 underline-offset-4'>
                                     Sign In
                                 </button>
