@@ -12,7 +12,6 @@ import { SearchResult } from '../Components/SearchResult'
 import useLocalStorage from 'use-local-storage'
 import { HomePage } from './HomePage'
 
-
 export const TopNav = () => {
     const [mobile, setMobile] = useState(false)
     const [open, setOpen ] = useState(false);
@@ -287,14 +286,24 @@ export const TopNav = () => {
                                 </button>
                             </Link>
                             {/* follow us  */}
-                            <div>
-                                <h1 className='font-bold p-2 py-5 text-lg'>Follow Us</h1>
-                                <div className='flex flex-wrap p-2'>
-                                    <p className='bg-stone-200 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaTwitter className=' text-blue-400 '/></p>
-                                    <p className='bg-stone-200 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaFacebookF className=' text-blue-800'/></p>
-                                    <p className='bg-stone-200 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaInstagram className=' text-red-600'/></p>
-                                    <p className='bg-stone-200 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaLinkedinIn className=' text-blue-900'/></p>
-                                    <p className='bg-stone-200 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'><FaGithub className=' text-black'/></p>
+                            <div className='my-2'>
+                                <h1 className='font-bold p-2 text-lg m-3'>Follow Us</h1>
+                                <div className='flex flex-wrap'>
+                                    <p className='bg-stone-200/30 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                                        <FaTwitter className=' text-blue-400 '/>
+                                    </p>
+                                    <p className='bg-stone-200/30 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                                        <FaFacebookF className=' text-blue-800'/>
+                                    </p>
+                                    <p className='bg-stone-200/30 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                                        <FaInstagram className=' text-red-600'/>
+                                    </p>
+                                    <p className='bg-stone-200/30 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                                        <FaLinkedinIn className=' text-blue-900'/>
+                                    </p>
+                                    <p className='bg-stone-200/30 m-1 hover:scale-110 ease-in duration-100 rounded-full p-2'>
+                                        <FaGithub className=' text-black'/>
+                                    </p>
                                 </div>
                             </div>  
                         </ul>

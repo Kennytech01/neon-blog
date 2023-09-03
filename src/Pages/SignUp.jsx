@@ -1,19 +1,19 @@
 import React from 'react'
 import LOGO from '../assets/images/logo.png'
 import { Link } from 'react-router-dom'
-import {WiDirectionLeft} from 'react-icons/wi'
+import {MdKeyboardDoubleArrowLeft} from 'react-icons/md'
 
 export const SignUp = () => {
   return (
-    <div className='flex flex-col justify-center items-center w-full my-2'>
+    <div className='flex  justify-center items-center h-[100vh]'>
       <div className='md:w-1/3 sm:w-2/3 w-[90%] mx-1/2'>
-        <div className='flex justify-center items-center p-2'>
+        <Link to= '/' className='flex justify-center items-center p-2'>
           <button 
-            className='p-2 bg-white border px-3 flex items-center justify-centerg5t font-semibold rounded-full hover:scale-95 ease-out duration-200'>
-            <WiDirectionLeft size={20}/>
-            back to home
+            className='p-2 px-3 border bg-white flex items-center justify-center font-semibold rounded-full hover:scale-95 ease-out duration-500'>
+            <MdKeyboardDoubleArrowLeft size={20}/>
+            <span>back to home</span>
           </button>
-        </div>
+        </Link>
         <div className='bg-white rounded-xl w-full text-center shadow-xl border'>
           <p className='p-5 flex justify-center'><img src={LOGO} alt="logo" /></p>
           <h1 className='font-bold text-3xl p-5 text-cente'>Sign up!</h1>
